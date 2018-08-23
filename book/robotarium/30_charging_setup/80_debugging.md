@@ -1,4 +1,4 @@
-# Testing and debugging {#autocharging-debugging status=beta}
+# Testing and debugging {#autocharging-debugging status=draft}
 
 ## Debug the whole charging pipeline
 
@@ -15,3 +15,13 @@ There exist the following maintenance states: [WAY_TO_MAINTENANCE, WAY_TO_CHARGI
 If you would like to test a specific maintenance state (i.e. for testing a specific path like path_calib), change the state with
 
     rostopic pub -1 "/<robot_name>/maintenance_control_node/set_state" std_msgs/String "<state_name>"
+
+## Troubleshooting
+
+**A Duckiebot gets stuck while traversing through a charger**
+
+This happens if the friction of the current collector is too high. Try to bend the 3D printed part a little down (multiple times) until the force acting on the charging rails is lower. You could also reprint the current collector with thinner connections (use the Customizer on Thingiverse).
+
+**Something esle**
+
+lululu
