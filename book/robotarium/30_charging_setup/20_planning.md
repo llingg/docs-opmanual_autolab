@@ -25,4 +25,4 @@ An example charging area which fulfills the specifications. This charging area c
 </figcaption>
 </div>
 
-The charging area in ([](#fig:charging_area_example)) fulfills the specifications and has four chargers (two per module).
+The charging area in [](#fig:charging_area_example) fulfills the specifications and has four chargers (two per module).

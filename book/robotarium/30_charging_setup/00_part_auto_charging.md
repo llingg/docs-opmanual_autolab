@@ -1,4 +1,4 @@
-# Auto charging {#part:aido-auto-charging}
+# Auto charging {#part:robotarium-auto-charging}
 
 Maintainer: Julien Kindle, Thomas Ackermann
 

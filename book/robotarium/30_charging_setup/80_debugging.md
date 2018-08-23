@@ -22,6 +22,6 @@ If you would like to test a specific maintenance state (i.e. for testing a speci
 
 This happens if the friction of the current collector is too high. Try to bend the 3D printed part a little down (multiple times) until the force acting on the charging rails is lower. You could also reprint the current collector with thinner connections (use the Customizer on Thingiverse).
 
-**Something esle**
+**Duckiebot turns off as soon as rails are touched**
 
-lululu
+Depending on the battery, if no voltage lies across the charging rails, the Raspberry Pi may reboot. This is a known issue and can be solved by turning on the power supplies.

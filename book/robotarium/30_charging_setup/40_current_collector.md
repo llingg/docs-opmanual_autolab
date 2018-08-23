@@ -29,7 +29,7 @@ If **no 3D printer is available**, then order the printed part from [this site](
 
 ### Put together three laboratory plugs
 
-Take three laboratory plugs and put them together as seen in ([](#fig:lp_assembly)).
+Take three laboratory plugs and put them together as seen in [](#fig:lp_assembly).
 
 <div figure-id="fig:lp_assembly">
 <img src="images/lp_assembly.jpg" style="width: 80%"/>
@@ -40,7 +40,7 @@ Three laboratory plugs put together.
 
 ### Prepare the current collector soldering
 
-Be sure to have everything ready in ([](#fig:assembly_pre_cc))
+Be sure to have everything ready in [](#fig:assembly_pre_cc)
 
 <div figure-id="fig:assembly_pre_cc">
 <img src="images/assembly_pre_cc.jpg" style="width: 80%"/>
@@ -51,7 +51,7 @@ Neccessary parts for the current collector soldering
 
 ### Solder the wires
 
-Solder the wires to the laboratory plugs as seen in ([](#fig:soldered_lp)).
+Solder the wires to the laboratory plugs as seen in [](#fig:soldered_lp).
 
 <div figure-id="fig:soldered_lp">
 <img src="images/soldered_lp.jpg" style="width: 80%"/>
@@ -60,7 +60,7 @@ A wire soldered to the laboratory plugs.
 </figcaption>
 </div>
 
-Put the cables through the 3D printed part as seen in ([](#fig:soldered_cc)).
+Put the cables through the 3D printed part as seen in [](#fig:soldered_cc).
 
 <div figure-id="fig:soldered_cc">
 <img src="images/soldered_cc.jpg" style="width: 80%"/>
@@ -75,7 +75,7 @@ If for any reason the laboratory plugs do not fit tightly in the 3D printed part
 
 ### Prepare the assembly
 
-Make the parts ready as seen in ([](#fig:assembly_current_collector)).
+Make the parts ready as seen in [](#fig:assembly_current_collector).
 
 <div figure-id="fig:assembly_current_collector">
 <img src="images/assembly_current_collector.jpg" style="width: 80%"/>
@@ -86,7 +86,7 @@ Neccessary parts for the assembly.
 
 ### Assemble the april tag plate
 
-Assemble the april tag plate by using the acrylic glass, screws and distance keepers as seen in ([](#fig:assembled_at_plate))
+Assemble the april tag plate by using the acrylic glass, screws and distance keepers as seen in [](#fig:assembled_at_plate)
 
 <div figure-id="fig:assembled_at_plate">
 <img src="images/assembled_duckietop.jpg" style="width: 80%"/>
@@ -97,7 +97,7 @@ The assembled april tag plate
 
 ### Mount current collector to april tag plate
 
-Mount the current collector by using three screws and nuts as seen in ([](#fig:screwed_current_collector))
+Mount the current collector by using three screws and nuts as seen in [](#fig:screwed_current_collector)
 
 <div figure-id="fig:screwed_current_collector">
 <img src="images/screwed_current_collector.jpg" style="width: 80%"/>
@@ -108,7 +108,7 @@ The current collector mounted to the april tag plate.
 
 ### Plug in the robotarium add-on board
 
-Plug in the robotarium add-on board as seen in ([](#fig:plugged_addon_board))
+Plug in the robotarium add-on board as seen in [](#fig:plugged_addon_board)
 
 <div figure-id="fig:plugged_addon_board">
 <img src="images/plugged_addon_board.jpg" style="width: 80%"/>
@@ -119,7 +119,7 @@ The robotarium add-on board.
 
 ### Mount the structure to the Duckiebot
 
-Mount the april tag board with the current collector assembled to a Duckiebot as in ([](#fig:result_cc)) and ([](#fig:mounted_at_plate)). Plug in the USB cable to the battery of the Duckiebot.
+Mount the april tag board with the current collector assembled to a Duckiebot as in [](#fig:result_cc) and [](#fig:mounted_at_plate). Plug in the USB cable to the battery of the Duckiebot.
 
 <div figure-id="fig:mounted_at_plate">
 <img src="images/mounted_duckietop.jpg" style="width: 80%"/>

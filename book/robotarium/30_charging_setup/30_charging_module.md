@@ -27,7 +27,7 @@ In this list, $X$ will denote the number of charging rail tiles in a charging mo
 
 ### Assemble the wooden structure
 
-Assemble the wooden structure as in ([](#fig:assembled_wooden_struc)). This part may differ from our reference part. The important and neccessary specifications are: (i) the structure must be larger than one tile such that a road (with margins on both sides) may fit underneath and (ii) the space between the tile and the bottom part of the crossbar must be exactly 21cm (see ([](#fig:hv_pole_drawing))).
+Assemble the wooden structure as in [](#fig:assembled_wooden_struc). This part may differ from our reference part. The important and neccessary specifications are: (i) the structure must be larger than one tile such that a road (with margins on both sides) may fit underneath and (ii) the space between the tile and the bottom part of the crossbar must be exactly 21cm (see [](#fig:hv_pole_drawing)).
 
 <div figure-id="fig:assembled_wooden_struc">
 <img src="images/assembled_wooden_struc.jpg" style="width: 80%"/>
@@ -39,7 +39,7 @@ An assembled wodden structure.
 
 ### Prepare for mounting the insulators
 
-Make sure you have the parts ready seen in ([](#fig:assembly_hv_pole)).
+Make sure you have the parts ready seen in [](#fig:assembly_hv_pole).
 
 <div figure-id="fig:assembly_hv_pole">
 <img src="images/assembly_hv_pole.jpg" style="width: 80%"/>
@@ -50,7 +50,7 @@ Parts needed to prepare and assemble a high voltage pole.
 
 ### Drill the holes
 
-Drill 3mm holes such that the insulators will be centered after mounting, seen in ([](#fig:hv_pole_drawing))
+Drill 3mm holes such that the insulators will be centered after mounting, seen in [](#fig:hv_pole_drawing)
 
 <div figure-id="fig:hv_pole_drawing">
 <img src="images/hv_pole_drawing.png" style="width: 80%"/>
@@ -59,7 +59,7 @@ Drill 3mm holes such that the insulators will be centered after mounting, seen i
 </figcaption>
 </div>
 
-The 6mm holes (depth roughly 5mm) are optional and act as a hideout for the screw heads. The resulting holes should look like ([](#fig:drilling_hole_hv_pole)).
+The 6mm holes (depth roughly 5mm) are optional and act as a hideout for the screw heads. The resulting holes should look like [](#fig:drilling_hole_hv_pole).
 
 <div figure-id="fig:drilling_hole_hv_pole">
 <img src="images/drilling_hole_hv_pole.jpg" style="width: 80%"/>
@@ -70,7 +70,7 @@ Drilled holes.
 
 ### Mount the insulator
 
-Mount the insulator 3D prints as seen in ([](#fig:assembled_insulator)) and ([](#fig:hidden_screw)).
+Mount the insulator 3D prints as seen in [](#fig:assembled_insulator) and [](#fig:hidden_screw).
 
 <div figure-id="fig:assembled_insulator">
 <img src="images/assembled_insulator.jpg" style="width: 80%"/>
@@ -91,7 +91,7 @@ How the screw head is hidden.
 TODO howto solder lab plugs and attach them
 
 ### Attach to power source
-For powering the Duckiebots we use a power supply rated at 5V with 30Amps max. You can see the connections of the power supply in ([](#fig:powersupply)).
+For powering the Duckiebots we use a power supply rated at 5V with 30Amps max. You can see the connections of the power supply in [](#fig:powersupply).
 <div figure-id="fig:powersupply">
 <img src="images/powersupply.jpg" style="width: 80%"/>
 <figcaption>
@@ -99,7 +99,7 @@ The connected power supply.
 </figcaption>
 </div>
 
-The cables of the brass rods must be polarized as seen in ([](#fig:polarity_graph)).
+The cables of the brass rods must be polarized as seen in [](#fig:polarity_graph).
 
 <div figure-id="fig:polarity_graph">
 <img src="images/polarity_graph.png" style="width: 100%"/>

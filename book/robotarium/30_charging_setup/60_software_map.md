@@ -33,7 +33,7 @@ The parameters in the config file are dictionaries - each key (i.e. '150') stand
 
 ### path_in
 
-The "path_in" parameter of a charger should map traffic sign april tag IDs to a single turn type, which in sum guide the Duckiebot to the charger. In ([](#fig:path_to_charger2)) an example is given. The path_in of charger 2 would then be
+The "path_in" parameter of a charger should map traffic sign april tag IDs to a single turn type, which in sum guide the Duckiebot to the charger. In [](#fig:path_to_charger2) an example is given. The path_in of charger 2 would then be
 
     path_in: {'261': 2, '240': 0}
 
@@ -47,7 +47,7 @@ An example path from maintenance entrance to charger 2.
 
 ### path_calib
 
-In the case that a calibration area is used, the dictionary "path_calib" guides the Duckiebot from a charger exit to the calibration area. In ([](#fig:charger2_to_calib)) an example is given. The path_calib of charger 2 would then be
+In the case that a calibration area is used, the dictionary "path_calib" guides the Duckiebot from a charger exit to the calibration area. In [](#fig:charger2_to_calib) an example is given. The path_calib of charger 2 would then be
 
     path_calib: {'236': 0, '153': 0, '243': 2}
 
@@ -60,7 +60,7 @@ An example path from charger 2 to calibration area.
 
 ### path_to_city
 
-The dictionary "path_to_city" guides a Duckiebot from every possible leaving position (i.e. charger exit, calibration exit) back to the city. In ([](#fig:path_to_city)), all paths are plotted for an example maintenance area (without a calibration area).
+The dictionary "path_to_city" guides a Duckiebot from every possible leaving position (i.e. charger exit, calibration exit) back to the city. In [](#fig:path_to_city), all paths are plotted for an example maintenance area (without a calibration area).
 
 <div figure-id="fig:path_to_city">
 <img src="images/path_to_city.png" style="width: 80%"/>
