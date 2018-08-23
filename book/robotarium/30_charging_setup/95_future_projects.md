@@ -4,7 +4,7 @@ There are still multiple tasks which would improve the charging area by a lot. I
 
 ## Improve the intersection navigation
 
-For traversing through the maintenance area, intersection navigation is a crucial part. With the new Unicorn Intersection Node, the success rate was raised to over 90%. For a completely autonomous city, this is still way too low.
+For traversing through the maintenance area, intersection navigation is a crucial part. With the new Unicorn Intersection Node, the success rate was raised up to over 90%. For a completely autonomous city, this is still way too low.
 
 ## Implement the battery capacity estimation
 
@@ -19,3 +19,15 @@ In order to keep distance to a Duckiebot in front, the vehicle avoidance node de
 With the introduction of a charging station, communication between different Duckiebots outside of intersections became crucial. This is why we developed the TCP Communication Node: Every time a Duckiebot goes charging, it finds a free spot by asking a centralized server and reserves it. When the Duckiebot finishes charging, it releases that spot again.
 
 This node was not tested enough and may have some bugs which need to be fixed. Also, if a Duckiebot is killed while charging (unplug the Raspberry pi without terminating ROS with CTRL+C), a charging spot is used by a Duckiebot phantom. This phantom can only be removed by connecting to the TCP server and manually adjusting the variable.
+
+## Fix the stop line sleep time
+
+In order to avoid stopping at the red line in opposite direction right after an intersection, there is a stop line sleep time implemented. This however does not work robustly - sometimes, that "bad" red line is still detected.
+
+## Optimize CPU utilization
+
+Currently, CPU utilization is at 100% for all four cores. The most expensive node seems to be the Image Transformer Node which uses alone 40% of the CPU. This slows down the whole megacity.launch and could be cause for multiple bugs.
+
+## Proper shutdown procedure
+
+After launching megacity for multiple times, it seems as if the CPU is getting slower. This could either be caused by the increase of temperature of the CPU or by the fact that not all python scripts are terminated when hitting CTRL+C.
