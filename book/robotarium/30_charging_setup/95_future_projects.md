@@ -31,3 +31,7 @@ Currently, CPU utilization is at 100% for all four cores. The most expensive nod
 ## Proper shutdown procedure
 
 After launching megacity for multiple times, it seems as if the CPU is getting slower. This could either be caused by the increase of temperature of the CPU or by the fact that not all python scripts are terminated when hitting CTRL+C.
+
+## Provide tiles that are more flat
+
+With the original tiles, it is almost impossible to obtain a nice flat surface. This is the reason why sometimes a Duckiebot gets stuck or loses contact. An idea would be to replace the charging tiles with a black and flat surface (like sprayed wood) and tape the lines directly on it.

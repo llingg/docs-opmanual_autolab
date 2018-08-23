@@ -46,20 +46,20 @@ An insulator.
 
 ## Charging rail tiles
 
-Charging rail tiles are tiles with charging rails. Duckiebots can charge in both directions. Each charging rail tile has $8$ brass rails. See ([](#fig:conventions)).
+Charging rail tiles are tiles with charging rails. Duckiebots can charge in both directions. Each charging rail tile has $8$ brass rails. See [](#fig:conventions).
 
 ## Charging module
 
-A charging module describes the combination of a charging rail and all connected straights and curves up to the next intersection. See ([](#fig:conventions)).
+A charging module describes the combination of a charging rail and all connected straights and curves up to the next intersection. See [](#fig:conventions).
 
 ## Charger
 
-A charger describes one single lane of a charging module. See ([](#fig:conventions)).
+A charger describes one single lane of a charging module. See [](#fig:conventions).
 
 
 ## Charging area
 
-A charging area is the combination of multiple charging modules and intersections, straights and curves which connect the charging modules to the maintenance entrance. ([](#fig:conventions)) shows a charging area.
+A charging area is the combination of multiple charging modules and intersections, straights and curves which connect the charging modules to the maintenance entrance. [](#fig:conventions) shows a charging area.
 
 <div figure-id="fig:conventions">
 <img src="images/conventions.png" style="width: 100%"/>
