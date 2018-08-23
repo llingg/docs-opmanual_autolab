@@ -2,9 +2,11 @@
 
 ## Debug the whole charging pipeline
 
-If you would like to test the whole charging procedure, place your Duckiebot on a road which ends in the intersection which is connected to the maintenance area. Then, request the Duckiebot to go charging (this is usually done by either a timer or the battery status estimation):
+Under normal conditions, the Duckiebot will drive for X minutes and then go to the charging station. After Y minutes, it will leave it again. X and Y are defined in the yaml file for the Charging Control Node. If you would like to test the whole charging procedure, place your Duckiebot on a road which ends in the intersection which is connected to the maintenance area. Then, request the Duckiebot to go charging:
 
     rostopic pub -1 "/<robot_name>/maintenance_control_node/go_mt_charging" std_msgs/Bool true
+
+The Charging Control Node will as the TCP server for a free charging spot and if available reserve it.
 
 Now, let your Duckiebot drive autonomously (L1 on your Joystick or 'a' on your virtual joystick).
 
@@ -20,8 +22,12 @@ If you would like to test a specific maintenance state (i.e. for testing a speci
 
 **A Duckiebot gets stuck while traversing through a charger**
 
-This happens if the friction of the current collector is too high. Try to bend the 3D printed part a little down (multiple times) until the force acting on the charging rails is lower. You could also reprint the current collector with thinner connections (use the Customizer on Thingiverse).
+This happens if the friction of the current collector is too high. Try to bend the 3D printed part a little down (multiple times) until the force acting on the charging rails is lower. You could also reprint the current collector with thinner connections (use the Customizer on Thingiverse). Also, ensure that the tiles of the charger are flat.
 
 **Duckiebot turns off as soon as rails are touched**
 
-Depending on the battery, if no voltage lies across the charging rails, the Raspberry Pi may reboot. This is a known issue and can be solved by turning on the power supplies.
+Depending on the battery, if no voltage lies across the charging rails, the Raspberry Pi may reboot. This is a known issue and may be solved by adding capacitors to the add-on board - this is in work by Autolab Zurich.
+
+**Duckiebot does not charge**
+
+There exist multiple reasons for that: did you turn on the power supply? However, most of the times the current collector / the rails are dirty. Clean them with alcohol or sanding paper.

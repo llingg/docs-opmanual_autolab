@@ -9,7 +9,7 @@ In order to let a Duckiebot charge in a charger, additional hardware is needed. 
 * Robotarium add-on board
 * If printer available: $5g$ Material for the 3D printer (cutest color is yellow)
 * April tag plate
-* $16 \times$ plastic spacers $M2.5 \times 12mm$
+* $16 \times$ plastic spacers $M2.5 \times 12mm$ **or** $4 \times$ spacers $M2.5 \times 50mm$
 * $7 \times$ screw $M2.5 \times 10mm$ and nut $M2.5$
 * Soldering iron and solder
 
