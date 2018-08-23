@@ -35,3 +35,7 @@ After launching megacity for multiple times, it seems as if the CPU is getting s
 ## Provide tiles that are more flat
 
 With the original tiles, it is almost impossible to obtain a nice flat surface. This is the reason why sometimes a Duckiebot gets stuck or loses contact. An idea would be to replace the charging tiles with a black and flat surface (like sprayed wood) and tape the lines directly on it.
+
+## Consider a cooling system
+
+After operating the Duckiebot for a long time, the Raspberry Pi gets really hot at its interfaces (USB plugs, LAN Port, etc). For a 24/7 operating time that can influence the behavior of the Duckiebot a lot. If one would cool the Duckiebot actively by a little fan, the temperature wouldn't increase that much.
