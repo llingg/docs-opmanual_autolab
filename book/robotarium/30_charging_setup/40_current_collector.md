@@ -11,6 +11,7 @@ In order to let a Duckiebot charge in a charger, additional hardware is needed. 
 * April tag plate
 * $16 \times$ plastic spacers $M2.5 \times 12mm$ **or** $4 \times$ spacers $M2.5 \times 50mm$
 * $7 \times$ screw $M2.5 \times 10mm$ and nut $M2.5$
+* Open ended USB cable $20cm$
 * Soldering iron and solder
 
 ## Build a charging capable Duckiebot
@@ -108,7 +109,7 @@ The current collector mounted to the april tag plate.
 
 ### Plug in the robotarium add-on board
 
-Plug in the robotarium add-on board as seen in [](#fig:plugged_addon_board)
+Plug in the robotarium add-on board as seen in [](#fig:plugged_addon_board). Also, screw the cables from the current collector as well as the open ends from the open ended USB cable to the add-on board.
 
 <div figure-id="fig:plugged_addon_board">
 <img src="images/plugged_addon_board.jpg" style="width: 80%"/>
