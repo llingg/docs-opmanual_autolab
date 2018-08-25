@@ -86,9 +86,44 @@ How the screw head is hidden.
 </figcaption>
 </div>
 
-### Solder things...
 
-TODO howto solder lab plugs and attach them
+### Fix the high voltage poles to tiles
+
+Use double-sided tape to mount the high voltage poles to the tiles ([](#fig:glued_wooden_structure)).
+
+
+### Bend brass rails and mount them
+
+Bend the charging rails 5cm on both sides (in the same direction) to ensure that Duckiebots do not get stuck when arriving at the charging rail tiles ([](#fig:glued_wooden_structure)).
+
+Then, clip the brass rails into the insulators.
+
+<div figure-id="fig:glued_wooden_structure">
+<img src="images/glued_wooden_structure.jpg" style="width: 100%"/>
+<figcaption>
+Glued high voltage poles with clipped in charging rails.
+</figcaption>
+</div>
+
+### Solder laboratory plugs and plug them onto brass rails
+
+Solder four red four black cables each to a laboratory plug. These cables should be long enough that the charging rails may be connected to the power supply. Then, connect the laboratory plugs to the bended ends of the charging rails as seen in [](#fig:mounted_plugs). The cables of the brass rods must be polarized as seen in [](#fig:polarity_graph).
+
+
+<div figure-id="fig:mounted_plugs">
+<img src="images/mounted_plugs.jpg" style="width: 100%"/>
+<figcaption>
+Conecction between cables of power supply and charging rails.
+</figcaption>
+</div>
+
+
+<div figure-id="fig:polarity_graph">
+<img src="images/polarity_graph.png" style="width: 100%"/>
+<figcaption>
+The polarities of the brass rods.
+</figcaption>
+</div>
 
 ### Attach to power source
 For powering the Duckiebots we use a power supply rated at 5V with 30Amps max. You can see the connections of the power supply in [](#fig:powersupply).
@@ -98,29 +133,3 @@ For powering the Duckiebots we use a power supply rated at 5V with 30Amps max. Y
 The connected power supply.
 </figcaption>
 </div>
-
-The cables of the brass rods must be polarized as seen in [](#fig:polarity_graph).
-
-<div figure-id="fig:polarity_graph">
-<img src="images/polarity_graph.png" style="width: 100%"/>
-<figcaption>
-The polarities of the brass rods.
-</figcaption>
-</div>
-
-
-### Fix the high voltage poles to tiles
-
-Use double-sided tape to mount the high voltage poles to the tiles.
-
-TODO add picture
-
-### Bend brass rails and mount them
-
-Bend the charging rails 5cm on both sides (in the same direction) to ensure that Duckiebots do not get stuck when arriving at the charging rail tiles.
-
-TODO add picture
-
-Then, clip the brass rails into the insulators.
-
-TODO add picture

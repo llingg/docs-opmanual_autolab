@@ -1,18 +1,27 @@
 # Future projects {#autocharging-future status=beta}
 
-There are still multiple tasks which would improve the charging area by a lot. In the following, you find a list of those tasks with a small description.
+There are still multiple tasks which would improve the charging area by a lot. In the following, you find a list of those tasks with a small description, ordered in descending priority.
 
 ## Improve the intersection navigation
 
 For traversing through the maintenance area, intersection navigation is a crucial part. With the new Unicorn Intersection Node, the success rate was raised up to over 90%. For a completely autonomous city, this is still way too low.
 
-## Implement the battery capacity estimation
+## Provide a flatter surface
 
-Currently, the time a Duckiebot drives through the city and stays inside a charger are hard coded variables. With a high enough charging time and a low enough driving time, it is ensured that a Duckiebot never reaches a battery level of 0%. The drawback is that the efficiency in terms of the ratio $\frac {driving time}{charging time}$ is very low. This can be improved by implementing the battery capacity estimation: with the new add-on board, one is able to measure the current going into the battery and therefore integrate it to obtain the battery level.
+With the original tiles, it is almost impossible to obtain a nice flat surface. This is the reason why sometimes a Duckiebot gets stuck or loses contact. An idea would be to replace the charging tiles with a black and flat surface (like sprayed wood) and tape the lines directly on it.
 
 ## Improve the vehicle detection
 
 In order to keep distance to a Duckiebot in front, the vehicle avoidance node detects a circle grid pattern ($7 \times 3$) and adapts the velocity. However, the detection only runs at $2Hz$ and fails sometimes.
+
+## Optimize CPU utilization
+
+Currently, CPU utilization is at 100% for all four cores. The most expensive node seems to be the Image Transformer Node which uses alone 40% of the CPU. This slows down the whole megacity.launch and could be cause for multiple bugs.
+
+## Implement the battery capacity estimation
+
+Currently, the time a Duckiebot drives through the city and stays inside a charger are hard coded variables. With a high enough charging time and a low enough driving time, it is ensured that a Duckiebot never reaches a battery level of 0%. The drawback is that the efficiency in terms of the ratio $\frac {driving time}{charging time}$ is very low. This can be improved by implementing the battery capacity estimation: with the new add-on board, one is able to measure the current going into the battery and therefore integrate it to obtain the battery level.
+
 
 ## Improve the TCP Communication Node
 
@@ -23,10 +32,6 @@ This node was not tested enough and may have some bugs which need to be fixed. A
 ## Fix the stop line sleep time
 
 In order to avoid stopping at the red line in opposite direction right after an intersection, there is a stop line sleep time implemented. This however does not work robustly - sometimes, that "bad" red line is still detected.
-
-## Optimize CPU utilization
-
-Currently, CPU utilization is at 100% for all four cores. The most expensive node seems to be the Image Transformer Node which uses alone 40% of the CPU. This slows down the whole megacity.launch and could be cause for multiple bugs.
 
 ## Proper shutdown procedure
 
