@@ -12,11 +12,14 @@ In this list, $X$ will denote the number of charging rail tiles in a charging mo
 * $(X + 1)$ $\times$ wooden structure top piece ($2 \times 2 \times 90cm$)
 * $(2 \times (X + 1))$ $\times$ wooden structure side piece ($2 \times 2 \times 20cm$)
 * $(2 \times (X + 1))$ $\times$ wooden structure floor piece ($10 \times 10 \times 1cm$)
-* $(4 \times (X + 1))$ Woodscrew for high voltage pole, i.e. screw $Ø3.2 \times 40mm$
+* $(4 \times (X + 1))$ $\times$ Woodscrew for high voltage pole, i.e. screw $Ø3.2 \times 40mm$
 * $(8 \times (X + 1))$ screw $M3 \times 30mm$ and $M3$ nuts
 * $(2 \times (X + 1))$ $\times$ insulator - [self-print here](https://www.thingiverse.com/thing:2996297/files) or [order here](https://www.shapeways.com/product/QN3HP9EAH/megacity-insulator)
 * Drill $Ø4mm$ and $Ø6mm$
-* $\lceil {\frac {X}{4}}\rceil \times $ power supply which enables you to drive 5V and 30Amps
+* $\frac {1}{per charger} \times $ power supply which enables you to drive 5V and 30Amps
+* $\frac{1}{per power supply} \times$ power cable
+* $18 \times$ cable shoes $Ø4mm$
+* crimping tool
 * $Ø4mm \times 6m$ red cable
 * $Ø4mm \times 6m$ black cable
 * $8 \times$ [laboratory plug CAT I Ø4mm](https://www.distrelec.ch/en/p/14048007)
@@ -105,15 +108,35 @@ Glued high voltage poles with clipped in charging rails.
 </figcaption>
 </div>
 
-### Solder laboratory plugs and plug them onto brass rails
+### Solder laboratory plugs
 
-Solder four red four black cables each to a laboratory plug. These cables should be long enough that the charging rails may be connected to the power supply. Then, connect the laboratory plugs to the bended ends of the charging rails as seen in [](#fig:mounted_plugs). The cables of the brass rods must be polarized as seen in [](#fig:polarity_graph).
+Solder four red and four black cables each to a laboratory plug as seen in [](#fig:soldered_plugs). These cables should be approximately 20-25cm long.
+
+<div figure-id="fig:soldered_plugs">
+<img src="images/soldered_plugs.jpg" style="width: 100%"/>
+<figcaption>
+Soldered laboratory plugs to the cables.
+</figcaption>
+</div>
+
+### Attach cable shoes
+On the other side of these cables you've soldered, mount a cable shoe on that side. Then connect two red and two black cables respectively together with another cable shoe with a M4 screw and a M4 nut. Then connect to the third cable shoe the corresponding red/black cable which will go towards the power supply. This third cable should be long enough to reach the power supply.
+
+<div figure-id="fig:connected_cables">
+<img src="images/cable_shoe_connection.jpg" style="width: 100%"/>
+<figcaption>
+Connection of the cables to the rails.
+</figcaption>
+</div>
+
+### Plug the soldered laboratory plug cable to the brass rail
+ Then, connect the laboratory plugs to the bended ends of the charging rails as seen in [](#fig:mounted_plugs). The cables of the brass rods must be polarized as seen in [](#fig:polarity_graph).
 
 
 <div figure-id="fig:mounted_plugs">
 <img src="images/mounted_plugs.jpg" style="width: 100%"/>
 <figcaption>
-Conecction between cables of power supply and charging rails.
+Connection between cables of power supply and charging rails.
 </figcaption>
 </div>
 
@@ -124,6 +147,7 @@ Conecction between cables of power supply and charging rails.
 The polarities of the brass rods.
 </figcaption>
 </div>
+
 
 ### Attach to power source
 For powering the Duckiebots we use a power supply rated at 5V with 30Amps max. You can see the connections of the power supply in [](#fig:powersupply).
