@@ -26,3 +26,8 @@ An example charging area which fulfills the specifications. This charging area c
 </div>
 
 The charging area in [](#fig:charging_area_example) fulfills the specifications and has four chargers (two per module).
+
+## Calculate the amount of power supplies
+
+According to the layout of your charging area and how many bots you want to fit into your town, you need to decide how many power supplies, you will going to use. We have decided to use a power supply which is rated at 5V and deliveres maximally 30Amps.
+The charging current of a Duckiebot is approximately 2Amps with the white battery from Ravpower. In order to have a safety margin, we use one power supply for each charger separately and we do not go over a length of 6 tiles. 

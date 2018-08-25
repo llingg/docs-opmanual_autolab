@@ -12,12 +12,13 @@ In this list, $X$ will denote the number of charging rail tiles in a charging mo
 * $(X + 1)$ $\times$ wooden structure top piece ($2 \times 2 \times 90cm$)
 * $(2 \times (X + 1))$ $\times$ wooden structure side piece ($2 \times 2 \times 20cm$)
 * $(2 \times (X + 1))$ $\times$ wooden structure floor piece ($10 \times 10 \times 1cm$)
-* $(4 \times (X + 1))$ $\times$ Woodscrew for high voltage pole, i.e. screw $Ø3.2 \times 40mm$
-* $(8 \times (X + 1))$ screw $M3 \times 30mm$ and $M3$ nuts
+* $(4 \times (X + 1))$ $\times$ woodscrew for high voltage pole, i.e. screw $Ø3.2 \times 40mm$
+* $(8 \times (X + 1))$ $\times$ screw $M3 \times 30mm$ and $M3$ nuts
 * $(2 \times (X + 1))$ $\times$ insulator - [self-print here](https://www.thingiverse.com/thing:2996297/files) or [order here](https://www.shapeways.com/product/QN3HP9EAH/megacity-insulator)
 * Drill $Ø4mm$ and $Ø6mm$
 * $\frac {1}{per charger} \times $ power supply which enables you to drive 5V and 30Amps
 * $\frac{1}{per power supply} \times$ power cable
+* $\frac{3}{per power supply} \times$ cable-end-sleeve
 * $18 \times$ cable shoes $Ø4mm$
 * crimping tool
 * $Ø4mm \times 6m$ red cable
@@ -92,7 +93,7 @@ How the screw head is hidden.
 
 ### Fix the high voltage poles to tiles
 
-Use double-sided tape to mount the high voltage poles to the tiles ([](#fig:glued_wooden_structure)).
+Use double-sided tape to mount the high voltage poles to the tiles ([](#fig:glued_wooden_structure)). Make sure that the high voltage poles are aligned throughout the whole charging module.
 
 
 ### Bend brass rails and mount them
@@ -110,7 +111,7 @@ Glued high voltage poles with clipped in charging rails.
 
 ### Solder laboratory plugs
 
-Solder four red and four black cables each to a laboratory plug as seen in [](#fig:soldered_plugs). These cables should be approximately 20-25cm long.
+Strip the insulation of the four red and four black cables on both sides with a wire stripper off. Then solder four red and four black cables each to a laboratory plug as seen in [](#fig:soldered_plugs). These cables should be approximately 20-25cm long.
 
 <div figure-id="fig:soldered_plugs">
 <img src="images/soldered_plugs.jpg" style="width: 100%"/>
@@ -120,7 +121,7 @@ Soldered laboratory plugs to the cables.
 </div>
 
 ### Attach cable shoes
-On the other side of these cables you've soldered, mount a cable shoe on that side. Then connect two red and two black cables respectively together with another cable shoe with a M4 screw and a M4 nut. Then connect to the third cable shoe the corresponding red/black cable which will go towards the power supply. This third cable should be long enough to reach the power supply.
+Mount a cable shoe $Ø4-6mm$ with a crimping tool on the other side of these cables you have soldered. Then connect two red and two black cables respectively together with another cable shoe with a M4 screw and a M4 nut as seen in [](#fig:connected_cables). Then connect to the third cable shoe the corresponding red/black cable which will go towards the power supply. This third cable should be long enough to reach the power supply. Also attach to the end of the third cable a cable shoe.
 
 <div figure-id="fig:connected_cables">
 <img src="images/cable_shoe_connection.jpg" style="width: 100%"/>
@@ -130,7 +131,7 @@ Connection of the cables to the rails.
 </div>
 
 ### Plug the soldered laboratory plug cable to the brass rail
- Then, connect the laboratory plugs to the bended ends of the charging rails as seen in [](#fig:mounted_plugs). The cables of the brass rods must be polarized as seen in [](#fig:polarity_graph).
+ Connect the laboratory plugs to the bended ends of the charging rails as seen in [](#fig:mounted_plugs). The cables of the brass rods must be polarized as seen in [](#fig:polarity_graph). Make sure that you connect the four rods on the left to one power supply and another four rods on the right to the other power supply.
 
 
 <div figure-id="fig:mounted_plugs">
@@ -148,6 +149,25 @@ The polarities of the brass rods.
 </figcaption>
 </div>
 
+### Prepare the power cable for the power supply
+Take the power cable and strip the isolation off. Then attach a cable-end-sleeve with the crimping tool as seen in [](#fig:power_cable). Then connect the prepared cable to the power supply exactly as it is shown in [](fig:attached_power_cable).
+
+Note:
+**It is important that ground, phase and neutral phase is connected the right way, so the colors need to match**.
+
+<div figure-id="fig:power_cable">
+<img src="images/power_cable.jpg" style="width: 100%"/>
+<figcaption>
+One end of the power cable before and after.
+</figcaption>
+</div>
+
+<div figure-id="fig:attached_power_cable">
+<img src="images/attached_power_cable.jpg" style="width: 100%"/>
+<figcaption>
+Attached power cable to the power supply.
+</figcaption>
+</div>
 
 ### Attach to power source
 For powering the Duckiebots we use a power supply rated at 5V with 30Amps max. You can see the connections of the power supply in [](#fig:powersupply).
