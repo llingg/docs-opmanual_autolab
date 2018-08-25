@@ -20,6 +20,7 @@ In this list, $X$ will denote the number of charging rail tiles in a charging mo
 * $\frac{1}{per power supply} \times$ power cable
 * $\frac{3}{per power supply} \times$ cable-end-sleeve
 * $18 \times$ cable shoes $Ø4mm$
+* $4 \times$ M4 screw 10mm and M4 Nut
 * crimping tool
 * $Ø4mm \times 6m$ red cable
 * $Ø4mm \times 6m$ black cable
@@ -150,7 +151,7 @@ The polarities of the brass rods.
 </div>
 
 ### Prepare the power cable for the power supply
-Take the power cable and strip the isolation off. Then attach a cable-end-sleeve with the crimping tool as seen in [](#fig:power_cable). Then connect the prepared cable to the power supply exactly as it is shown in [](fig:attached_power_cable).
+Take the power cable and strip the isolation off. Then attach a cable-end-sleeve with the crimping tool as seen in [](#fig:power_cable). Then connect the prepared cable to the power supply exactly as it is shown in [](#fig:attached_power_cable).
 
 Note:
 **It is important that ground, phase and neutral phase is connected the right way, so the colors need to match**.
@@ -170,10 +171,25 @@ Attached power cable to the power supply.
 </div>
 
 ### Attach to power source
-For powering the Duckiebots we use a power supply rated at 5V with 30Amps max. You can see the connections of the power supply in [](#fig:powersupply).
+Connect the power supply to the rails. Red cable to V+ and black cable to V- as shown in [](#fig:powersupply). Make also a connection between the two power supplies ground, in order to have a common ground.
+
 <div figure-id="fig:powersupply">
 <img src="images/powersupply.jpg" style="width: 80%"/>
 <figcaption>
 The connected power supply.
 </figcaption>
 </div>
+
+### Adjust the output voltage of the power source
+Turn on the power supply by plugging in the power cable. There is a voltage regulator next to the V+ connection - there you can adjust the voltage. Take a screw driver and a multimeter and measure the Voltage across V+ and V-. The Voltage should be adjusted to 5.5V.
+
+<div figure-id="fig:powersupply_cc">
+<img src="images/powersupply_cc.jpg" style="width: 80%"/>
+<figcaption>
+Voltage regulator seen as the plastic screw.
+</figcaption>
+</div>
+
+### Test your setup
+
+Place an assemblied Duckiebot which is capable of charging underneath the charging rails and see if the battery is going to charge.

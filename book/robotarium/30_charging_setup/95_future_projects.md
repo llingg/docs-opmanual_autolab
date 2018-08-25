@@ -44,3 +44,7 @@ With the original tiles, it is almost impossible to obtain a nice flat surface. 
 ## Consider a cooling system
 
 After operating the Duckiebot for a long time, the Raspberry Pi gets really hot at its interfaces (USB plugs, LAN Port, etc). For a 24/7 operating time that can influence the behavior of the Duckiebot a lot. If one would cool the Duckiebot actively by a little fan, the temperature wouldn't increase that much.
+
+## Implement a fault detection
+
+In order being able to act as soon as possible when a fault occurs on the charging station, a monitor system which enables the user to have a remote control over the whole auto-charging system could be developped. Then someone could for instance get a mail to clear a fault.
