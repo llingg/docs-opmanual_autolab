@@ -2,7 +2,17 @@
 
 For the construction of a charging module, you have many degrees of freedom. This includes the choice of material of the wooden structure (may be metal as well), the type of connection between the structure elements (screws, glue, nails), the length of the cables and many more.
 
+However, the following requirements need to be satisfied:
+
+* Insulators need to be mounted $210mm$ above tiles ([](#fig:hv_pole_drawing)) for optimal pressure between current collector and charging rails
+* Insulators need to be centered with respect to a lane to obtain good contact in center of lane
+* There must be at least $150mm$ in between the white lines and the pylons to provide enough space to drive in a lane
+* Enough high voltge poles (one per tile) must be used to provide a stable charger
+
 In the following, you find the description on how we did it in Zurich.
+
+
+TODO Thomas: from here
 
 ## Material for one charging module
 

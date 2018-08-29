@@ -15,7 +15,7 @@ Respect the constraints of Duckietown.
 Directly at the beginning of the next tile after a charger, add a red line [](#fig:red_line). This red line is used to determine whether a Duckiebot is the first in a charger or not.
 
 <div figure-id="fig:red_line">
-<img src="images/cable_shoe_connection" style="width: 100%"/>
+<img src="images/cable_shoe_connection.jpg" style="width: 100%"/>
 <figcaption>
 The red line after a charger.
 </figcaption>

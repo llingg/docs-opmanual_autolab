@@ -89,6 +89,8 @@ Neccessary parts for the assembly.
 
 Assemble the april tag plate by using the acrylic glass, screws and distance keepers as seen in [](#fig:assembled_at_plate)
 
+TODO Thomas: replace this pic
+
 <div figure-id="fig:assembled_at_plate">
 <img src="images/assembled_duckietop.jpg" style="width: 80%"/>
 <figcaption>
