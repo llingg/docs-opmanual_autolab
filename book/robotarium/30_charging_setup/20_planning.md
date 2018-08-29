@@ -29,4 +29,4 @@ The charging area in [](#fig:charging_area_example) fulfills the specifications 
 
 ## Calculate the amount of power supplies
 
-The charging current of a Duckiebot is approximately 2Amps at 5V. By using a 5v30A power supply, you are able to charge 15 Duckiebots. However, we recommend to use one power supply per charger. That way, you may use shorter cables and there have less voltage drop.
+The charging current of a Duckiebot is approximately 2Amps at 5V. By using a 5v30A power supply, you are able to charge 15 Duckiebots. However, we recommend to use one power supply per charger. That way, you may use shorter cables and therefore have less voltage drop.
