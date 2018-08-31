@@ -27,7 +27,7 @@ In this list, $X$ will denote the number of charging rail tiles in a charging mo
 * $2 \times $ power supply which enables you to drive 5V and 30Amps
 * $\frac{1}{per power supply} \times$ power cable
 * $\frac{3}{per power supply} \times$ cable-end-sleeve
-* $18 \times$ cable shoes $Ø4-6mm²$ M4
+* $18 \times$ cable shoes M4 $Ø4-6mm²$
 * $4 \times$ M4 screw 10mm and M4 Nut
 * $Ø4mm \times 6m$ red cable
 * $Ø4mm \times 6m$ black cable

@@ -14,7 +14,7 @@ Inside a charging module, Duckiebots drive in a charger ([](#sec:autocharging-de
 
 ## Current collector {#autocharging-definitions-currcol}
 
-The current collector is a flexible shaft mounted on top of a Duckiebot. Its purpose is to make contact with the charging rails.
+The current collector [](#fig:soldered_cc) is a flexible shaft mounted on top of a Duckiebot. Its purpose is to make contact with the charging rails.
 
 <div figure-id="fig:db_w_cc">
 <img src="images/result_current_collector.jpg" style="width: 80%"/>
