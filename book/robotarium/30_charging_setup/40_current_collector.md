@@ -89,10 +89,8 @@ Neccessary parts for the assembly.
 
 Assemble the april tag plate by using the acrylic glass, screws and distance keepers as seen in [](#fig:assembled_at_plate)
 
-TODO Thomas: replace this pic
-
 <div figure-id="fig:assembled_at_plate">
-<img src="images/assembled_duckietop.jpg" style="width: 80%"/>
+<img src="images/topplate.jpg" style="width: 80%"/>
 <figcaption>
 The assembled april tag plate
 </figcaption>
@@ -103,7 +101,7 @@ The assembled april tag plate
 Mount the current collector by using three screws and nuts as seen in [](#fig:screwed_current_collector)
 
 <div figure-id="fig:screwed_current_collector">
-<img src="images/screwed_current_collector.jpg" style="width: 80%"/>
+<img src="images/curr_collector_attach.jpg" style="width: 80%"/>
 <figcaption>
 The current collector mounted to the april tag plate.
 </figcaption>
@@ -125,14 +123,14 @@ The robotarium add-on board.
 Mount the april tag board with the current collector assembled to a Duckiebot as in [](#fig:result_cc) and [](#fig:mounted_at_plate). Plug in the USB cable to the battery of the Duckiebot.
 
 <div figure-id="fig:mounted_at_plate">
-<img src="images/mounted_duckietop.jpg" style="width: 80%"/>
+<img src="images/att_topplate.jpg" style="width: 80%"/>
 <figcaption>
 The april tag plate mounted to a Duckiebot.
 </figcaption>
 </div>
 
 <div figure-id="fig:result_cc">
-<img src="images/result_current_collector.jpg" style="width: 80%"/>
+<img src="images/assemblied_dbot.jpg" style="width: 80%"/>
 <figcaption>
 The resulting charging-capable Duckiebot.
 </figcaption>
