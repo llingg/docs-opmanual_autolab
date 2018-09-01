@@ -41,7 +41,7 @@ Adjust the IP and PORT if needed. If you change these settings, you need to adju
 
 as well.
 
-### Launch the TCP server
+### Launch the TCP server {#autocharging-tcp-server}
 
 Enter the command
 
