@@ -17,14 +17,14 @@ Requires: Material for one charging module [](#sec:autocharging-module-mat)
 
 Requires: Extra tools for assembling [](#autocharging-extratools)
 
-Result: A charging module for charging Duckiebots.
+Result: A charging module for charging Duckiebots [](#fig:charging_module_during_operation).
 
 Next: Assembly a charging capable Duckiebot with a current collector [](#sec:autocharging-current-collector).
 
 </div>
 
 <div figure-id="fig:charging_module_during_operation">
-<img src="images/charging-module.jpg" style="width: 80%" data-rotate="90"/>
+<img src="images/charging-module-rot.jpg" style="width: 80%"/>
 <figcaption>
 A resulting charging module during operation.
 </figcaption>

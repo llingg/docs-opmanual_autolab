@@ -8,6 +8,8 @@ Requires: Material for a single current collector [](#sec:autocharging-current-c
 
 Result: A charging capable Duckiebot [](#fig:capable-Dbot).
 
+Next: Assembly your maintenance area [](#sec:autocharging-maintenance-area)
+
 </div>
 
 
