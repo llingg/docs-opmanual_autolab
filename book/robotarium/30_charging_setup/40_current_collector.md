@@ -2,7 +2,23 @@
 
 In order to let a Duckiebot charge in a charger, additional hardware is needed. This piece is called the current collector.
 
-## Materials for a single current collector
+<div class='requirements' markdown="1">
+
+Requires: Material for a single current collector [](#sec:autocharging-current-collector-mat)
+
+Result: A charging capable Duckiebots.
+
+</div>
+
+
+<div figure-id="fig:capable-Dbot">
+<img src="images/assemblied_dbot.jpg" style="width: 80%"/>
+<figcaption>
+A charging capable Duckiebot.
+</figcaption>
+</div>
+
+## Materials for a single current collector {#autocharging-current-collector-mat}
 
 * $6 \times$ [laboratory plug CAT I Ø4mm](https://www.distrelec.ch/en/p/14048007)
 * $2 \times$ 1mm cable, length 30cm

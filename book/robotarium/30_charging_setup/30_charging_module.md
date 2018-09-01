@@ -11,8 +11,26 @@ However, the following requirements need to be satisfied:
 
 In the following, you find the description on how we did it in Zurich.
 
+<div class='requirements' markdown="1">
 
-## Material for one charging module
+Requires: Material for one charging module [](#sec:autocharging-module-mat)
+
+Requires: Extra tools for assembling [](#autocharging-extratools)
+
+Result: A charging module for charging Duckiebots.
+
+Next: Assembly a charging capable Duckiebot with a current collector [](#sec:autocharging-current-collector).
+
+</div>
+
+<div figure-id="fig:charging_module_during_operation">
+<img src="images/charging-module.jpg" style="width: 80%"/>
+<figcaption>
+A resulting charging module during operation.
+</figcaption>
+</div>
+
+## Material for one charging module {#autocharging-module-mat}
 
 In this list, $X$ will denote the number of charging rail tiles in a charging module. \emph{Reminder}: One charging rail tile can fit $3$ Duckiebots ($1.5$ per lane).
 
@@ -33,7 +51,7 @@ In this list, $X$ will denote the number of charging rail tiles in a charging mo
 * $Ø4mm \times 6m$ black cable
 * $8 \times$ [laboratory plug CAT I Ø4mm](https://www.distrelec.ch/en/p/14048007)
 
-## Extra tools
+## Extra tools {#autocharging-extratools}
 In order to put things together you may need the following extra tools:
 
 * crimping tool

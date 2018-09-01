@@ -1,5 +1,12 @@
 # Building a maintenance area {#autocharging-maintenance-area status=beta}
 
+<div figure-id="fig:maintenance-area">
+<img src="images/MaintenanceArea.jpg" style="width: 100%"/>
+<figcaption>
+A complete maintenance area.
+</figcaption>
+</div>
+
 Next, please build the whole maintenance area.
 
 ##Put together all tiles
