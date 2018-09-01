@@ -6,7 +6,7 @@ In order to let a Duckiebot charge in a charger, additional hardware is needed. 
 
 Requires: Material for a single current collector [](#sec:autocharging-current-collector-mat)
 
-Result: A charging capable Duckiebots.
+Result: A charging capable Duckiebot [](#fig:capable-Dbot).
 
 </div>
 

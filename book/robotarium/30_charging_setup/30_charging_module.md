@@ -24,7 +24,7 @@ Next: Assembly a charging capable Duckiebot with a current collector [](#sec:aut
 </div>
 
 <div figure-id="fig:charging_module_during_operation">
-<img src="images/charging-module.jpg" style="width: 80%"/>
+<img src="images/charging-module.jpg" style="width: 80%" data-rotate="90"/>
 <figcaption>
 A resulting charging module during operation.
 </figcaption>
