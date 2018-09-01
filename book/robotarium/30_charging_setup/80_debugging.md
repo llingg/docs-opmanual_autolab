@@ -1,4 +1,4 @@
-# Testing and debugging {#autocharging-debugging status=draft}
+# Testing and debugging {#autocharging-debugging status=beta}
 
 ## Debug the whole charging pipeline
 
