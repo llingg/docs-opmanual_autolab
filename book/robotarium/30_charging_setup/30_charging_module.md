@@ -1,10 +1,36 @@
-# Charging module {#autocharging-charging-module status=draft}
+# Charging module {#autocharging-charging-module status=beta}
 
 For the construction of a charging module, you have many degrees of freedom. This includes the choice of material of the wooden structure (may be metal as well), the type of connection between the structure elements (screws, glue, nails), the length of the cables and many more.
 
+However, the following requirements need to be satisfied:
+
+* Insulators need to be mounted $210mm$ above tiles ([](#fig:hv_pole_drawing)) for optimal pressure between current collector and charging rails
+* Insulators need to be centered with respect to a lane to obtain good contact in center of lane
+* There must be at least $150mm$ in between the white lines and the pylons to provide enough space to drive in a lane
+* Enough high voltge poles (one per tile) must be used to provide a stable charger
+
 In the following, you find the description on how we did it in Zurich.
 
-## Material for one charging module
+<div class='requirements' markdown="1">
+
+Requires: Material for one charging module [](#sec:autocharging-module-mat)
+
+Requires: Extra tools for assembling [](#autocharging-extratools)
+
+Result: A charging module for charging Duckiebots [](#fig:charging_module_during_operation).
+
+Next: Assembly a charging capable Duckiebot with a current collector [](#sec:autocharging-current-collector).
+
+</div>
+
+<div figure-id="fig:charging_module_during_operation">
+<img src="images/charging-module-rot.jpg" style="width: 80%"/>
+<figcaption>
+A resulting charging module during operation.
+</figcaption>
+</div>
+
+## Material for one charging module {#autocharging-module-mat}
 
 In this list, $X$ will denote the number of charging rail tiles in a charging module. \emph{Reminder}: One charging rail tile can fit $3$ Duckiebots ($1.5$ per lane).
 
@@ -16,15 +42,24 @@ In this list, $X$ will denote the number of charging rail tiles in a charging mo
 * $(8 \times (X + 1))$ $\times$ screw $M3 \times 30mm$ and $M3$ nuts
 * $(2 \times (X + 1))$ $\times$ insulator - [self-print here](https://www.thingiverse.com/thing:2996297/files) or [order here](https://www.shapeways.com/product/QN3HP9EAH/megacity-insulator)
 * Drill $Ø4mm$ and $Ø6mm$
-* $\frac {1}{per charger} \times $ power supply which enables you to drive 5V and 30Amps
+* $2 \times $ power supply which enables you to drive 5V and 30Amps
 * $\frac{1}{per power supply} \times$ power cable
 * $\frac{3}{per power supply} \times$ cable-end-sleeve
-* $18 \times$ cable shoes $Ø4mm$
+* $18 \times$ cable shoes M4 $Ø4-6mm²$
 * $4 \times$ M4 screw 10mm and M4 Nut
-* crimping tool
 * $Ø4mm \times 6m$ red cable
 * $Ø4mm \times 6m$ black cable
 * $8 \times$ [laboratory plug CAT I Ø4mm](https://www.distrelec.ch/en/p/14048007)
+
+## Extra tools {#autocharging-extratools}
+In order to put things together you may need the following extra tools:
+
+* crimping tool
+* wire stripper
+* hot glue gun
+* solder iron and solder
+* drill
+* screw driver
 
 
 ## Building a charging module
@@ -96,6 +131,8 @@ How the screw head is hidden.
 
 Use double-sided tape to mount the high voltage poles to the tiles ([](#fig:glued_wooden_structure)). Make sure that the high voltage poles are aligned throughout the whole charging module.
 
+\emph{Optional}: you could also use hot glue instead of double-sided tape.
+
 
 ### Bend brass rails and mount them
 
@@ -122,7 +159,26 @@ Soldered laboratory plugs to the cables.
 </div>
 
 ### Attach cable shoes
-Mount a cable shoe $Ø4-6mm$ with a crimping tool on the other side of these cables you have soldered. Then connect two red and two black cables respectively together with another cable shoe with a M4 screw and a M4 nut as seen in [](#fig:connected_cables). Then connect to the third cable shoe the corresponding red/black cable which will go towards the power supply. This third cable should be long enough to reach the power supply. Also attach to the end of the third cable a cable shoe.
+In order to crimp a cable shoe onto a cable, you need the following things which you can see in [](#fig:crimping_tools).
+
+<div figure-id="fig:crimping_tools">
+<img src="images/crimping.jpg" style="width: 100%"/>
+<figcaption>
+Crimping tool with a cable and a cable shoe M4 $Ø4-6mm²$.
+</figcaption>
+</div>
+
+First put the cable shoe onto the uninsulated cable such that it looks as in [](#fig:attached_crimped_cable). Then take the crimping tool, put the cable inside the yellow hole and press the cable shoe on it.
+
+<div figure-id="fig:attached_crimped_cable">
+<img src="images/crimped_cable.jpg" style="width: 100%"/>
+<figcaption>
+Crimped cable with a cable shoe.
+</figcaption>
+</div>
+
+### Connect the cable to the power supply
+Mount a cable shoe $Ø4-6mm²$ with a crimping tool on the other side of these cables you have soldered. Then connect two red and two black cables respectively together with another cable shoe with a M4 screw and a M4 nut as seen in [](#fig:connected_cables). Then connect to the third cable shoe the corresponding red/black cable which will go towards the power supply. This third cable should be long enough to reach the power supply. Also attach to the end of the third cable a cable shoe.
 
 <div figure-id="fig:connected_cables">
 <img src="images/cable_shoe_connection.jpg" style="width: 100%"/>
@@ -151,11 +207,18 @@ The polarities of the brass rods.
 </div>
 
 ### Prepare the power cable for the power supply
-Take the power cable and strip the isolation off. Then attach a cable-end-sleeve with the crimping tool as seen in [](#fig:power_cable). Then connect the prepared cable to the power supply exactly as it is shown in [](#fig:attached_power_cable).
+Take the power cable [](#fig:pow_kabel) and strip the isolation off. Then attach a cable-end-sleeve with the crimping tool as seen in [](#fig:power_cable). Then connect the prepared cable to the power supply exactly as it is shown in [](#fig:attached_power_cable).
 
 Note:
 **It is important that ground, phase and neutral phase is connected the right way, so the colors need to match**.
+<div figure-id="fig:pow_kabel">
+<img src="images/powercable.jpg" style="width: 100%"/>
+<figcaption>
+A power cable.
+</figcaption>
+</div>
 
+<p float="left">
 <div figure-id="fig:power_cable">
 <img src="images/power_cable.jpg" style="width: 100%"/>
 <figcaption>
@@ -169,27 +232,21 @@ One end of the power cable before and after.
 Attached power cable to the power supply.
 </figcaption>
 </div>
+</p>
 
 ### Attach to power source
 Connect the power supply to the rails. Red cable to V+ and black cable to V- as shown in [](#fig:powersupply). Make also a connection between the two power supplies ground, in order to have a common ground.
 
 <div figure-id="fig:powersupply">
-<img src="images/powersupply.jpg" style="width: 80%"/>
+<img src="images/powersupply_attach.jpg" style="width: 80%"/>
 <figcaption>
 The connected power supply.
 </figcaption>
 </div>
 
 ### Adjust the output voltage of the power source
-Turn on the power supply by plugging in the power cable. There is a voltage regulator next to the V+ connection - there you can adjust the voltage. Take a screw driver and a multimeter and measure the Voltage across V+ and V-. The Voltage should be adjusted to 5.5V.
-
-<div figure-id="fig:powersupply_cc">
-<img src="images/powersupply_cc.jpg" style="width: 80%"/>
-<figcaption>
-Voltage regulator seen as the plastic screw.
-</figcaption>
-</div>
+Turn on the power supply by plugging in the power cable. There is a voltage regulator - the plastic screw - (see [](#fig:powersupply)) next to the V+ connection - there you can adjust the voltage. Take a screw driver and a multimeter and measure the Voltage across V+ and V-. The Voltage should be adjusted to 5.5V.
 
 ### Test your setup
 
-Place an assemblied Duckiebot which is capable of charging underneath the charging rails and see if the battery is going to charge.
+Place an assemblied Duckiebot [](#fig:result_cc) which is capable of charging underneath the charging rails, turn on the power supplies and see if the battery is going to charge.

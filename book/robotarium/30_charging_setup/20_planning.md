@@ -16,7 +16,7 @@ $ ChargingTiles = \frac{Duckiebots}{3}$
 
 ## Plan the charging area
 
-**In between an intersection and a charging rail tile, there needs to be at least one straight.**
+**In between an intersection and a charging rail tile, there needs to be at least one straight.** This restriction comes from the fact that the current collector may not touch a charging rail while traversing through an intersection to avoid additional disturbances.
 
 <div figure-id="fig:charging_area_example">
 <img src="images/charging_area_example.png" style="width: 80%"/>
@@ -29,5 +29,4 @@ The charging area in [](#fig:charging_area_example) fulfills the specifications 
 
 ## Calculate the amount of power supplies
 
-According to the layout of your charging area and how many bots you want to fit into your town, you need to decide how many power supplies, you will going to use. We have decided to use a power supply which is rated at 5V and deliveres maximally 30Amps.
-The charging current of a Duckiebot is approximately 2Amps with the white battery from Ravpower. In order to have a safety margin, we use one power supply for each charger separately and we do not go over a length of 6 tiles. 
+The charging current of a Duckiebot is approximately 2Amps at 5V. By using a 5v30A power supply, you are able to charge 15 Duckiebots. However, we recommend to use one power supply per charger. That way, you may use shorter cables and therefore have less voltage drop.

@@ -2,7 +2,25 @@
 
 In order to let a Duckiebot charge in a charger, additional hardware is needed. This piece is called the current collector.
 
-## Materials for a single current collector
+<div class='requirements' markdown="1">
+
+Requires: Material for a single current collector [](#sec:autocharging-current-collector-mat)
+
+Result: A charging capable Duckiebot [](#fig:capable-Dbot).
+
+Next: Assembly your maintenance area [](#sec:autocharging-maintenance-area)
+
+</div>
+
+
+<div figure-id="fig:capable-Dbot">
+<img src="images/assemblied_dbot.jpg" style="width: 80%"/>
+<figcaption>
+A charging capable Duckiebot.
+</figcaption>
+</div>
+
+## Materials for a single current collector {#autocharging-current-collector-mat}
 
 * $6 \times$ [laboratory plug CAT I Ø4mm](https://www.distrelec.ch/en/p/14048007)
 * $2 \times$ 1mm cable, length 30cm
@@ -90,7 +108,7 @@ Neccessary parts for the assembly.
 Assemble the april tag plate by using the acrylic glass, screws and distance keepers as seen in [](#fig:assembled_at_plate)
 
 <div figure-id="fig:assembled_at_plate">
-<img src="images/assembled_duckietop.jpg" style="width: 80%"/>
+<img src="images/topplate.jpg" style="width: 80%"/>
 <figcaption>
 The assembled april tag plate
 </figcaption>
@@ -101,7 +119,7 @@ The assembled april tag plate
 Mount the current collector by using three screws and nuts as seen in [](#fig:screwed_current_collector)
 
 <div figure-id="fig:screwed_current_collector">
-<img src="images/screwed_current_collector.jpg" style="width: 80%"/>
+<img src="images/curr_collector_attach.jpg" style="width: 80%"/>
 <figcaption>
 The current collector mounted to the april tag plate.
 </figcaption>
@@ -123,14 +141,14 @@ The robotarium add-on board.
 Mount the april tag board with the current collector assembled to a Duckiebot as in [](#fig:result_cc) and [](#fig:mounted_at_plate). Plug in the USB cable to the battery of the Duckiebot.
 
 <div figure-id="fig:mounted_at_plate">
-<img src="images/mounted_duckietop.jpg" style="width: 80%"/>
+<img src="images/att_topplate.jpg" style="width: 80%"/>
 <figcaption>
 The april tag plate mounted to a Duckiebot.
 </figcaption>
 </div>
 
 <div figure-id="fig:result_cc">
-<img src="images/result_current_collector.jpg" style="width: 80%"/>
+<img src="images/assemblied_dbot.jpg" style="width: 80%"/>
 <figcaption>
 The resulting charging-capable Duckiebot.
 </figcaption>

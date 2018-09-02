@@ -2,8 +2,16 @@
 
 Maintainer: Julien Kindle, Thomas Ackermann
 
-A Robotarium consists of a Megacity - a big Duckietown - which has many intersections, long roads and several additional features such as a charging solution where Duckiebots can charge automatically, a localization system, etc... 
+A Robotarium consists of a Duckietown and a maintenance area. These two elements must be connected by a single road, see [](#fig:robotarium).
+
 The following documentation shall give an overview about how things are going to be built and operated for further development and improvements.
+
+<div figure-id="fig:robotarium">
+<img src="images/robotarium.png" style="width: 60%"/>
+<figcaption>
+conventions
+</figcaption>
+</div>
 
 
 **Keywords**: robotics, safety-critical AI, self-driving cars, autonomous mobility on demand.
