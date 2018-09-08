@@ -13,7 +13,7 @@ Requires: Some tape and wood glue []
 
 Result: A traffic light [](#fig:TL-25).  
 
-Next: Installation of the traffic light in the town [](#sec:traffic_light_installationin_town).
+Next: Installation of the traffic light in the town [](#sec:traffic_light_installation_in_town).
 
 </div>
 
@@ -197,7 +197,7 @@ Close the ground module with the case.
 </figcaption>
 </div>
 
-### Add traffic sign stands 
+### Add traffic sign stands
 <div figure-id="fig:TL-23">
 <img src="images/TL-23.jpg" style="width: 80%"/>
 <figcaption>
