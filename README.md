@@ -1,23 +1,4 @@
-# docs-robotarium
-Duckumentation for Robotariums around the world.
+This repository is a duckuments book. 
 
-
-# Setup
-
-First, create a fork (top right of this page).
-
-Then, clone your own fork using
-
-    git clone <your_fork_url>
-
-As soon as this is done, change directory into the cloned fork and do
-
-    source init.sh
-
-You're ready to go!
-
-# Compiling changes
-
-Compile changes by executing
-
-    make compile
+Please see the repository [docs-duckumentation](https://github.com/duckietown/docs-duckumentation)
+for instructions on how to compile this book, and use that repository for filing issues.
