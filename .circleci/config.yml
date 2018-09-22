@@ -1,9 +1,8 @@
-
 version: 2
 jobs:
     build:
         docker:
-        - image: andreacensi/mcdp_books:duckuments@sha256:5e149f33837f999e0aa5233a77f8610baf3c3fc1a2f1bfb500756b427cf52dbe
+        - image: andreacensi/mcdp_books:duckuments@sha256:ecc502de748fa936f4420980b2fa9f255250400bce32c9b20ad4d6d7bfc49ccf
           environment:
               COLUMNS: 160
               TERM: xterm-256color
@@ -25,6 +24,9 @@ jobs:
         - run:
             name: Link check
             command: |
+                # linkcheck drops permissions to nobody, so we need to make everything readable
+                chmod -R go+rwX /root
+                
                 . /project/deploy/bin/activate && make linkcheck || true
 
         - run:
