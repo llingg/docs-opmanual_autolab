@@ -16,8 +16,6 @@ See [](#components_assembly)
 
 The image setup is the same procedure of preparing images for Duckiebots.
 
-See [](#duckiebot-config-db18)
-
 In the robotarium of ETH Zurich, the watchtowers has username `mom`, hostname `watchtowerXX` (where XX specify the number of the watchtower.) and password `MomWatches`.
 
 However, it will be pretty time consuming to prepare the images one by one. Here we provide some little tricks to decrease time for manufacture.
@@ -29,8 +27,6 @@ However, it will be pretty time consuming to prepare the images one by one. Here
 Prepare this Image, but _DON’T_ do ssh configuration. (You could do Step 8.14 if you wants Duckie Logos)
 
 Name the watchtower `mom@watchtower01` with username `mom` and hostname `watchtower01`. Set the password to `MomWatches`.
-
-See: [](#duckiebot-config-db18)
 
 We recommend you to erase the Wifi configuration file in /etc/Network/system-connections/duckietown. Since we are connecting watchtowers through Ethernet, it will confuse your Wifi router if it connects to the router via Ethernet and Wifi at the same time.
 

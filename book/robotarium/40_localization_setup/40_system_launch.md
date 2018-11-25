@@ -34,7 +34,7 @@ _The default map for localization system is None. You need to specify the map ea
 
 _The default map for system calibration is testcircle.yaml_
 
-## System Calibration (Automatically)
+## System calibration (Automatically)
 
 To perform auto-localization, we need to know the transformation between local frame and the global frame . Of course one could enter the pose of each tag hand-by-hand, but that will be pretty annoying and inefficient. Here we introduce a tool that could calibrate the whole system, provide the transformation of each tag and save them to and yaml file for future usage.
 
