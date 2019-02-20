@@ -4,4 +4,4 @@ Maintainer: Amaury Camus
 
 
 
-**Keywords**: robotics, megacity, robotarium, traffic-lights
+**Keywords**: robotics, megacity, robotarium, traffic-lights, lights, traffic
