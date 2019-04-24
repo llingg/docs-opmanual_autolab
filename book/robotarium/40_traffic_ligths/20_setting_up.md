@@ -10,6 +10,6 @@ The raspberry need to have DB18 setup with docker. Refer to **To be determined**
 
 Then, once the watchtower is up and running, run :
 
-    docker -H watchtowerXX.local run -dit --privileged --name trafficlight --network=host duckietown/traffic_lights
+    docker -H watchtowerXX.local run -dit --privileged --name trafficlight --network=host duckietown/traffic-lights
 
 The lights should start blinking now.
