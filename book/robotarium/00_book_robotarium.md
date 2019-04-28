@@ -1,6 +1,6 @@
-# The Robotarium {#book:robotarium status=draft}
+# The Robotarium {#book:robotarium status=ready}
 
-Maintainer: Julien Kindle, Thomas Ackermann
+Note: Robotariums are currently under development. The following documentation is very volatile. We expect convergence to happen
 
 A Robotarium consists of a Duckietown and a maintenance area. These two elements must be connected by a single road, see [](#fig:robotarium).
 
