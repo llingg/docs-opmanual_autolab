@@ -27,7 +27,7 @@ The hardware the system relies on are "watchtowers". A watchtower is a tower com
 
 The system are designed that watchtowers don't need to be in a specific height or pose as long as they could see a sufficient field of view and closed enough to track Apriltags in its field of view. However, we still provide the spec of the watchtowers so that one could produce watchtowers without testing field of view.
 
-See hardware part in chapter [](#auto-localization-hardware)
+See hardware part in chapter [](#localization-watchtower-hardware)
 
 TODO: Add hardware picture
 
