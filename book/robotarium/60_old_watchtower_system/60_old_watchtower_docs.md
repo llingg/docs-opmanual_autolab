@@ -1,4 +1,4 @@
-# Old watchtower docs {#part:autolab-old-localization status=beta}
+# Old watchtower docs {#part:autolab-old-localization status=outdated}
 
 
 The autolab needs an integrated localization system. This system currently relies on watchtowers and april tags.

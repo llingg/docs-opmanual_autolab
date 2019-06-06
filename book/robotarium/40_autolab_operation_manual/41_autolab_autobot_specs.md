@@ -1,1 +1,1 @@
-# Autobot specifications {#autolab-autobot-specs status=ready}
+# Autobot specifications {#autolab-autobot-specs status=beta}

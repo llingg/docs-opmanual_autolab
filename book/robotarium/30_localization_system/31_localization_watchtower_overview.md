@@ -1,4 +1,4 @@
-# Watchtower Overview {#localization-watchtower-overview status=ready}
+# Watchtower Overview {#localization-watchtower-overview status=beta}
 
 TODO : update
 

@@ -1,4 +1,4 @@
-# Auto-Localization Operation Procedure {#auto-localization-operation-procedure status=beta}
+# Auto-Localization Operation Procedure {#auto-localization-operation-procedure status=outdated}
 
 TODO: Move this to the Autolab book.
 

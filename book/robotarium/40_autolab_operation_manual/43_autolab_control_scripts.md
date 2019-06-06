@@ -1,1 +1,1 @@
-# Autolab control and monitoring scripts {#autolab-control-scripts status=ready}
+# Autolab control and monitoring scripts {#autolab-control-scripts status=beta}

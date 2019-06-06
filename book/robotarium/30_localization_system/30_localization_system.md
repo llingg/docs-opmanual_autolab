@@ -1,4 +1,4 @@
-# Localization System {#part:autolab-localization status=beta}
+# Localization System {#part:autolab-localization status=draft}
 
 
 The autolab needs an integrated localization system. This system currently relies on watchtowers and april tags.

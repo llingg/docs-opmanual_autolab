@@ -1,1 +1,1 @@
-# Autolab complete integration {#autolab-complete-integration status=ready}
+# Autolab complete integration {#autolab-complete-integration status=beta}
