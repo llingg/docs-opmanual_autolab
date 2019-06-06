@@ -2,4 +2,4 @@
 
 
 
-**Keywords**: robotics, robotarium, auto-charging, charging, maintenance
+**Keywords**: robotics, Autolab, auto-charging, charging, maintenance

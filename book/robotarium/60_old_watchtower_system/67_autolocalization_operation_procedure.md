@@ -1,6 +1,6 @@
 # Auto-Localization Operation Procedure {#auto-localization-operation-procedure status=beta}
 
-TODO: Move this to the Robotarium book.
+TODO: Move this to the Autolab book.
 
 TODO: add knowledge box
 
@@ -8,7 +8,7 @@ In this document, we wrote down the procedure of launching Auto-localization sys
 
 ## Overview
 
-The purpose of this chapter is to guide all robotarium builders in the world to successfully launch the Auto-localization system.
+The purpose of this chapter is to guide all Autolab builders in the world to successfully launch the Auto-localization system.
 
 The procedure including two part, map setup, system calibration and system localization The system calibration procedure should calculate and save the transformation matrices from local tags frame to the origin tag frame. The system localization procedure is simply the localization function.
 
@@ -25,7 +25,7 @@ You need to create your own map file to make the system work! Create a map file 
     laptop $ cd ~/duckietown/catkin_ws/src/30-localization-and-planning/auto_localization/config
     laptop $ cp testcircle_origin(dontoverwrite).yaml ![your map].yaml
 
-The `your map`.yaml is the map file for your robotarium, name it whatever you want. Edit `your map`, modify the id of `origin` to your origin tag id, and add all your watchtowers' hostnames to `watchtowers`.
+The `your map`.yaml is the map file for your Autolab, name it whatever you want. Edit `your map`, modify the id of `origin` to your origin tag id, and add all your watchtowers' hostnames to `watchtowers`.
 
 ## System Calibration
 

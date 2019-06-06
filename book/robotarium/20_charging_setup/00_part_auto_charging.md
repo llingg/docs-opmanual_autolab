@@ -4,4 +4,4 @@ Duckiebots have a limited battery capacity. Therefore to create a fully autonomo
 
 Please keep in mind that this solution is still not perfect - in [](#autocharging-future), you find the issues which should be solved next.
 
-**Keywords**: robotics, megacity, robotarium, auto-charging, charging, maintenance
+**Keywords**: robotics, megacity, Autolab, auto-charging, charging, maintenance

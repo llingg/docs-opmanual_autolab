@@ -1,3 +1,3 @@
-# Traffic Lights {#part:robotarium-traffic-light}
+# Traffic Lights {#part:Autolab-traffic-light}
 
-**Keywords**: robotics, megacity, robotarium, traffic-lights, lights, traffic
+**Keywords**: robotics, megacity, Autolab, traffic-lights, lights, traffic

@@ -124,7 +124,7 @@ The image setup is the same procedure of preparing images for Duckiebots.
 
 See setup-duckiebot
 
-In the robotarium of ETH Zurich, the watchtowers has username **mom**, hostname **watchtowerXX** (where XX specify the number of the watchtower.) and password **MomWatches**.
+In the Autolab of ETH Zurich, the watchtowers has username **mom**, hostname **watchtowerXX** (where XX specify the number of the watchtower.) and password **MomWatches**.
 
 However, it will be pretty time consuming to prepare the images one by one. Here we provide some little tricks to decrease time for manufacture.
 

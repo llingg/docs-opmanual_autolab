@@ -24,7 +24,7 @@ A charging capable Duckiebot.
 
 * $6 \times$ [laboratory plug CAT I Ø4mm](https://www.distrelec.ch/en/p/14048007)
 * $2 \times$ 1mm cable, length 30cm
-* Robotarium add-on board
+* Autolab add-on board
 * If printer available: $5g$ Material for the 3D printer (cutest color is yellow)
 * April tag plate
 * $16 \times$ plastic spacers $M2.5 \times 12mm$ **or** $4 \times$ spacers $M2.5 \times 50mm$
@@ -125,14 +125,14 @@ The current collector mounted to the april tag plate.
 </figcaption>
 </div>
 
-### Plug in the robotarium add-on board
+### Plug in the Autolab add-on board
 
-Plug in the robotarium add-on board as seen in [](#fig:plugged_addon_board). Also, screw the cables from the current collector as well as the open ends from the open ended USB cable to the add-on board.
+Plug in the Autolab add-on board as seen in [](#fig:plugged_addon_board). Also, screw the cables from the current collector as well as the open ends from the open ended USB cable to the add-on board.
 
 <div figure-id="fig:plugged_addon_board">
 <img src="images/plugged_addon_board.jpg" style="width: 80%"/>
 <figcaption>
-The robotarium add-on board.
+The Autolab add-on board.
 </figcaption>
 </div>
 

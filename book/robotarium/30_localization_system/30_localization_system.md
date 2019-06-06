@@ -5,7 +5,7 @@ The autolab needs an integrated localization system. This system currently relie
 
 Watchtowers enable the actual Duckietown city to sense what is going on in its roads.
 
-Note: Watchtowers are an experimental feature of Duckietown, which are currently only used in Robotariums.
+Note: Watchtowers are an experimental feature of Duckietown, which are currently only used in Autolabs.
 
 * [](#localization-watchtower-overview): What are watchtowers, and what is their use?
 * [](#localization-watchtower-hardware): How to assemble watchtowers.
