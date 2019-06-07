@@ -1,6 +1,7 @@
 # Autolab definition {#part:autolab-definition status=draft}
 
 <div class='requirements' markdown="1">
+
 Requires: A Duckietown up to specifications from [the duckietown book](+opmanual_duckietown#duckietowns).
 
 Results: Knowledge of the fundamental structures that make an Autolab.
