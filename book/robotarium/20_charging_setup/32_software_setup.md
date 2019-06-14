@@ -1,29 +1,32 @@
-# Software: Create the map {#autocharging-map status=beta}
+# Software setup on the Duckiebot {#autocharging-map status=beta}
+
+## Goal
+
+In order to allow the duckiebot to have the autocharging capability. The duckiebot requires to run a container which does the following tasks.
+
+1) The duckiebot has to be guided from any place on the map to the charging area.
+2) At the charging area, it understands the instructions of the autocharging manager, which directs it to the appropriate charging lane.
+3) From the autocharging entrance the duckiebot follows the correct path to the charging lane
+4) In the charging lane it successfully charges.
+5) After charging the duckiebot navigates back to the city.
+
+All these tasks are bundled in the megacity image. However, prior to running it, the appropriate paths of the autocharging area have to be setup.
 
 ## Preparation
 
-The branch used for Autolabs is called megacity.
+Clone the following repository
 
-Checkout the branch megacity and build the catkin workspace
+    git clone https://github.com/duckietown/rpi-autocharging-demo.git
+    cd rpi-autocharging-demo.git
+    vim default.yaml
 
-    git checkout megacity
-    git pull
-    ./dependencies_for_duckiebot.sh
-    ./dependencies_common.sh
-    source environment.sh
-    make build-catkin
+The default.yaml file should have the following outline and structure:
 
+picture of the yaml file
 
-Go to the configuration file folder for the maintenance node
+The parameters in the yaml file correspond to the following map:
 
-    cd catkin_ws/src/00-infrastructure/duckietown/config/baseline
-    /maintenance_control/maintenance_control_node
-
-and copy the default.yaml file for your city
-
-    cp default.yaml <your_city_name>.yaml
-
-Edit the newly created file.
+picture of map
 
 The parameters in the config file are dictionaries - each key (i.e. '150') stands for an april tag ID and maps to either a single direction (i.e. 1) or to multiple directions, stored in a list (i.e. [0,1,2]). The directions, stored as integers, map as follows:
 
@@ -45,19 +48,6 @@ An example path from maintenance entrance to charger 2.
 </figcaption>
 </div>
 
-### path_calib
-
-In the case that a calibration area is used, the dictionary "path_calib" guides the Duckiebot from a charger exit to the calibration area. In [](#fig:charger2_to_calib) an example is given. The path_calib of charger 2 would then be
-
-    path_calib: {'236': 0, '153': 0, '243': 2}
-
-<div figure-id="fig:charger2_to_calib">
-<img src="images/charger2_to_calib.png" style="width: 80%"/>
-<figcaption>
-An example path from charger 2 to calibration area.
-</figcaption>
-</div>
-
 ### path_to_city
 
 The dictionary "path_to_city" guides a Duckiebot from every possible leaving position (i.e. charger exit, calibration exit) back to the city. In [](#fig:path_to_city), all paths are plotted for an example maintenance area (without a calibration area).
@@ -76,7 +66,3 @@ The dictionary "entrances" and "exits" in the charging_stations parameter contai
 ### maintenance_entrance / maintenance_exit
 
 This dictionaries define which april tag IDs correspond to the entrance / exit of the maintenance area. This information is needed to detect when a Duckiebot enters or leaves the maintenance area.
-
-### calibration_station: entrances, exits
-
-If a calibration area is used, these parameters define the entrance / exit of it.
