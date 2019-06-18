@@ -27,7 +27,7 @@ ___
 * [](#localization-software): An overview of the localization code. - TODO
 
 
-**Overview**
+**Overview and Concept of the system**
 
 ___
 The localization system has multiple purposes: 
@@ -41,12 +41,8 @@ The localization system mainly relies on Apriltags, which are a kind of QR code.
 
 To track the Apriltags, we use watchtowers. In the spirit of Duckietown, a watchtower uses the same hardware as a Duckiebot and is integrated with the city. Thus, we developed a little tower which is about 60cm in height. At the top of the tower, the  pi-camera looks over a part of the city. The watchtowers are spread all over the city, and by combining the field of view of each tower, it is possible to cover the whole Autolab.
 
+Then, using other Apriltags that are on the ground, called ground Apriltags, for which we determine in advance the exact localization, we build a big graph of all the relative poses bewteen watchtowers and what they see. By running optimization on the graph, we merge the local influx of data from all agents into a global position graph of all agents, using the ground Apriltags as global fixed references.
 
-**The Basic Concept of the System**
-___
-
-
-Todo: complete this part
 
 
 **BUILDING - Hardware**

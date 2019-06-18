@@ -2,9 +2,9 @@
 
 <div class='requirements' markdown="1">
 
-Requires: put requirements here
+Requires: A fully operational [Duckietown](+opmanual_duckietown#duckietowns)
 
-Results: put result here
+Results: A watchtower system ready to be used
 
 Next Steps: The next step is to print, place and measure the [ground april tags](#localization-apriltags-specs)
 </div>

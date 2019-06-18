@@ -2,9 +2,8 @@
 
 <div class='requirements' markdown="1">
 
-Requires: put requirements here
+Requires: A fully operational [Duckietown](+opmanual_duckietown#duckietowns) with [watchtowers](#localization-watchtower-hardware) built to right specs. TODO : add the name of the right specs
 
-Results: put result here
+Results: Accurate measure of the light field of the Autolab
 
-Next Steps: put next steps here
 </div>

@@ -2,9 +2,9 @@
 
 <div class='requirements' markdown="1">
 
-Requires: put requirements here
+Requires: A fully operational [Duckietown](+opmanual_duckietown#duckietowns) with [watchtowers](#localization-watchtower-hardware) and a system of [ground april tags](#localization-apriltags-specs). Also requires a powerfull computer with LAN fast connection to all watchtowers.
 
-Results: put result here
+Results: Running online localization in the Autolab
 
-Next Steps: put next steps here
+Next Steps: Check out the [software](#localization-software)
 </div>
