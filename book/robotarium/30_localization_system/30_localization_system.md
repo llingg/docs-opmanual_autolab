@@ -14,7 +14,6 @@ The localization system is an important part of the Autolab, as it gives the loc
 
 Note: Watchtowers are an experimental feature of Duckietown, which are currently only used in Autolabs.
 
-$~$
 
 **Sections**
 
@@ -27,7 +26,6 @@ ___
 * [](#light-sensors): The manual to use the lights sensors of the watchtowers. - TODO
 * [](#localization-software): An overview of the localization code. - TODO
 
-$~$
 
 **Overview**
 
@@ -43,7 +41,6 @@ The localization system mainly relies on Apriltags, which are a kind of QR code.
 
 To track the Apriltags, we use watchtowers. In the spirit of Duckietown, a watchtower uses the same hardware as a Duckiebot and is integrated with the city. Thus, we developed a little tower which is about 60cm in height. At the top of the tower, the  pi-camera looks over a part of the city. The watchtowers are spread all over the city, and by combining the field of view of each tower, it is possible to cover the whole Autolab.
 
-$~$
 
 **The Basic Concept of the System**
 ___
@@ -51,7 +48,6 @@ ___
 
 Todo: complete this part
 
-$~$
 
 **BUILDING - Hardware**
 ___
@@ -66,7 +62,6 @@ As explained before, the system is designed so that watchtowers don't need to be
 Moreover, the ground Apriltags need to follow conventions specified in the chapter [](#localization-apriltags-specs).
 
 
-$~$
 
 **DEMOS - Running Localization**
 ___
@@ -80,7 +75,6 @@ Running localization _offline_ means that the data recorded but processed only _
 
 While the long term objective is to only do online localization, the offline localization has proved very usefull for AIDO, because it requires less computing power and depends less on the network.
 
-$~$
 
 **SOFTWARE - Description**
 ___
