@@ -1,5 +1,15 @@
 # Future projects {#autocharging-future status=beta}
 
+<div class='requirements' markdown="1">
+
+Requires: put requirements here
+
+Results: put result here
+
+Next Steps: put next steps here
+</div>
+
+
 There are still multiple tasks which would improve the charging area by a lot. In the following, you find a list of those tasks with a small description, ordered in descending priority.
 
 ## Improve the intersection navigation

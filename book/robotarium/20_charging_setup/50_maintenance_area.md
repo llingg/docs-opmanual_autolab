@@ -1,5 +1,15 @@
 # BUILDING - Building a maintenance area {#autocharging-maintenance-area status=beta}
 
+<div class='requirements' markdown="1">
+
+Requires: put requirements here
+
+Results: put result here
+
+Next Steps: put next steps here
+</div>
+
+
 <div figure-id="fig:maintenance-area">
 <img src="images/MaintenanceArea.jpg" style="width: 100%"/>
 <figcaption>

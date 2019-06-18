@@ -1,5 +1,15 @@
 # BUILDING - Plan your maintenance area {#autocharging-planning status=beta}
 
+<div class='requirements' markdown="1">
+
+Requires: put requirements here
+
+Results: put result here
+
+Next Steps: put next steps here
+</div>
+
+
 We highly recommend that the maintenance area fulfills the specifications of Duckietown. If needed, U-turns can be used.
 
 Charging modules are scalable structures. Under good light conditions, roughly $3$ Duckiebots fit in one tile. To ensure robustness, multiple charging modules should be used - that way, if a Duckiebot gets stuck for any reason, the affected charging module can be closed while all others can still be used.

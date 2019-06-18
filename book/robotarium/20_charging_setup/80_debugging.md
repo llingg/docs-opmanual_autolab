@@ -1,5 +1,15 @@
 # Testing and debugging {#autocharging-debugging status=beta}
 
+<div class='requirements' markdown="1">
+
+Requires: put requirements here
+
+Results: put result here
+
+Next Steps: put next steps here
+</div>
+
+
 ## Debug the whole charging pipeline
 
 If megacity is launched, a Duckiebot will drive for X minutes and then go to the charging station. After Y minutes, it will leave it again. X and Y are defined in the yaml file for the Charging Control Node. If you would like to test the whole charging procedure, place your Duckiebot on a road which ends in the intersection which is connected to the maintenance area. Then, request the Duckiebot to go charging:

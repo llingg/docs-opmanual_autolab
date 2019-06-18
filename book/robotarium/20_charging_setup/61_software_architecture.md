@@ -1,5 +1,15 @@
 # SOFTWARE - code architecture {#autocharging-software-architecture status=beta}
 
+<div class='requirements' markdown="1">
+
+Requires: put requirements here
+
+Results: put result here
+
+Next Steps: put next steps here
+</div>
+
+
 Operating a Duckiebot inside a megacity requires software which can switch from state to state. In this section, we describe how we have fit the maintenance code into the bigger picture.
 
 ## Transition of states

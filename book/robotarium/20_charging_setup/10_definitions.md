@@ -1,5 +1,15 @@
 # Definitions {#autocharging-definitions status=beta}
 
+<div class='requirements' markdown="1">
+
+Requires: put requirements here
+
+Results: put result here
+
+Next Steps: put next steps here
+</div>
+
+
 ## Maintenance area
 
 The actual Duckietown city and the charging and calibration area are strictly separated by a single road. Every tile which purpose is the servicing of Duckiebots is part of the maintenance area. This includes every intersection and road which guides the Duckiebot from the maintenance entrance to a charging module and back.

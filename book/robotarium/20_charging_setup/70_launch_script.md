@@ -1,5 +1,15 @@
 # DEMO - Launch your script {#autocharging-launch status=beta}
 
+<div class='requirements' markdown="1">
+
+Requires: put requirements here
+
+Results: put result here
+
+Next Steps: put next steps here
+</div>
+
+
 As soon as you have created your own configuration file described above, you are ready to test your setup.
 
 Launch the final script inside the root folder of Duckietown

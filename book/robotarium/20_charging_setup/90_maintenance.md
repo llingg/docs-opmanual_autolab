@@ -1,5 +1,15 @@
 # Maintenance of the charging area {#autocharging-maintenance status=beta}
 
+<div class='requirements' markdown="1">
+
+Requires: put requirements here
+
+Results: put result here
+
+Next Steps: put next steps here
+</div>
+
+
 The Tram charging solution needs to be maintained to ensure a robust charging procedure.
 
 ## Clean the contacts
