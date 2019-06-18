@@ -1,5 +1,12 @@
 # The Autolab {#book:autolab status=draft}
 
+<div class='requirements' markdown="1">
+
+Requires: A fully operational [Duckietown](+opmanual_duckietown#duckietowns)
+
+Results: A working Autolab
+</div>
+
 
 
 ## The big picture

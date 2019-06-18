@@ -6,7 +6,7 @@ Requires: put requirements here
 
 Results: put result here
 
-Next Steps: put next steps here
+Next Steps: The next step is to print, place and measure the [ground april tags](#localization-apriltags-specs)
 </div>
 
 TODO : update

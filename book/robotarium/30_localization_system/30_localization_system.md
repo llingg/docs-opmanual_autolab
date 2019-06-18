@@ -2,15 +2,15 @@
 
 <div class='requirements' markdown="1">
 
-Requires: put requirements here
+Requires: A fully operational [Duckietown](+opmanual_duckietown#duckietowns)
 
-Results: put result here
+Results: A working localization system to localize all duckiebots inside the Autolab
 
-Next Steps: put next steps here
+Next Steps: The first step is to build the [watchtowers](#localization-watchtower-hardware)
 </div>
 
 
-The auto-localization system is an important part of the Autolab, as it gives the localization of all Autobots in the city to a server. In the Autolab, the Autobots are Duckiebots that have been improved to Autolab specifications (see [](#autolab-autobot-specs)).
+The localization system is an important part of the Autolab, as it gives the localization of all Autobots in the city to a server. In the Autolab, the Autobots are Duckiebots that have been improved to Autolab specifications (see [](#autolab-autobot-specs)).
 
 Note: Watchtowers are an experimental feature of Duckietown, which are currently only used in Autolabs.
 
@@ -53,7 +53,7 @@ Todo: complete this part
 
 $~$
 
-**Hardware**
+**BUILDING - Hardware**
 ___
 
 There are two structural elements to have a working system:
@@ -68,16 +68,22 @@ Moreover, the ground Apriltags need to follow conventions specified in the chapt
 
 $~$
 
-**Software Setup**
+**DEMOS - Running Localization**
 ___
 
 
-See software part in chapter [](#auto-localization-software)
+Localization can be run either online or offline.
+
+Running localization _online_ means that the data is processed _during_ the experiment and the results can be vizualised with some delay. The demo is found at [](#localization-online)
+
+Running localization _offline_ means that the data recorded but processed only _after_ the experiment. Thee demo is found at [](#localization-offline)
+
+While the long term objective is to only do online localization, the offline localization has proved very usefull for AIDO, because it requires less computing power and depends less on the network.
 
 $~$
 
-**Steps of Running Auto-Localization**
+**SOFTWARE - Description**
 ___
 
 
-See more about steps of running auto-localization system [](#auto-localization-operation-procedure)
+The software is explained in detailed in chapter [](#localization-software)
