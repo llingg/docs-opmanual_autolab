@@ -1,4 +1,4 @@
-# Current collector {#autocharging-current-collector status=beta}
+# BUILDING - Current collector {#autocharging-current-collector status=beta}
 
 In order to let a Duckiebot charge in a charger, additional hardware is needed. This piece is called the current collector.
 

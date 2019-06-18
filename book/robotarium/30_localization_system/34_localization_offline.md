@@ -1,1 +1,1 @@
-# Localization offline {#localization-offline status=beta}
+# DEMO - Localization offline {#localization-offline status=beta}

@@ -6,17 +6,19 @@
 
 The goal of an autolab is to create a human free, automated environment for duckiebots. This requires a bit more than just a standard [Duckietown](+opmanual_duckietown#duckietowns) to work. 
 
-An autolab can serve different purposes. It is daily used for research on the duckietown platform, and is also being used to organize the embodied challenges of AIDO.
+An autolab can serve different purposes. It is daily used for research on the duckietown platform, and is also being used to organize the embodied challenges of [AIDO]((+AIDO#AIDO)).
 
-Todo: add link to AIDO book
+___
 
 The aim of this book is to present:
 
-- a set of instructions on how to build an autolab to current specifications
-- a set of instructions on how to run the autolab functions or demos
-- a set of guides to the different pieces of software that are used and are under development
+- a set of instructions (labeled BUILDING) on how to build an autolab to current specifications
+- a set of instructions (labeled DEMO) on how to run the autolab functions or demos
+- a set of guides (labeled SOFTWARE) to the different pieces of software that are used and are under development
 
 ## The sections
+
+In each of the following sections you will find the BUILDING, the DEMOs and the SOFTWARE pages.
 
 - [](#autolab-definition) : The precise definition of an Autolab
 - [](#autolab-auto-charging) : The set of instruction on how to build and operate an autocharging station

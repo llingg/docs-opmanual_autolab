@@ -1,4 +1,4 @@
-# Watchtower Hardware Preparation {#localization-watchtower-hardware status=beta}
+# BUILDING - Watchtower Hardware Preparation {#localization-watchtower-hardware status=beta}
 
 TODO : update
 

@@ -1,4 +1,4 @@
-# Software: Create the map {#autocharging-map status=beta}
+# SOFTWARE : Create the map {#autocharging-map status=beta}
 
 ## Preparation
 

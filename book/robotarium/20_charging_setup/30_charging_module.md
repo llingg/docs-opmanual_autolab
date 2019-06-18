@@ -1,4 +1,4 @@
-# Charging module {#autocharging-charging-module status=beta}
+# BUILDING - Charging module {#autocharging-charging-module status=beta}
 
 For the construction of a charging module, you have many degrees of freedom. This includes the choice of material of the wooden structure (may be metal as well), the type of connection between the structure elements (screws, glue, nails), the length of the cables and many more.
 

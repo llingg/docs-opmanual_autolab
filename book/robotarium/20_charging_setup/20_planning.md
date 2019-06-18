@@ -1,4 +1,4 @@
-# Plan your maintenance area {#autocharging-planning status=beta}
+# BUILDING - Plan your maintenance area {#autocharging-planning status=beta}
 
 We highly recommend that the maintenance area fulfills the specifications of Duckietown. If needed, U-turns can be used.
 
