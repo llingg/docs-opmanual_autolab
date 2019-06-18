@@ -1,5 +1,15 @@
 # Localization System {#part:autolab-localization status=draft}
 
+<div class='requirements' markdown="1">
+
+Requires: put requirements here
+
+Results: put result here
+
+Next Steps: put next steps here
+</div>
+
+
 The auto-localization system is an important part of the Autolab, as it gives the localization of all Autobots in the city to a server. In the Autolab, the Autobots are Duckiebots that have been improved to Autolab specifications (see [](#autolab-autobot-specs)).
 
 Note: Watchtowers are an experimental feature of Duckietown, which are currently only used in Autolabs.
@@ -10,12 +20,12 @@ $~$
 
 ___
 
-* [](#localization-watchtower-hardware): How to assemble watchtowers.
-* [](#localization-apriltags-specs): The april tag specifications and measure.
-* [](#localization-offline): The manual to run localization offline.
-* [](#localization-online): The manual to run localization online.
-* [](#light-sensors): The manual to use the lights sensors of the watchtowers.
-* [](#localization-software): An overview of the localization code.
+* [](#localization-watchtower-hardware): How to assemble watchtowers. - OUTDATED
+* [](#localization-apriltags-specs): The april tag specifications and measure. - TODO
+* [](#localization-offline): The manual to run localization offline. - TODO
+* [](#localization-online): The manual to run localization online. - TODO
+* [](#light-sensors): The manual to use the lights sensors of the watchtowers. - TODO
+* [](#localization-software): An overview of the localization code. - TODO
 
 $~$
 
