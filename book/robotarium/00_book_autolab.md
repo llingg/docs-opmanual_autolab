@@ -9,7 +9,7 @@ Results: A working Autolab
 
 
 
-## The big picture
+### The big picture
 
 The goal of an autolab is to create a human free, automated environment for duckiebots. This requires a bit more than just a standard [Duckietown](+opmanual_duckietown#duckietowns) to work. 
 
@@ -23,7 +23,7 @@ The aim of this book is to present:
 - a set of instructions (labeled DEMO) on how to run the autolab functions or demos
 - a set of guides (labeled SOFTWARE) to the different pieces of software that are used and are under development
 
-## The sections
+### The sections
 
 In each of the following sections you will find the BUILDING, the DEMOs and the SOFTWARE pages.
 

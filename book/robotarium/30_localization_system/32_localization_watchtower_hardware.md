@@ -2,7 +2,7 @@
 
 <div class='requirements' markdown="1">
 
-Requires: A fully operational [Duckietown](+opmanual_duckietown#duckietowns)
+Requires: A fully operational [Duckietown](+opmanual_duckietown#duckietowns) and compliant [autobots](#autolab-autobot-specs)
 
 Results: A watchtower system ready to be used
 
