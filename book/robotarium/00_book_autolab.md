@@ -30,6 +30,7 @@ In each of the following sections you will find the BUILDING, the DEMOs and the 
 In the description introduction of each part will be the up-to-date status of each page of the book, that will change as we write them down. Please only refer to those marked as BETA or as READY. 
 
 - [](#autolab-definition) : The precise definition of an Autolab
+- [](#autolab-fleet) : The set of instruction on how to build an Autobot fleet and maintain it
 - [](#autolab-auto-charging) : The set of instruction on how to build and operate an autocharging station
 - [](#autolab-localization) : The set of instruction on how to build and operate the localization system
 - [](#autolab-operation-manual) : The set of instructions on how to operate the whole Autolab
