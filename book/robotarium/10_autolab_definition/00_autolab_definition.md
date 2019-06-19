@@ -11,6 +11,7 @@ Next Steps: Building the [autocharging area](#part:autolab-auto-charging).
 
 An Autolab is a Duckietown with a set of additional structures:
 
+- A map
 - A fleet of Autobots*
 - A maintenance area
 - A localization system
@@ -18,8 +19,11 @@ An Autolab is a Duckietown with a set of additional structures:
 
 *The duckiebots that are used are called autobots and rely on additional specifications.
 
+### The map
+For an autolab to work, a precise map is needed. This part is handled in [](#autolab-map-making)
+
 ### The fleet of autobots
-An Autolab is nothing without its [fleet](#autolab-fleet) of Autobots. The [Autobots](#autolab-autobot-specs) are duckiebots improved with different parts, mainly for autocharging and localization. They also follow a strict procedure of calibration, and we keep a log of all events that happen in tha life of an Autobot. This is the role of the [fleet roster](#autolab-fleet-roster).
+An Autolab is nothing without its fleet of Autobots. The [Autobots](#autolab-autobot-specs) are duckiebots improved with different parts, mainly for autocharging and localization. They also follow a strict procedure of calibration, and we keep a log of all events that happen in tha life of an Autobot. This is the role of the [fleet roster](#autolab-fleet-roster).
 
 ### The maintenance area
 

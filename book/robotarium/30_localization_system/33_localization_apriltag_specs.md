@@ -17,13 +17,13 @@ Because of localization.
 
 As a reminder, the Apriltags already have predetermined sets of usecase. The ranges of tags are specified in [](#tab:tag-ranges).
 
-For localization, **the ground Apriltags are in range 300 to 399**
+For localization, **the ground Apriltags are in range 300 to 399**.
 
 <col4 figure-id="tab:tag-ranges" figure-caption="Apriltag ID ranges">
     <span>Purpose</span><span>Size</span><span>Family</span><span>ID Range</span>
     <span>Traffic signs</span><span>6.5cm x 6.5cm</span><span>36h11</span><span>1-199</span>
     <span>Traffic lights</span><span>6.5cm x 6.5cm</span><span>36h11</span><span>200-299</span>
-    <span>Localization (ground Apriltags)</span><span>6.5cm x 6.5cm</span><span>36h11</span><span>300-399</span>
+    <span>Localization</span><span>6.5cm x 6.5cm</span><span>36h11</span><span>300-399</span>
     <span>Street Name Signs</span><span>6.5cm x 6.5cm</span><span>36h11</span><span>400-587</span>
 </col4>
 
@@ -59,6 +59,7 @@ This is the important part of the Apriltag specifications. You need to make sure
 **How to measure**:
 
 In the following, you will be asked 5 numbers for each Apriltag:
+
 * the x coordinate of the tile : it is the number (starting at 0 at the first bottom left origin tile) of tile along the x axis (bottom axis)
 * the y coordinate of the tile : same as for x, it starts at 0
 * the x measure of the Apriltag on the tile : you can get it by blocking your meter in the interior left edge and measuring (in meters) the distance from the interior edge to the center of the Apriltag.
@@ -72,8 +73,12 @@ TODO : add a picture to make that clear.
 Once you are sure of your positioning of the Apriltags, you can start measuring them. To do so:
 
 * Open a terminal inside the duckietown-world repository, as you did to create your map. Your map should still be in the `src/duckietown_world/data/gd1/maps` folder.
-* run the following command 
-    laptop $ python3 src/apriltag_measure/measure_ground_apriltags.py ![YOUR_MAP_NAME]
+
+Run the following command:    
+
+    laptop $ python3 src/apriltag_measure/measure_ground_apriltags.py ![MAP_NAME]
+
+
 * Follow the instructions in the terminal : choose an Apriltag number, and fill in the 5 asked numbers, as described above.
 * If an Apriltag was already filled in before (if you are changing your map for instance), you will be asked to confirm the overwritting of the positionning. As everything is versionned in github, you can always go back to find the previous positions if need be.
 * If you try recording an Apriltag number than is not in the allocated range (300-399), the script will also ask to confirm.
