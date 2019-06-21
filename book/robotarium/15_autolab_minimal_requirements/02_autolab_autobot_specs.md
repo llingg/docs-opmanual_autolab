@@ -1,4 +1,4 @@
-# BUILDING - Autobot specifications {#autolab-autobot-specs status=beta}
+# BUILDING - Autobot specifications {#autolab-autobot-specs status=draft}
 
 <div class='requirements' markdown="1">
 

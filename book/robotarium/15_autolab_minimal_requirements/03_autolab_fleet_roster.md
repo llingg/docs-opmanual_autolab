@@ -1,4 +1,4 @@
-# BUILDING - Autolab fleet roster {#autolab-fleet-roster status=beta}
+# BUILDING - Autolab fleet roster {#autolab-fleet-roster status=draft}
 
 <div class='requirements' markdown="1">
 

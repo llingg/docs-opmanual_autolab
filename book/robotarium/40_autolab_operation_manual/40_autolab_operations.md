@@ -1,4 +1,4 @@
-# Autolab operation manual {#part:autolab-operation-manual status=beta}
+# Autolab operation manual {#part:autolab-operation-manual status=draft}
 
 <div class='requirements' markdown="1">
 

@@ -1,4 +1,4 @@
-# DEMO - Localization online {#localization-online status=beta}
+# DEMO - Localization online {#localization-online status=draft}
 
 <div class='requirements' markdown="1">
 

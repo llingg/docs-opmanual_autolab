@@ -1,4 +1,4 @@
-# DEMO - Light sensors {#light-sensors status=beta}
+# DEMO - Light sensors {#light-sensors status=draft}
 
 <div class='requirements' markdown="1">
 

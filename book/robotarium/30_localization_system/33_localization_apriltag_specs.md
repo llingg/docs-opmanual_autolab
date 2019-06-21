@@ -1,4 +1,4 @@
-# BUILDING - Apriltags specifications {#localization-apriltags-specs status=draft}
+# BUILDING - Apriltags specifications {#localization-apriltags-specs status=beta}
 
 <div class='requirements' markdown="1">
 

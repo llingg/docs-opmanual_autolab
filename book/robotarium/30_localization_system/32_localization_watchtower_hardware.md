@@ -1,4 +1,4 @@
-# BUILDING - Watchtower Hardware Preparation {#localization-watchtower-hardware status=beta}
+# BUILDING - Watchtower Hardware Preparation {#localization-watchtower-hardware status=draft}
 
 <div class='requirements' markdown="1">
 
