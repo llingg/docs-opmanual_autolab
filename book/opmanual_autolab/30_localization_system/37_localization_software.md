@@ -46,6 +46,7 @@ For the Watchtowers it is a different story. As it is not used (yet) for anythin
 * The Autobots are (mostly) always moving, and this created blur with the default shutter speed. With a higher shutter speed, we really decreased the blur, and the resulting loss of light is barely noticeable. 
 
 Todo: add images to see the difference
+
 Todo: add actual numbers (resolution and shutter speed)
 
 
@@ -66,7 +67,26 @@ As explained in [](#localization-offline), the offline localization just needs e
 
 ### Online acquisition of images
 
+To do online, there is a whole new thing to worry about: How to communicate between different ROS masters.
 
+Remember, each agent has its own ROS master, and they cannot communicate with each other natively, even though they are on the same network.
+
+The currently used solution is to:
+
+* Create a new central ROS master
+* On each agent, create a "bridge" node that communicates with the agent's ROS master and the central ROS master
+* Through this bridge node, get all the images from the agents to the centra ROS master
+
+Todo: Actually explain how we do that.
+
+### Apriltag extraction
+
+No matter how (or on which device) we get the image, we need to process it to get two things for each Apriltag in the image:
+
+* its relative pose
+* its unique Id
+
+Todo: explain process and code, link repos etc...
 
 ## Graph building and optimization
 
