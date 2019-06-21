@@ -31,14 +31,14 @@ The pipeline is roughly the following:
 
 The global frame is fixed thanks to the measured ground Apriltags, that are fed into the graph at initialization, and set as fixed points of the graph.
 
-## Camera feed
+## Camera parameters
 
-### Autobot camera feed
+### Autobot camera parameters
 
 The Autobots already use a camera feed that is medium quality on the normal pipeline. All we do here is use the same image stream.
 Todo: add actual quality 
 
-### Watchtower camera feed
+### Watchtower camera parameters
 
 For the Watchtowers it is a different story. As it is not used (yet) for anything else, we decided for the below reason to use a better image resolution and a higher shutter speed:
 
@@ -48,7 +48,23 @@ For the Watchtowers it is a different story. As it is not used (yet) for anythin
 Todo: add images to see the difference
 Todo: add actual numbers (resolution and shutter speed)
 
+
 ## Apriltag detection
+
+From here, there are many different ways of doing things. The Apriltag detection is very computationally expensive, and different strategies can be used:
+
+* Offline acquisition : each agent just records the images, then they are gathered and processed later, offline, without any time requirement. This is the easy, but unsatisfactory way. This also means that the localization can only be used *a posteriori*, so it can not be used for real time decision making.
+* Online acquisition : the images are processed during the experiment, and the graph and localization is done (with some delay) online. This is much harder to do as processing images is costly. Two strategies can be used here:
+    * Each agent tries to do the processing directly onboard and just sends the transforms to a central ROS master that will do the graph
+    * Each agent directly sends the images and the central ROS master does the processing for every agent (implies having a good computer)
+    * A mix of the two is also possible (the Autobot send the images, the watchtowers process them for instance)
+
+
+### Offline acquisition of images
+
+As explained in [](#localization-offline), the offline localization just needs every agent to record in rosbags the image stream. Then, it is download and feed to a Apriltag extractor node, that outputs all the transforms to a new bag, that is then fed to the graph optimizer. 
+
+### Online acquisition of images
 
 
 
