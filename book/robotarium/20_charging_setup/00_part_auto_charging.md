@@ -10,6 +10,7 @@ Expected resulted
 DB drives in CITY for _driving time_(predefined 120 minutes), and then he goes to the MAINTENANCE_AREA. He goes to a charger which is assigned to him by the charging manager. Stays in the charging area for 120 minutes and goes back to CITY)
 
 
+
 Please keep in mind that this solution is still not perfect - in [](#autocharging-future), you find the issues which should be solved next.
 
 **Keywords**: robotics, megacity, Autolab, auto-charging, charging, maintenance
