@@ -1,82 +1,89 @@
-# Software: Create the map {#autocharging-map status=beta}
-
-## Preparation
-
-The branch used for Autolabs is called megacity.
-
-Checkout the branch megacity and build the catkin workspace
-
-    git checkout megacity
-    git pull
-    ./dependencies_for_duckiebot.sh
-    ./dependencies_common.sh
-    source environment.sh
-    make build-catkin
+# Run the demo
 
 
-Go to the configuration file folder for the maintenance node
+The megacity container has to be built and uploaded to the duckiebot as outlined in [here](https://docs.duckietown.org/DT17/)
 
-    cd catkin_ws/src/00-infrastructure/duckietown/config/baseline
-    /maintenance_control/maintenance_control_node
+**Step 1** Power on your bot and wait for the `duckiebot-interface` to initialize (the LEDs go off).
 
-and copy the default.yaml file for your city
+**Step 2**: Launch the demo by running:
 
-    cp default.yaml <your_city_name>.yaml
+if we run the container for the first we need to pull and run the container on the duckiebot
 
-Edit the newly created file.
+    laptop $ docker -H hostname.local run -it --net host --privileged -v /data:/data --name megacity duckietown/rpi-duckiebot-base:megacity /bin/bash
 
-The parameters in the config file are dictionaries - each key (i.e. '150') stands for an april tag ID and maps to either a single direction (i.e. 1) or to multiple directions, stored in a list (i.e. [0,1,2]). The directions, stored as integers, map as follows:
+if the container is already on the duckiebot but has been stopped we can execute
 
-[0, 1, 2] == [LEFT, STRAIGHT, RIGHT].
+    laptop $ docker -H ![hostname].local start megacity
 
-## Add your own paths
+Note: Many nodes need to be launched, so it will take quite some time.
 
-### path_in
+**Step 3**: With the joystick or In a separate terminal, start the joystick GUI:
 
-The "path_in" parameter of a charger should map traffic sign april tag IDs to a single turn type, which in sum guide the Duckiebot to the charger. In [](#fig:path_to_charger2) an example is given. The path_in of charger 2 would then be
+    laptop $ dts duckiebot keyboard_control ![hostname]
 
-    path_in: {'261': 2, '240': 0}
+and use the instructions to toggle between autonomous navigation and joystick control modes.
 
+**Step 4**: While in autonomous mode, publishing the following topic will direct the duckiebot to the maintenance area and start the entire charging procedure
 
-<div figure-id="fig:path_to_charger2">
-<img src="images/path_to_charger2.png" style="width: 80%"/>
+    rostopic pub -1 "/<robot_name>/maintenance_control_node/go_mt_charging" std_msgs/Bool true
+
+<div figure-id="fig:software_architec">
+<img src="images/way_to_maintenance.png" style="width: 80%"/>
 <figcaption>
-An example path from maintenance entrance to charger 2.
+Graph of software architecture.
 </figcaption>
 </div>
+<br />
 
-### path_calib
+**Step 5: Way to Maintenance** <br />Duckiebot calculates the shortest path to the maintenance entrance. During its journey it has the priority of way before other duckies. (indicated by purple blinking LEDs)
 
-In the case that a calibration area is used, the dictionary "path_calib" guides the Duckiebot from a charger exit to the calibration area. In [](#fig:charger2_to_calib) an example is given. The path_calib of charger 2 would then be
-
-    path_calib: {'236': 0, '153': 0, '243': 2}
-
-<div figure-id="fig:charger2_to_calib">
-<img src="images/charger2_to_calib.png" style="width: 80%"/>
+<div figure-id="fig:software_architec">
+<img src="images/way_to_maintenance_2.png" style="width: 80%"/>
 <figcaption>
-An example path from charger 2 to calibration area.
+Graph of software architecture.
 </figcaption>
 </div>
+<br />
 
-### path_to_city
+**Step 6: Wait** <br />Duckiebot waits at the charging manager for 10 seconds to correctly read the light frequency from the trafficlight. When it is finished it goes into the intersection coordination state.
 
-The dictionary "path_to_city" guides a Duckiebot from every possible leaving position (i.e. charger exit, calibration exit) back to the city. In [](#fig:path_to_city), all paths are plotted for an example maintenance area (without a calibration area).
-
-<div figure-id="fig:path_to_city">
-<img src="images/path_to_city.png" style="width: 80%"/>
+<div figure-id="fig:software_architec">
+<img src="images/wait.png" style="width: 80%"/>
 <figcaption>
-All possible exit paths from an example maintenance area (without calibration area).
+Graph of software architecture.
 </figcaption>
 </div>
+<br />
 
-### charging_stations: entrances, exits
+**Step 7: Way to Charging** <br />
+The duckiebot has arrived at the maintenance entrance and receives further instructions from the trafficlight. Each frequency corresponds to one of the chargers
 
-The dictionary "entrances" and "exits" in the charging_stations parameter contains every entrance / exit to charging stations. This information is needed in the code to determine when a Duckiebot enters or leaves a charger.
+<div figure-id="fig:software_architec">
+<img src="images/way_to_charging.png" style="width: 80%"/>
+<figcaption>
+Graph of software architecture.
+</figcaption>
+</div>
+<br />
 
-### maintenance_entrance / maintenance_exit
+**Step 8: Charging First in Line** <br />
+At this given point of time the Duckiebot is the first one being able to leave the charger and it only needs to wait until it gets fully charged or someone triggers it to exit the charger and free another charging spot.
 
-This dictionaries define which april tag IDs correspond to the entrance / exit of the maintenance area. This information is needed to detect when a Duckiebot enters or leaves the maintenance area.
+<div figure-id="fig:software_architec">
+<img src="images/in charging.png" style="width: 80%"/>
+<figcaption>
+Graph of software architecture.
+</figcaption>
+</div>
+<br />
 
-### calibration_station: entrances, exits
+**Step 9: Way to City** <br />
+The duckiebot is charged and enters the final state: Way to city. It follows the return path of the corresponding charger. By the time a Duckiebot receives a ready to go from a timer, the charge estimation algorithm or a human being two things happens: the finite state switches to LANE_FOLLOWING which makes the Duckiebot able to drive and the maintenance control node switches to WAY_TO_CITY. The Duckiebot is now guided out of the maintenance area. If the exit is reached, the maintenance control node is switched to NONE and the Duckiebot is again able to drive around in the city.
 
-If a calibration area is used, these parameters define the entrance / exit of it.
+<div figure-id="fig:software_architec">
+<img src="images/way_to_city.png" style="width: 80%"/>
+<figcaption>
+Graph of software architecture.
+</figcaption>
+</div>
+<br />
