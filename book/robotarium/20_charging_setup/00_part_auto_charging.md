@@ -6,8 +6,8 @@ Duckiebots have a limited battery capacity. Therefore to create a fully autonomo
 
 Expected resulted
 
-asdfasdfadsfa
-asdfasdfasdfads
+(general view
+DB drives in CITY for _driving time_(predefined 120 minutes), and then he goes to the MAINTENANCE_AREA. He goes to a charger which is assigned to him by the charging manager. Stays in the charging area for 120 minutes and goes back to CITY)
 
 
 
