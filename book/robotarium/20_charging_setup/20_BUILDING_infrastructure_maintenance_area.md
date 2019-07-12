@@ -1,4 +1,4 @@
-# Infrastructure of Maintenance Area 
+# Infrastructure of Maintenance Area {#autocharging-definitions status=beta}
 
 This part contains the steps to plan and build a maintenance area.  
 Before starting, here is a general schematic view of a maintenance area for module 1[](#fig:mt1) 
