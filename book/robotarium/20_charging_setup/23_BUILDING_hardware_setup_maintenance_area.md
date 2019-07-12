@@ -27,8 +27,10 @@ Directly at the beginning of the next tile after a charger, add a red line [](#f
 
 ## Place a traffic light on the maintenance intersection 
 
+This traffic light will serve as the charging manager.
+
 ## Place watchtowers on charger intersections
-make sure that the intersection is under the scope of the camera
+Make sure that the intersection is under the scope of the camera
 
 
 
