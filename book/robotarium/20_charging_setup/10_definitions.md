@@ -7,7 +7,7 @@ Below you can find the definitions of maintenance intersection and charger inter
 
 > intersection definitons
 <div figure-id="fig:int_def">
-<img src="images/definition_intersections.png" style="width: 100%"/>
+<img src="images/maintenance_intersection_def.png" style="width: 100%"/>
 <figcaption>
 Definitions of Intersections and Placement of Charging Manager and Doorkeepers
 </figcaption>
