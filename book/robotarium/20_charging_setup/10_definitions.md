@@ -5,7 +5,6 @@
 The actual Duckietown city and the charging and calibration area are strictly separated by a single road. Every tile which purpose is the servicing of Duckiebots is part of the maintenance area. This includes every intersection and road which guides the Duckiebot from the maintenance entrance to a charging module and back.  
 Below you can find the definitions of maintenance intersection and charger intersections. You can also see also an example of the placement of charging manager and doorkeepers.[](#fig:int_def)
 
-> intersection definitons
 <div figure-id="fig:int_def">
 <img src="images/maintenance_intersection_def.png" style="width: 100%"/>
 <figcaption>
