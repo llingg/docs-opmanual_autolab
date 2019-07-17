@@ -98,10 +98,11 @@ Now in the logs of charging manager/doorkeeper container you will see the follow
 ...  
 
 In this log you see a python dictionary. Its keys refer to the apriltag ids of the duckiebot which arrived to the intersection. For every apriltag id that is observed on the intersection, there is a dictionary. In it you have some attributes of a duckiebot apriltag:  
-    * pose : Position of Duckiebot's apriltag on the image 
-    * first_neighbor : First seen closest reference tag to Duckiebot's apriltag
-    * last_neighbor  : Last seen closest reference tag to Duckiebot's apriltag
-    * time : The time the information above is saved
+
+    * pose : Position of Duckiebot's apriltag on the image  
+    * first_neighbor : First seen closest reference tag to Duckiebot's apriltag  
+    * last_neighbor  : Last seen closest reference tag to Duckiebot's apriltag  
+    * time : The time the information above is saved  
 After understanding what the logs mean, look at the last_neighbor argument on the logs. If it corresponds to the entrance reference tag and your duckiebot is located near the entrance reference tag, it means, the placement of entrance reference tag works. 
     
 If it is not the case, replace the reference tag which is at the moment the closest neighbor apriltag (last_neighbor in terms of logs)  further from the intersection entrance along the lane it is located. In this example, you can see that the apriltag 361 is far from the intersection entrance and it is near to the charger exit.[](fig:doorkeeper_intersection)
