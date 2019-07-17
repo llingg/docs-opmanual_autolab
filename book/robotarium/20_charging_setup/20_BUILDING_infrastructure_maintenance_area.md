@@ -19,4 +19,14 @@ Module 2
 </figcaption>
 </div>
 
-
+<figure class="flow-subfigures">  
+    <figcaption>Main Modules</figcaption>
+    <figure>
+        <figcaption>Module 1</figcaption>
+        <img style='width:8em' src="images/module_1.png"/>
+    </figure>
+    <figure>  
+        <figcaption>Module 2</figcaption>
+        <img style='width:8em' src="images/module_2.png"/>
+    </figure>
+</figure>
