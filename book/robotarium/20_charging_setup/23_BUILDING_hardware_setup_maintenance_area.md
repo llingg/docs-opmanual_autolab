@@ -17,10 +17,6 @@ Respect the constraints of Duckietown.
 
 **Note down** all the **tag IDs** and their **positions** in your maintenance area - you will need them later on to define your map in the software.
 
-## Add ground April tags for the necessary intersection(s)
-
-For Module 1, one has to put the ground april tags on the maintenance intersection and for module 2 on the charger intersections. For this step, please follow the instructions on (link)
-
 ## Add a red line and a **STOP** april tag after each charger
 
 Directly at the beginning of the next tile after a charger, add a red line [](#fig:red_line). This red line and the stop tag is used to determine whether a Duckiebot is the first in a charger or not.  
