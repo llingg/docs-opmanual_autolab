@@ -15,7 +15,7 @@ Respect the constraints of Duckietown.
 
 ## Add April tags for every intersection
 
-**Note down** all the **tag IDs** and their **positions** in your maintenance area - you will need them later on to define your map in the software.
+**Note down** all the **tag IDs** and their **positions** in your maintenance area - you will need them later on to define your map in the software. You may find information on how to place the april tags in the following part[](#autocharging-reference-tags). 
 
 ## Add a red line and a **STOP** april tag after each charger
 
