@@ -81,9 +81,9 @@ conventions
 
 The maintenance intersection is a 3-way intersection. A direction on the maintenance intersection leads either to a charging intersection (in case of module 2) or to a subset of chargers (in case of Module 1). 
 
-## Charging Intersection {#autocharging-definitions-charging-intersection}
+## Charger Intersection {#autocharging-definitions-charging-intersection}
 
-A charging intersection is a 3-way intersection where the charging entrances and exits of seperate chargers meet.  
+A charger intersection is a 3-way intersection where the charger entrances and exits of seperate chargers meet.  
 
 
 ## Charging Manager {#autocharging-definitions-charging-manager}
