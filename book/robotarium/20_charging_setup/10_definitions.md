@@ -3,14 +3,7 @@
 ## Maintenance area
 
 The actual Duckietown city and the charging and calibration area are strictly separated by a single road. Every tile which purpose is the servicing of Duckiebots is part of the maintenance area. This includes every intersection and road which guides the Duckiebot from the maintenance entrance to a charging module and back.  
-Below you can find the definitions of maintenance intersection and charger intersections. You can also see also an example of the placement of charging manager and doorkeepers.[](#fig:int_def)
 
-<div figure-id="fig:int_def">
-<img src="images/maintenance_intersection_def.png" style="width: 100%"/>
-<figcaption>
-Definitions of Intersections and Placement of Charging Manager and Doorkeepers
-</figcaption>
-</div>
 
 ## Charging area
 
@@ -74,7 +67,7 @@ A charging module describes the combination of a charging rail and all connected
 
 ## Charger {#autocharging-definitions-charger}
 
-A charger describes one single lane of a charging module. See [](#fig:conventions).
+A charger describes one single lane of a charging module. See [](#fig:conventions). 
 
 <div figure-id="fig:conventions">
 <img src="images/conventions.png" style="width: 100%"/>
@@ -84,5 +77,32 @@ conventions
 </div>
 
 
+## Maintenance Intersection {#autocharging-definitions-maintenance-intersection}
+
+The maintenance intersection is a 3-way intersection. A direction on the maintenance intersection leads either to a charging intersection (in case of module 2) or to a subset of chargers (in case of Module 1). 
+
+## Charging Intersection {#autocharging-definitions-charging-intersection}
+
+A charging intersection is a 3-way intersection where the charging entrances and exits of seperate chargers meet.  
+
+
+## Charging Manager {#autocharging-definitions-charging-manager}
+
+A charging manager is basically a watchtower with a traffic light. Its task is to tell Duckiebots to which charger they should drive in. 
+The charging manager must be allocated on the maintenance intersection.
+
+## Doorkeeper {#autocharging-definitions-doorkeeper}
+
+A doorkeeper is a watchtower that detects which charger a Duckiebot entered or exited. It must be allocated on the charging intersection.    
+
+
+Below you can find the definitions of maintenance intersection and charger intersections. You can also see also an example of the placement of charging manager and doorkeepers.[](#fig:int_def)
+
+<div figure-id="fig:int_def">
+<img src="images/maintenance_intersection_def.png" style="width: 80%"/>
+<figcaption>
+Definitions of Intersections and Placement of Charging Manager and Doorkeepers
+</figcaption>
+</div>
 
 
