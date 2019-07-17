@@ -79,29 +79,29 @@ conventions
 
 ## Maintenance Intersection {#autocharging-definitions-maintenance-intersection}
 
-The maintenance intersection is a 3-way intersection. A direction on the maintenance intersection leads either to a charging intersection (in case of module 2) or to a subset of chargers (in case of Module 1). 
+The maintenance intersection is a 3-way intersection. A direction on the maintenance intersection leads either to a charging intersection (in case of module 2) or to a subset of chargers (in case of Module 1). See [](#fig:int_def)
 
 ## Charger Intersection {#autocharging-definitions-charging-intersection}
 
-A charger intersection is a 3-way intersection where the charger entrances and exits of seperate chargers meet.  
+A charger intersection is a 3-way intersection where the charger entrances and exits of seperate chargers meet. See [](#fig:int_def)  
 
 
 ## Charging Manager {#autocharging-definitions-charging-manager}
 
 A charging manager is basically a watchtower with a traffic light. Its task is to tell Duckiebots to which charger they should drive in. 
-The charging manager must be allocated on the maintenance intersection.
+The charging manager must be allocated on the maintenance intersection. See [](#fig:int_def)
 
 ## Doorkeeper {#autocharging-definitions-doorkeeper}
 
-A doorkeeper is a watchtower that detects which charger a Duckiebot entered or exited. It must be allocated on the charging intersection.    
+A doorkeeper is a watchtower that detects which charger a Duckiebot entered or exited. It must be allocated on the charging intersection. See [](#fig:int_def)    
 
 
-Below you can find the definitions of maintenance intersection and charger intersections. You can also see also an example of the placement of charging manager and doorkeepers.[](#fig:int_def)
+Below you can find the definitions of maintenance intersection and charger intersections. You can also see also an example of the placement of charging manager and doorkeepers. See [](#fig:int_def)
 
 <div figure-id="fig:int_def">
 <img src="images/maintenance_intersection_def.png" style="width: 60%"/>
 <figcaption>
-Definitions of Intersections and Placement of Charging Manager and Doorkeepers
+Definitions of Intersections and Placement of Charging Manager and Doorkeepers for Module 2
 </figcaption>
 </div>
 
