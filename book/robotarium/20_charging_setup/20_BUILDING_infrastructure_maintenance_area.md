@@ -5,7 +5,7 @@ Before starting, here is a general schematic view of a maintenance area for modu
 and module 2[](#fig:mt2).
 
 <div figure-id="fig:mt1">
-<img src="images/module_1.png" style="width: 100%"/>
+<img src="images/module_1.png" style="width: 10%"/>
 <figcaption>
 Module 1
 </figcaption>
