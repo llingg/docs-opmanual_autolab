@@ -1,14 +1,13 @@
-# Setup of Reference Tags
+# Setup of Reference Tags {#autocharging-reference-tags status=Beta}
 
+This part helps you to place apriltags on the intersections they are needed. They are used for detecting Duckiebots on either maintenance intersection for Module 1 or charger intersections for Module 2. To seperate the apriltags that are only used for charging management, we call them reference tags.
 
 ## Steps
 
 
-1. Allocate the watchtowers near to the intersection in order to let it see all 3 directions: entrance/exit to the intersection and two directions to two seperate chargers
+1. Allocate the watchtowers near to the intersection in order to let it see all 3 directions: entrance/exit to the intersection and two directions to two seperate chargers. See[]()
 
->TODO: IMAGE plain intersection and watchtower position  
-
-2. Before setting up the ground april tags, please first start the CSLAM container and then either charging manager container for module 1 with the following command :
+2. Before setting up the reference tags, please first start the CSLAM container and then either charging manager container for module 1 with the following command :
 
 laptop $  docker -H ![HOSTNAME].local run -it --net host --memory="800m" --memory-swap="1.8g" --privileged -v /data:/data --name charging_manager ![charging_manager_container]
 
@@ -16,25 +15,27 @@ or doorkeeper container for module 2 with the following command:
 
 laptop $  docker -H ![HOSTNAME].local run -it --net host --memory="800m" --memory-swap="1.8g" --privileged -v /data:/data --name doorkeeper ![doorkeeper]
 
-Afer a while you will see logs like this:
-# TODO: normal logs of doorkeeper
 
-
-
-3. In order to see what the camera sees type the following command on your computer: 
+3. In order to observe what the camera type the following commands below in: 
 
     laptop $ dts start_gui_tools ![HOSTNAME]
 
     container $ rqt_image_view 
+    
     Now select the topic _acquisition_node/test_video_ .
     You have to get an image as following:
 
-#TODO:find the right name of topic
     
-#TODO: IMAGE plain intersection 
+>TODO: IMAGE  intersection 
+<div figure-id="fig:doorkeeper_intersection">
+<img src="images/apriltags_def.png" style="width: 80%"/>
+<figcaption>
+View from doorkeeper on charger intersection
+</figcaption>
+</div>
 
 
-4. In the picture below you can see that the lane on the right side is defined as direction 1 and on the lower left side as direction 2. Define which charger the direction leads. For example in our case direction 1 leads to charger 2 and direction 2 leads to charger 4. Then, choose apriltags under the scope of camera in order to assign them as reference apriltags, for example in this picture the reference tags are selected as following:  
+4. In the picture above you can see that the lane on the right side is defined as direction 1 and on the lower left side as direction 2. Define which charger the direction leads. For example in our case direction 1 leads to charger 2 and direction 2 leads to charger 4. Then, choose apriltags under the scope of camera in order to assign them as reference apriltags, for example in this picture the reference tags are selected as following:  
     * entrance tag : 374
     * exit tag : 238 
     * direction 1 tag : 361
