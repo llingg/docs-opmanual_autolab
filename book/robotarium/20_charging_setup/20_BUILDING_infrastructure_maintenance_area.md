@@ -6,7 +6,7 @@ and module 2[](#fig:mt2).
 
 
 <figure class="flow-subfigures">  
-    <figcaption>Main Modules</figcaption>
+    <figcaption>Modules</figcaption>
     <figure>
         <figcaption>Module 1</figcaption>
         <img style='width:8em' src="images/module_1.png"/>
