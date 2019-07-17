@@ -99,7 +99,7 @@ A doorkeeper is a watchtower that detects which charger a Duckiebot entered or e
 Below you can find the definitions of maintenance intersection and charger intersections. You can also see also an example of the placement of charging manager and doorkeepers.[](#fig:int_def)
 
 <div figure-id="fig:int_def">
-<img src="images/maintenance_intersection_def.png" style="width: 80%"/>
+<img src="images/maintenance_intersection_def.png" style="width: 60%"/>
 <figcaption>
 Definitions of Intersections and Placement of Charging Manager and Doorkeepers
 </figcaption>
