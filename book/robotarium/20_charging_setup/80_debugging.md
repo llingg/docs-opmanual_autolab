@@ -31,3 +31,15 @@ Depending on the battery, if no voltage lies across the charging rails, the Rasp
 **Duckiebot does not charge**
 
 There exist multiple reasons for that: did you turn on the power supply? However, most of the times the current collector / the rails are dirty. Clean them with alcohol or sanding paper.
+
+<!--TODO: troubleshooting,explanations  -->
+**Duckiebot does not stop while waiting in the queue in the charger**
+
+
+**Charging Manager was blinking with a frequency for charger 1 but the duckiebot did not drive in charger 1**
+
+**Duckiebot drove in charger 1 but charging manager thought it went in charger 2**
+
+
+
+
