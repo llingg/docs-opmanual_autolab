@@ -61,29 +61,29 @@ View from doorkeeper on charger intersection
     
     First, change direction parameters:
 
-    container $ rosparam set ![HOSTNAME]/![NODE_NAME]/direction1 ![CHARGER_ID]
-    container $ rosparam set ![HOSTNAME]/![NODE_NAME]/direction2 ![CHARGER_ID]
+    container $ rosparam set ![HOSTNAME]/charging_manager_node/direction1 ![CHARGER_ID]
+    container $ rosparam set ![HOSTNAME]/charging_manager_node/direction2 ![CHARGER_ID]
 
     Secondly, change the april tag parameters: 
 
-    container $ rosparam set ![HOSTNAME/![NODE_NAME]/direction1_tag ![direction1_tag]
-    container $ rosparam set ![HOSTNAME/![NODE_NAME]/direction2_tag ![direction2_tag]
-    container $ rosparam set ![HOSTNAME/![NODE_NAME]/entrance ![entrance]
-    container $ rosparam set ![HOSTNAME/![NODE_NAME]/exit ![exit]
+    container $ rosparam set ![HOSTNAME/charging_manager_node/direction1_tag ![direction1_tag]
+    container $ rosparam set ![HOSTNAME/charging_manager_node/direction2_tag ![direction2_tag]
+    container $ rosparam set ![HOSTNAME/charging_manager_node/entrance ![entrance]
+    container $ rosparam set ![HOSTNAME/charging_manager_node/exit ![exit]
     
     For module 2:
     
     First, change direction parameters:
 
-    container $ rosparam set ![HOSTNAME]/![NODE_NAME]/direction1 ![CHARGER_ID]  
-    container $ rosparam set ![HOSTNAME]/![NODE_NAME]/direction2 ![CHARGER_ID]  
+    container $ rosparam set ![HOSTNAME]/doorkeeper_node/direction1 ![CHARGER_ID]  
+    container $ rosparam set ![HOSTNAME]/doorkeeper_node/direction2 ![CHARGER_ID]  
 
     Secondly, change the april tag parameters: 
 
-    container $ rosparam set ![HOSTNAME/![NODE_NAME]/direction1_tag ![direction1_tag]  
-    container $ rosparam set ![HOSTNAME/![NODE_NAME]/direction2_tag ![direction2_tag]  
-    container $ rosparam set ![HOSTNAME/![NODE_NAME]/entrance ![entrance]  
-    container $ rosparam set ![HOSTNAME/![NODE_NAME]/exit ![exit]  
+    container $ rosparam set ![HOSTNAME/doorkeeper_node/direction1_tag ![direction1_tag]  
+    container $ rosparam set ![HOSTNAME/doorkeeper_node/direction2_tag ![direction2_tag]  
+    container $ rosparam set ![HOSTNAME/doorkeeper_node/entrance ![entrance_tag]  
+    container $ rosparam set ![HOSTNAME/doorkeeper_node/exit ![exit_tag]  
 
     In the logs you see the positions of reference tags are updated periodically. At the beginning all reference tag positions are initialized with 0.0. After you change the above mentioned parameters, you must see that the positions are updated with non-zero values. If that is the case, you accomplished this step. 
     
