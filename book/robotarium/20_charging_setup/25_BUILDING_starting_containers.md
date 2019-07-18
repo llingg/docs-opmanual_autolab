@@ -1,5 +1,7 @@
 # Starting the Containers {#autocharging-starting-containers status=Beta}
 
+> TODO: Explain how to create a docker container, create a container for TCP, change the IP parameter, build&push container, pull&run container 
+
 ## For Module 1:
 
 ### Start the CSLAM Container
