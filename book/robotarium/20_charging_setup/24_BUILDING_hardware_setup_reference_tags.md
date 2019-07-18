@@ -120,8 +120,7 @@ If it is not the case, replace the reference tag which is at the moment the clos
         and press _A_ for switching the Duckiebot to the autonomous mode.
         
     4. Observe the logs of charging manager(for module 1) or doorkeeper (for module 2) 
-    You have 
-    Repeat this experiment for other directions. 
+    You have to repeat this experiment for other directions. 
     
 
 
