@@ -32,13 +32,34 @@ Depending on the battery, if no voltage lies across the charging rails, the Rasp
 
 There exist multiple reasons for that: did you turn on the power supply? However, most of the times the current collector / the rails are dirty. Clean them with alcohol or sanding paper.
 
-<!--TODO: troubleshooting,explanations  -->
 **Duckiebot does not stop while waiting in the queue in the charger**
 
+Duckiebots are waiting in the queue with the help of vehicle detection and vehicle avoidance control nodes. You can solve this problem by increasing the desired_distance and minimal_distance parameters of vehicle avoidance control node. 
 
 **Charging Manager was blinking with a frequency for charger 1 but the duckiebot did not drive in charger 1**
 
+There can be several reasons for this occasion. Duckiebot could drive to the unintended direction if the intersection control node did not work correctly. You can find this out by looking at the logs of the Duckiebot. You may see logs as following 
+
+> driving to 0
+
+This means that the Duckiebot wanted to go left. If the direction the duckiebot wanted to go and the direction it went agree, nothing from the intersection control was wrong. (If it is not the case, you can trim the parameters of unicorn_intersection_node.)
+
+The second reason why this could happen is the LED detection. After arriving to the maintenance intersection, the Duckiebot waits for 15 seconds to detect the LED frequency of the traffic light. The image received by the camera is cut into three pieces. For traffic light detection, the upper part of the image is used. If the traffic light is not in this upper part of the image, the Duckiebot cannot detect the frequency of the LED. You can check this by looking at the led_detection_node/image_detection_TL topic:
+First start the megacity container. After the container is ready type in the following commands: 
+
+>dts start_gui_tools HOSTNAME
+First publish the topic in order to let the duckiebot drive to the maintenance area 
+>rostopic pub -1 "/<robot_name>/maintenance_control_node/go_mt_charging" std_msgs/Bool true
+>rqt_image_view
+Select the topic led_detection_node/image_detection_TL 
+
+Now you are ready to debug the led detection process. The duckiebot will come to the maintenance intersection and the led detection node will be switched on. Then you will see a gray image. First check whether you see the LED on the image. If this is not the case, then either the placement of the traffic light was wrong or the Duckiebot arrived to the intersection not correctly. Then, check whether there is a blue circle around the LED. 
+
+
+
 **Duckiebot drove in charger 1 but charging manager thought it went in charger 2**
+
+Check whether the reference tags are placed correctly following the instructions for "setup of reference tags".
 
 
 
