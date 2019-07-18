@@ -89,19 +89,12 @@ View from doorkeeper on charger intersection
     
 
 6. Now you have to place the reference tags such that they refer to a particular direction. In order to do that, take a duckiebot and place it to the entrance of the intersection.   
-Now in the logs of charging manager/doorkeeper container you will see the following:
-
-...  
->TODO: Screenshot  logs of doorkeeper
-(duckiebot apriltag is near to entrance/exit apriltag)  
-...  
-
-In this log you see a python dictionary. Its keys refer to the apriltag ids of the duckiebot which arrived to the intersection. For every apriltag id that is observed on the intersection, there is a dictionary. In it you have some attributes of a duckiebot apriltag:  
-
+Now in the logs of charging manager(for module 1)/doorkeeper(for module 2) container you will see that the april tag id is added to a dictionary called MOVING AT(referring the moving apriltags). Its keys refer to the apriltag ids of the duckiebot which arrived to the intersection. For every apriltag id that is observed on the intersection, there is a dictionary. In it you have some attributes of a duckiebot apriltag:  
     * pose : Position of Duckiebot's apriltag on the image  
     * first_neighbor : First seen closest reference tag to Duckiebot's apriltag  
-    * last_neighbor  : Last seen closest reference tag to Duckiebot's apriltag  
-    * time : The time the information above is saved  
+    * last_neighbor  : Last seen closest reference tag to Duckiebot's apriltag. This attribute will be updated upon receiving april tag positions from the acquisition node(see CSLAM).  
+    * timestamp : The time the information above is saved  
+    
 After understanding what the logs mean, look at the last_neighbor argument on the logs. If it corresponds to the entrance reference tag and your duckiebot is located near the entrance reference tag, it means, the placement of entrance reference tag works. 
     
 If it is not the case, replace the reference tag which is at the moment the closest neighbor apriltag (last_neighbor in terms of logs)  further from the intersection entrance along the lane it is located. In this example, you can see that the apriltag 361 is far from the intersection entrance and it is near to the charger exit.[](fig:doorkeeper_intersection)
@@ -119,8 +112,14 @@ If it is not the case, replace the reference tag which is at the moment the clos
         
         and press _A_ for switching the Duckiebot to the autonomous mode.
         
-    4. Observe the logs of charging manager(for module 1) or doorkeeper (for module 2) 
-    You have to repeat this experiment for other directions. 
+    4. Observe the logs of charging manager(for module 1) or doorkeeper (for module 2). You have to see the following: 
+    
+    >402 is on WAY 2 
+    
+    This means, a duckiebot with apriltag ID 402 entered the charger 2.
+    
+    
+    You have to repeat this experiment for other directions and verify that our reference tag placement works. 
     
 
 
