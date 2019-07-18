@@ -61,15 +61,15 @@ View from doorkeeper on charger intersection
     
     First, change direction parameters:
 
-    container $ rosparam set ![HOSTNAME]/charging_manager_node/direction1 ![CHARGER_ID]
-    container $ rosparam set ![HOSTNAME]/charging_manager_node/direction2 ![CHARGER_ID]
+    container $ rosparam set ![HOSTNAME]/charging_manager_node/direction1 ![CHARGER_ID]  
+    container $ rosparam set ![HOSTNAME]/charging_manager_node/direction2 ![CHARGER_ID]  
 
     Secondly, change the april tag parameters: 
 
-    container $ rosparam set ![HOSTNAME/charging_manager_node/direction1_tag ![direction1_tag]
-    container $ rosparam set ![HOSTNAME/charging_manager_node/direction2_tag ![direction2_tag]
-    container $ rosparam set ![HOSTNAME/charging_manager_node/entrance ![entrance]
-    container $ rosparam set ![HOSTNAME/charging_manager_node/exit ![exit]
+    container $ rosparam set ![HOSTNAME/charging_manager_node/direction1_tag ![direction1_tag]  
+    container $ rosparam set ![HOSTNAME/charging_manager_node/direction2_tag ![direction2_tag]  
+    container $ rosparam set ![HOSTNAME/charging_manager_node/entrance ![entrance]  
+    container $ rosparam set ![HOSTNAME/charging_manager_node/exit ![exit]  
     
     For module 2:
     
