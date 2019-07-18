@@ -1,8 +1,12 @@
 # General Overview:
 
+In this part it is explained how the system for module 1 and 2 works.
+
 ## Responsibilities of overall managing the chargers  
-**TASK 1**- Evaluating the april tag’s position in order to understand in which direction the duckiebot went  
-**TASK 2**- Gathering information on charger sizes and finding the next charger a duckiebot newly arriving the maintenance area should go  
+There are 3 main tasks that have to be accomplished :
+
+**TASK 1**- Evaluating the april tag’s position in order to understand in which direction the duckiebot went and where the reference tags are located.
+**TASK 2**- Gathering information on charger sizes and finding the next free charger a duckiebot newly arriving the maintenance area should go  
 **TASK 3**- Selecting the frequency with which the LED should blink 
 
 In Modul 1, all the responsibilities are done by the charging manager. 
@@ -11,14 +15,10 @@ In task 2, charging manager will iterate over the data structure in order to dis
 
 In Modul 2, the tasks are completed in separate devices. Task 1 is accomplished by doorkeepers and the rest will be done by the charging manager. The output of task 1 will be shared with the charging manager through a communication server. For this objective, charging manager serves a python-dictionary of duckiebot Apriltags as keys and charger indices as values (initially all charger indices are set to zero to indicate that the duckiebot does not occupy any charger.). The clients, in this case the doorkeepers, will update this dictionary according to their evaluation of april tag positions, for example, if duckiebot with april tag 400 enters charger 3 then the doorkeeper will change the value of 400 from 0 to 3. 
 
-_To give you a better understanding of the code, you are welcome to use the schema below. It uses the exact same variable names in the code._
-
-[SCHEMA OF FUNCTIONS AND THEIR USAGE AND SHARED MEMORIES FOR MODUL 1 AND 2]
-
 
 
 ## Workflow in detail
-
+Here you can find 
 ### Preliminary information:
 Every frequency with which the LED blinks, implies to which charger the duckiebot should go.
 CSLAM Acquisiton node provides many information. Only the data about the position of the center on the image will be used by charging manager. 
