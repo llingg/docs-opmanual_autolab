@@ -45,7 +45,7 @@ Graph of software architecture.
 </div>
 <br />
 
-**Step 6: Wait** <br />Duckiebot waits at the charging manager for 10 seconds to correctly read the light frequency from the trafficlight. When it is finished it goes into the intersection coordination state.
+**Step 6: Wait** <br />Duckiebot waits at the charging manager for 15 seconds to correctly read the light frequency from the trafficlight. the finite state machine transitions to wait state. When it is finished the finite state machine goes into the intersection coordination state.
 
 <div figure-id="fig:software_architec">
 <img src="images/wait.png" style="width: 80%"/>
