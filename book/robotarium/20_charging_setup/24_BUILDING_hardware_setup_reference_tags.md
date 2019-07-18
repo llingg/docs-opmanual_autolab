@@ -75,19 +75,18 @@ View from doorkeeper on charger intersection
     
     First, change direction parameters:
 
-    container $ rosparam set ![HOSTNAME]/![NODE_NAME]/direction1 ![CHARGER_ID]
-    container $ rosparam set ![HOSTNAME]/![NODE_NAME]/direction2 ![CHARGER_ID]
+    container $ rosparam set ![HOSTNAME]/![NODE_NAME]/direction1 ![CHARGER_ID]  
+    container $ rosparam set ![HOSTNAME]/![NODE_NAME]/direction2 ![CHARGER_ID]  
 
     Secondly, change the april tag parameters: 
 
-    container $ rosparam set ![HOSTNAME/![NODE_NAME]/direction1_tag ![direction1_tag]
-    container $ rosparam set ![HOSTNAME/![NODE_NAME]/direction2_tag ![direction2_tag]
-    container $ rosparam set ![HOSTNAME/![NODE_NAME]/entrance ![entrance]
-    container $ rosparam set ![HOSTNAME/![NODE_NAME]/exit ![exit]
+    container $ rosparam set ![HOSTNAME/![NODE_NAME]/direction1_tag ![direction1_tag]  
+    container $ rosparam set ![HOSTNAME/![NODE_NAME]/direction2_tag ![direction2_tag]  
+    container $ rosparam set ![HOSTNAME/![NODE_NAME]/entrance ![entrance]  
+    container $ rosparam set ![HOSTNAME/![NODE_NAME]/exit ![exit]  
 
-    If you see that the positions of reference tags are updated, you accomplished this step.
+    In the logs you see the positions of reference tags are updated periodically. At the beginning all reference tag positions are initialized with 0.0. After you change the above mentioned parameters, you must see that the positions are updated with non-zero values. If that is the case, you accomplished this step. 
     
-> TODO:Screenshot static tags logs doorkeeper
 
 6. Now you have to place the reference tags such that they refer to a particular direction. In order to do that, take a duckiebot and place it to the entrance of the intersection.   
 Now in the logs of charging manager/doorkeeper container you will see the following:
@@ -118,12 +117,12 @@ If it is not the case, replace the reference tag which is at the moment the clos
 
         laptop $ dts duckiebot keyboard_control DUCKIEBOT_NAME  
         
-        and press _A_
-    4. Observe the logs of charging manager/doorkeeper  
-    You have to see similar logs like this:
-    Repeat this experiment for other directions. _(During your experiments you may see some other logs then the one below, please ignore them. They are not relevant for our purpose)_
+        and press _A_ for switching the Duckiebot to the autonomous mode.
+        
+    4. Observe the logs of charging manager(for module 1) or doorkeeper (for module 2) 
+    You have 
+    Repeat this experiment for other directions. 
     
-> TODO: LOGS DUCKİEBOT ON WAY 
 
 
 
