@@ -114,7 +114,7 @@ If it is not the case, replace the reference tag which is at the moment the clos
         
     4. Observe the logs of charging manager(for module 1) or doorkeeper (for module 2). You have to see the following: 
     
-    > 402 is on WAY 2 
+    >402 is on WAY 2 
     
     This means, Duckiebot with apriltag ID 402 entered the charger 2.
     
