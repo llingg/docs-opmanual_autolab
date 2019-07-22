@@ -102,6 +102,10 @@ View from doorkeeper on charger intersection
 
     In the logs you see the positions of reference tags are updated periodically. At the beginning all reference tag positions are initialized with 0.0. After you change the above mentioned parameters, you must see that the positions are updated with non-zero values. If that is the case, you accomplished this step. 
     
+> You should see that it says apriltags changed 
+
+> TODO: Show the logs
+    
 
 6. Now you have to place the reference tags such that they refer to a particular direction. In order to do that, take a duckiebot and place it to the entrance of the intersection.   
 Now in the logs of charging manager(for module 1)/doorkeeper(for module 2) container you will see that the april tag id is added to a dictionary called MOVING AT(referring the moving apriltags). Its keys refer to the apriltag ids of the duckiebot which arrived to the intersection. For every apriltag id that is observed on the intersection, there is a dictionary. In it you have some attributes of a duckiebot apriltag:  
