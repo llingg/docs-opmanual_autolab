@@ -112,7 +112,9 @@ Now in the logs of charging manager(for module 1)/doorkeeper(for module 2) conta
     * pose : Position of Duckiebot's apriltag on the image  
     * first_neighbor : First seen closest reference tag to Duckiebot's apriltag  
     * last_neighbor  : Last seen closest reference tag to Duckiebot's apriltag. This attribute will be updated upon receiving april tag positions from the acquisition node(see CSLAM).  
-    * timestamp : The time the information above is saved  
+    * timestamp : The time the information above is saved 
+    
+> TODO: Show the moving AT updating  
     
 After understanding what the logs mean, look at the last_neighbor argument on the logs. If it corresponds to the entrance reference tag and your duckiebot is located near the entrance reference tag, it means, the placement of entrance reference tag works. 
     
