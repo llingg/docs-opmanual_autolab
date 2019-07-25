@@ -100,13 +100,13 @@ You can check the logs of the container, You have to see the following logs peri
 ```
 ...
 [INFO] [1563805663.275686]: ###########################
-[INFO] [1563805663.288087]: STATIC AT:{'334': {'position': x: 1217.38195801
+[INFO] [1563805663.288087]: STATIC AT:{'374': {'position': x: 1217.38195801
 y: 527.410217285
-z: 0}, '327': {'position': x: 252.730285645
+z: 0}, '238': {'position': x: 252.730285645
 y: 602.758789062
-z: 0}, '360': {'position': x: 518.172912598
+z: 0}, '361': {'position': x: 518.172912598
 y: 229.96383667
-z: 0}, '376': {'position': x: 283.221954346
+z: 0}, '347': {'position': x: 283.221954346
 y: 217.282211304
 z: 0}}
 [INFO] [1563805663.298289]: MOVING AT:defaultdict(<type 'dict'>, {})
@@ -120,14 +120,6 @@ In the logs you see the positions of reference tags are updated periodically. At
 4. Now you have to place the reference tags such that they refer to a particular direction. In order to do that, take a duckiebot and place it to the entrance of the intersection.   
 Now in the logs of charging manager(for module 1)/doorkeeper(for module 2) container you will see that the april tag id is added to a dictionary called MOVING AT(referring the moving apriltags). Its keys refer to the apriltag ids of the duckiebot which arrived to the intersection.
 
-```
-...
-[INFO] [1563805798.282072]: MOVING AT:defaultdict(<type 'dict'>, {'400': {'first_neighbor': '327', 'last_neighbor': '360', 'timestamp': 1563805796.091526, 'position': x: 748.847106934
-y: 468.132141113
-z: 0}})
-...
-``` 
-
 For every apriltag id that is observed on the intersection, there is a dictionary. In it you have some attributes of a duckiebot apriltag: 
 
     * position :  Position of Duckiebot's apriltag on the image  
@@ -135,8 +127,17 @@ For every apriltag id that is observed on the intersection, there is a dictionar
     * last_neighbor  : Last seen closest reference tag to Duckiebot's apriltag. This attribute will be updated upon receiving april tag positions from the acquisition node  
     * timestamp : The time the information above is saved 
     
+Have a look on this log. We moved a duckiebot from entrance to direction 2:
 
-    
+```
+...
+[INFO] [1563805798.282072]: MOVING AT:defaultdict(<type 'dict'>, {'400': {'first_neighbor': '374', 'last_neighbor': '347', 'timestamp': 1563805796.091526, 'position': x: 748.847106934
+y: 468.132141113
+z: 0}})
+...
+``` 
+There you see that the first_neighbor is the reference tag with ID 374 corresponding the entrance tag. The last_neighbor argument is tag 347, this is the direction2_tag. So one can infer that duckiebot was moved from entrance to direction 2.
+
 After understanding what the logs mean, look at the last_neighbor argument on the logs. If it corresponds to the entrance reference tag and your duckiebot is located near the entrance reference tag, it means, the placement of entrance reference tag works. 
     
 If it is not the case, replace the reference tag which is at the moment the closest neighbor apriltag (last_neighbor in terms of logs)  further from the intersection entrance along the lane it is located. In this example, you can see that the apriltag 361 is far from the intersection entrance and it is near to the charger exit.[](fig:doorkeeper_intersection)
