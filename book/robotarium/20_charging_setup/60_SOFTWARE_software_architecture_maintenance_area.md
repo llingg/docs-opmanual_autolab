@@ -27,19 +27,19 @@ Before starting to read,note that every frequency with which the LED blinks, imp
 #### Charging Manager
 
 0. Charging Manager’s LED blinks with the initial frequency
-1. (TASK 1) CSLAM Acquisition node provides information on the Apriltags in the scope of camera  
+1. **(TASK 1)** CSLAM Acquisition node provides information on the Apriltags in the scope of camera  
 	In the scope of the camera, lies the reference tags and duckiebots’ Apriltags if there are any duckiebots arrived to the intersection.   
 	The positions of duckiebots’ Apriltags and reference tags will be saved and updated, as the node publishes the topic.   
 	Upon receiving these, the closest neighbor reference tag to duckiebot's apriltag and the timestamp will be computed and saved (Here minimal distance is defined by the minimal euclidean distance of two points on the image.)  
 	(The first computed closest neighbor reference tag will be saved under the variable “first_neighbor” and the other results will be updated and saved under “last_neighbor”.)  
 	
-2. (TASK 1) Apriltag Evalutaion:  
+2. **(TASK 1)** Apriltag Evalutaion:  
 	After not seeing an Apriltag of a duckiebot for more than threshold time, the “first_neighbor” and “last_neighbor” will be evaluated. That means, if the first_neighbor is the entrance tag and the last_neighbor is the direction2_tag, then Duckiebot went in direction2. Since direction2 corresponds to , for example, charger 2, the Duckiebot went in charger 2. 
 	According to this outcome the chargers dictionary will be updated and the tag of duckiebot which has entered/exited the charger i and the timestamp of entrance/exit will be saved/deleted under/from charger i’s list. 
-3. (TASK 2) Charger sizes will be updated according to step 2  
+3. **(TASK 2)** Charger sizes will be updated according to step 2  
 	If the most unoccupied charger is changed, it will be noticed and new frequency corresponding the new charger with the most free spaces will be determined.
 
-4. (TASK 3) LED blinks with the determined frequency in step 3
+4. **(TASK 3)** LED blinks with the determined frequency in step 3
 
 These steps will be repeated upon receiving the messages from acquisition node’s topic
 	
