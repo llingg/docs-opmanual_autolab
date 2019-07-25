@@ -28,13 +28,13 @@ laptop $  docker -H ![HOSTNAME].local run -it --net host --memory="800m" --memor
     
     Add two lines: 
     
-    HOST_IP_ADDRESS     HOST_NAME 
-    HOST_IP_ADDRESS     HOST_NAME.local
+    HOST_IP_ADDRESS     HOST_NAME   
+    HOST_IP_ADDRESS     HOST_NAME.local  
     
     such as 
     
-    192.168.1.170       watchtower26
-    192.168.1.170       watchtower26.local
+    192.168.1.170       watchtower26  
+    192.168.1.170       watchtower26.local  
     
 
 
