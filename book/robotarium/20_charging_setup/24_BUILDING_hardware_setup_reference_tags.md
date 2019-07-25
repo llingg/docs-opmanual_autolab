@@ -9,7 +9,9 @@ For module 2 Duckiebots are detected on the charger intersections by the doorkee
 
 ## Steps
 
-
+0. Take 4 apriltags to place on the intersection they are needed. Notice the apriltag IDs you are using.
+0.1 
+0.2 Now you shoud build a container where your 
 1. Allocate the watchtowers on the edge to the intersection in order to let it see all 3 directions: entrance/exit to the intersection and two directions to two seperate chargers. See[]()
 
 > TODO: add a picture of doorkeeper on charger intersection 
@@ -63,10 +65,13 @@ z: 0.0}}
 ...
 ``` 
 
-3. In order to observe what the camera sees type the following commands below in: 
+3. Now, it is time to place the apriltags on the intersection they are needed. Therefore, you have to observe what the camera of charging manager(in case of module 1) or the doorkeeper (in case of module 2) sees.
+
+In order to observe what the camera sees type the following commands below in: 
 
     laptop $ dts start_gui_tools ![HOSTNAME]
     
+In order to 
     container $ vim /etc/hosts 
     
     Add two lines: 
