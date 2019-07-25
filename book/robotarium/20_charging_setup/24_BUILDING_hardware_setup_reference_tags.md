@@ -12,9 +12,13 @@ For module 2 Duckiebots are detected on the charger intersections by the doorkee
 
 1. Allocate the watchtowers on the edge to the intersection in order to let it see all 3 directions: entrance/exit to the intersection and two directions to two seperate chargers. See[]()
 
+> TODO: add a picture of doorkeeper on charger intersection 
 
-2. If you are using module 1, the charging manager will be responsible for apriltag detection. Therefore, you have to run the CSLAM container on charging manager.   
-If you are using module 2, the doorkeepers will be responsible for detecting apriltags. Hence, CSLAM container must be started on doorkeepers.  
+
+2. In Step 2 we will start the containers we need to setup the reference tags, namely, the CSLAM container for acquiring the apriltag poses and either the charging manager container(for module 1) or the doorkeeper container(for module 2)
+
+If you are using module 1, the charging manager will be responsible for apriltag detection. Therefore, you have to run the CSLAM container on charging manager.   
+If you are using module 2, the doorkeepers will be responsible for detecting apriltags. Hence, CSLAM container must be started on doorkeepers and not on the charging manager.  
 
 Use the following command line to run the CSLAM container 
 
@@ -23,25 +27,41 @@ Use the following command line to run the CSLAM container
 After starting the container, make sure it is running. You have to see logs in CSLAM container as following:
 
 ```
-
+...
 [INFO/serverSideProcess] Published pose for tag 327 in sequence 10
 [INFO/serverSideProcess] Published pose for tag 334 in sequence 10
 [INFO/serverSideProcess] Published pose for tag 360 in sequence 10
 [INFO/serverSideProcess] Published pose for tag 327 in sequence 11
-
+...
 
 ```
-
-
+If you are using module 1, you have to start the charging manager container as follows:
 
 laptop $  docker -H ![HOSTNAME].local run -it --net host --memory="800m" --memory-swap="1.8g" --privileged -v /data:/data --name charging_manager ![charging_manager_container]
 
-or doorkeeper container for module 2 with the following command:  
+If you are using module 2, you have to start the doorkeeper container as follows:
 
 laptop $  docker -H ![HOSTNAME].local run -it --net host --memory="800m" --memory-swap="1.8g" --privileged -v /data:/data --name doorkeeper ![doorkeeper]
-Before setting up the reference tags, first start the CSLAM container:
 
->TODO: describe how to start the CSLAM:autocharging container
+You can check the logs of the container, You have to see the following logs periodically:
+
+```
+...
+[INFO] [1564066277.821698]: ###########################
+[INFO] [1564066277.824795]: STATIC AT:{'334': {'position': x: 0.0
+y: 0.0
+z: 0.0}, '327': {'position': x: 0.0
+y: 0.0
+z: 0.0}, '360': {'position': x: 0.0
+y: 0.0
+z: 0.0}, '376': {'position': x: 0.0
+y: 0.0
+z: 0.0}}
+[INFO] [1564066277.826921]: MOVING AT:defaultdict(<type 'dict'>, {})
+[INFO] [1564066277.828527]: Charging Manager: {'charger2': {}, 'charger1': {}}
+[INFO] [1564066277.831690]: Charging Manager: Charger 1 Occupancy: 0, Charger 2 Occupancy: 0
+...
+``` 
 
 3. In order to observe what the camera sees type the following commands below in: 
 
