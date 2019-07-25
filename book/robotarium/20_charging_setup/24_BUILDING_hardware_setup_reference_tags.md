@@ -90,8 +90,10 @@ Add two lines:
     
     192.168.1.170       watchtower26  
     container $ rqt_image_view 
+    
 Then select the topic /poses_acquisition/test_video/HOSTNAME/compressed  
-Select the apriltags such that every selected apriltag represents one direction as in the picture above.  
+Select the apriltags such that every selected apriltag represents one direction as in the picture above. If it is necessary to choose traffic sign apriltags, you may select them as reference tags.
+
 Type in the parameters to the YAML file.
 
 Now you have to build, push and run the container
@@ -124,13 +126,24 @@ In the logs you see the positions of reference tags are updated periodically. At
 
 
 6. Now you have to place the reference tags such that they refer to a particular direction. In order to do that, take a duckiebot and place it to the entrance of the intersection.   
-Now in the logs of charging manager(for module 1)/doorkeeper(for module 2) container you will see that the april tag id is added to a dictionary called MOVING AT(referring the moving apriltags). Its keys refer to the apriltag ids of the duckiebot which arrived to the intersection. For every apriltag id that is observed on the intersection, there is a dictionary. In it you have some attributes of a duckiebot apriltag:  
-    * pose : Position of Duckiebot's apriltag on the image  
+Now in the logs of charging manager(for module 1)/doorkeeper(for module 2) container you will see that the april tag id is added to a dictionary called MOVING AT(referring the moving apriltags). Its keys refer to the apriltag ids of the duckiebot which arrived to the intersection.
+
+```
+...
+[INFO] [1563805798.282072]: MOVING AT:defaultdict(<type 'dict'>, {'400': {'first_neighbor': '327', 'last_neighbor': '360', 'timestamp': 1563805796.091526, 'position': x: 748.847106934
+y: 468.132141113
+z: 0}})
+...
+``` 
+
+For every apriltag id that is observed on the intersection, there is a dictionary. In it you have some attributes of a duckiebot apriltag: 
+
+    * position :  Position of Duckiebot's apriltag on the image  
     * first_neighbor : First seen closest reference tag to Duckiebot's apriltag  
-    * last_neighbor  : Last seen closest reference tag to Duckiebot's apriltag. This attribute will be updated upon receiving april tag positions from the acquisition node(see CSLAM).  
+    * last_neighbor  : Last seen closest reference tag to Duckiebot's apriltag. This attribute will be updated upon receiving april tag positions from the acquisition node  
     * timestamp : The time the information above is saved 
     
-> TODO: Show the moving AT updating  
+
     
 After understanding what the logs mean, look at the last_neighbor argument on the logs. If it corresponds to the entrance reference tag and your duckiebot is located near the entrance reference tag, it means, the placement of entrance reference tag works. 
     
@@ -150,9 +163,9 @@ If it is not the case, replace the reference tag which is at the moment the clos
         and press _A_ for switching the Duckiebot to the autonomous mode.
         
     4. Observe the logs of charging manager(for module 1) or doorkeeper (for module 2). You have to see the following: 
-    
-    >402 is on WAY 2 
-    
+    ``` 
+    402 is on WAY 2 
+    ``` 
     This means, Duckiebot with apriltag ID 402 entered the charger 2.
     
     
