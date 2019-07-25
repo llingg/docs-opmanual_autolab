@@ -37,16 +37,7 @@ After starting the container, make sure it is running. You have to see logs in C
 
 ```
 
-3.Now you are going to build and run a container which will interpret the apriltag poses in order to acquire information on charger occupancies (for more information, read the software parts). First it will be explained   
-
-
-First, you have to clone the git repository:
-> TODO: change the relevant github repo  
-```
-git clone https://github.com/alifahriander/charging_manager_module1.git
-cd charging_manager_module1
-```  
-
+3.Now you are going to run the containers which are 
 
 
 
