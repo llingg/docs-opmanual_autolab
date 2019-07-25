@@ -9,15 +9,14 @@ For module 2 Duckiebots are detected on the charger intersections by the doorkee
 
 ## Steps
 
-0. Take 4 apriltags to place on the intersection they are needed. Notice the apriltag IDs you are using.
-0.1 
-0.2 Now you shoud build a container where your 
+0. Take 4 apriltags and place them on the intersection they are needed. Note down the apriltag IDs you are using.
+
 1. Allocate the watchtowers on the edge to the intersection in order to let it see all 3 directions: entrance/exit to the intersection and two directions to two seperate chargers. See[]()
 
 > TODO: add a picture of doorkeeper on charger intersection 
 
 
-2. In Step 2 we will start the containers we need to setup the reference tags, namely, the CSLAM container for acquiring the apriltag poses and either the charging manager container(for module 1) or the doorkeeper container(for module 2)
+2. In Step 2 we will start the CSLAM container.
 
 If you are using module 1, the charging manager will be responsible for apriltag detection. Therefore, you have to run the CSLAM container on charging manager.   
 If you are using module 2, the doorkeepers will be responsible for detecting apriltags. Hence, CSLAM container must be started on doorkeepers and not on the charging manager.  
@@ -37,6 +36,22 @@ After starting the container, make sure it is running. You have to see logs in C
 ...
 
 ```
+
+3.Now you are going to build and run a container which will interpret the apriltag poses in order to acquire information on charger occupancies (for more information, read the software parts). First it will be explained   
+
+
+First, you have to clone the git repository:
+> TODO: change the relevant github repo  
+```
+git clone https://github.com/alifahriander/charging_manager_module1.git
+cd charging_manager_module1
+```  
+
+
+
+
+
+
 If you are using module 1, you have to start the charging manager container as follows:
 
 laptop $  docker -H ![HOSTNAME].local run -it --net host --memory="800m" --memory-swap="1.8g" --privileged -v /data:/data --name charging_manager ![charging_manager_container]
