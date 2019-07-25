@@ -11,9 +11,7 @@ For module 2 Duckiebots are detected on the charger intersections by the doorkee
 
 0. Take 4 apriltags and place them on the intersection they are needed. Note down the apriltag IDs you are using.
 
-1. Allocate the watchtowers on the edge to the intersection in order to let it see all 3 directions: entrance/exit to the intersection and two directions to two seperate chargers. See[]()
-
-> TODO: add a picture of doorkeeper on charger intersection 
+1. Allocate the watchtowers on the edge to the intersection in order to let it see all 3 directions: entrance/exit to the intersection and two directions to two seperate chargers.
 
 
 2. In Step 2 we will start the CSLAM container.
