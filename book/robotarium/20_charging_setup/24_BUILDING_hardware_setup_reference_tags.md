@@ -80,15 +80,7 @@ Then, choose apriltags under the scope of camera in order to assign them as refe
 If you want to see which apriltags your camera sees, use these command lines:  
 
     laptop $ dts start_gui_tools ![HOSTNAME]
-    container $ vim /etc/hosts 
-    
-Add two lines: 
-    
-    HOST_IP_ADDRESS     HOST_NAME   
-    
-    such as 
-    
-    192.168.1.170       watchtower26  
+    container $ echo "![HOST_IP] ![HOSTNAME]" >> /etc/hosts   
     container $ rqt_image_view 
     
 Then select the topic /poses_acquisition/test_video/HOSTNAME/compressed  
@@ -125,7 +117,7 @@ In the logs you see the positions of reference tags are updated periodically. At
 
 
 
-6. Now you have to place the reference tags such that they refer to a particular direction. In order to do that, take a duckiebot and place it to the entrance of the intersection.   
+4. Now you have to place the reference tags such that they refer to a particular direction. In order to do that, take a duckiebot and place it to the entrance of the intersection.   
 Now in the logs of charging manager(for module 1)/doorkeeper(for module 2) container you will see that the april tag id is added to a dictionary called MOVING AT(referring the moving apriltags). Its keys refer to the apriltag ids of the duckiebot which arrived to the intersection.
 
 ```
@@ -149,8 +141,8 @@ After understanding what the logs mean, look at the last_neighbor argument on th
     
 If it is not the case, replace the reference tag which is at the moment the closest neighbor apriltag (last_neighbor in terms of logs)  further from the intersection entrance along the lane it is located. In this example, you can see that the apriltag 361 is far from the intersection entrance and it is near to the charger exit.[](fig:doorkeeper_intersection)
 
-7. Repeat the previous step for every reference tag 
-8. Test and verify that reference tags' placement works. In order to do that, follow the instructions below:
+5. Repeat the previous step for every reference tag 
+6. Test and verify that reference tags' placement works. In order to do that, follow the instructions below:
     1. Start the _indefinite navigation demo_
 
     laptop $ dts duckiebot demo --demo_name indefinite_navigation --duckiebot_name DUCKIEBOT_NAME --package_name duckietown_demos
