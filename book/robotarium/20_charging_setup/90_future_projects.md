@@ -6,11 +6,6 @@ There are still multiple tasks which would improve the charging area by a lot. I
 
 For traversing through the maintenance area, intersection navigation is a crucial part. With the new Unicorn Intersection Node, the success rate was raised up to over 90%. For a completely autonomous city, this is still way too low.
 
-<!--  Provide a flatter surface -->
-
-<!--With the original tiles, it is almost impossible to obtain a nice flat surface. This is the reason why sometimes a Duckiebot gets stuck or loses contact. An idea would be to replace the charging tiles with a black and flat surface (like sprayed wood) and tape the lines directly on it
--->
-
 ## Improve the vehicle detection
 
 In order to keep distance to a Duckiebot in front, the vehicle avoidance node detects a circle grid pattern ($7 \times 3$) and adapts the velocity. However, the detection only runs at $2Hz$ and fails sometimes.
@@ -36,3 +31,4 @@ After operating the Duckiebot for a long time, the Raspberry Pi gets really hot 
 ## Implement a fault detection
 
 In order being able to act as soon as possible when a fault occurs on the charging station, a monitor system which enables the user to have a remote control over the whole auto-charging system could be developped. Then someone could for instance get a mail to clear a fault.
+
