@@ -1,6 +1,6 @@
 # Setup of Reference Tags {#autocharging-reference-tags status=Beta}
 
-First, we seperate the apriltags that are only used for charging management with the normal ground apriltags and we call them reference tags.
+(First, we seperate the apriltags that are only used for charger management with the normal ground apriltags and we call them reference tags.)
 
 This part helps you to place reference tags on the intersections they are needed. They are used for detecting Duckiebots on an intersection. 
 For module 1 the charging manager will be detecting Duckiebots, so you have to place the reference tags on the maintenance intersection following the instructions below.   
@@ -23,7 +23,9 @@ If you are using module 2, the doorkeepers will be responsible for detecting apr
 
 Use the following command line to run the CSLAM container 
 
->TODO: describe how to run the CSLAM:autocharging container 
+> TODO: describe how to run the CSLAM:autocharging container 
+> Use the script for duckietown-cslam, change the container tag to autocharge
+> explain how it should work ros_master as it self...
 
 After starting the container, make sure it is running. You have to see logs in CSLAM container as following:
 
@@ -37,129 +39,89 @@ After starting the container, make sure it is running. You have to see logs in C
 
 ```
 
-3.Now you are going to run the containers which are 
+3.Now you are going build and run containers which are responsible to interpret the apriltag poses of duckiebots. In order to do that, use the commands : 
+
+For module 1:
+
+    laptop $ git clone https://github.com/alifahriander/charging_manager_module1.git
+    laptop $ cd charging_manager_module1/docker
 
 
+For module 2:
 
+    laptop $ git clone https://github.com/alifahriander/doorkeeper.git
+    laptop $ cd doorkeeper/docker 
 
+In the _docker_ directory you find a YAML file. There you can find the parameters relevant for charging manager or doorkeeper. You have to change the following parameters:  
+* direction1  
+* direction2  
+* direction1_tag  
+* direction2_tag  
+* entrance  
+* exit    
 
-If you are using module 1, you have to start the charging manager container as follows:
+Now it is explained how these parameters are defined.  
 
-laptop $  docker -H ![HOSTNAME].local run -it --net host --memory="800m" --memory-swap="1.8g" --privileged -v /data:/data --name charging_manager ![charging_manager_container]
-
-If you are using module 2, you have to start the doorkeeper container as follows:
-
-laptop $  docker -H ![HOSTNAME].local run -it --net host --memory="800m" --memory-swap="1.8g" --privileged -v /data:/data --name doorkeeper ![doorkeeper]
-
-You can check the logs of the container, You have to see the following logs periodically:
-
-```
-...
-[INFO] [1564066277.821698]: ###########################
-[INFO] [1564066277.824795]: STATIC AT:{'334': {'position': x: 0.0
-y: 0.0
-z: 0.0}, '327': {'position': x: 0.0
-y: 0.0
-z: 0.0}, '360': {'position': x: 0.0
-y: 0.0
-z: 0.0}, '376': {'position': x: 0.0
-y: 0.0
-z: 0.0}}
-[INFO] [1564066277.826921]: MOVING AT:defaultdict(<type 'dict'>, {})
-[INFO] [1564066277.828527]: Charging Manager: {'charger2': {}, 'charger1': {}}
-[INFO] [1564066277.831690]: Charging Manager: Charger 1 Occupancy: 0, Charger 2 Occupancy: 0
-...
-``` 
-
-3. Now, it is time to place the apriltags on the intersection they are needed. Therefore, you have to observe what the camera of charging manager(in case of module 1) or the doorkeeper (in case of module 2) sees.
-
-In order to observe what the camera sees type the following commands below in: 
-
-    laptop $ dts start_gui_tools ![HOSTNAME]
-    
-In order to 
-    container $ vim /etc/hosts 
-    
-    Add two lines: 
-    
-    HOST_IP_ADDRESS     HOST_NAME   
-    HOST_IP_ADDRESS     HOST_NAME.local  
-    
-    such as 
-    
-    192.168.1.170       watchtower26  
-    192.168.1.170       watchtower26.local  
-    
-
-
-    
-    container $ rqt_image_view 
-    
-    Now select the topic _acquisition_node/test_video_ .
-    
-    You have to get an image as following:
-
-<div figure-id="fig:doorkeeper_intersection">
+div figure-id="fig:doorkeeper_intersection">
 <img src="images/apriltags_def.png" style="width: 80%"/>
 <figcaption>
 View from doorkeeper on charger intersection
 </figcaption>
 </div>
 
-
-4. In the picture above you can see that the lane on the right side is defined as direction 1 and on the lower left side as direction 2. Define which charger the direction leads. For example in our case direction 1 leads to charger 2 and direction 2 leads to charger 4. Then, choose apriltags under the scope of camera in order to assign them as reference tags, for example in this picture the reference tags are selected as following:  
+In the picture above you can see that the lane on the right side is defined as direction 1 and on the lower left side as direction 2. Define to which charger the direction leads. For example in our case direction 1 leads to charger 2 and direction 2 leads to charger 4. Therefore, according to this picture we have to define direction1 as 2 and direction2 as 4  
+Then, choose apriltags under the scope of camera in order to assign them as reference tags, for example in this picture the reference tags are selected as following:  
 
     * entrance tag : 374
     * exit tag : 238 
-    * direction 1 tag : 361
-    * direction 2 tag : 347 
-
-    Please note them down. It is recommended to choose apriltags on the ground as reference tags for the next step, but you are allowed to use traffic signs as reference tags, if necessary. 
-
-5. Go into the container   
-
-    laptop $ docker -H ![HOSTNAME].local exec -it ![CONTAINER_NAME] /bin/bash 
+    * direction1_tag : 361
+    * direction2_tag : 347 
     
-    and list all the parameters with 
+If you want to see which apriltags your camera sees, use these command lines:  
 
-    container $ rosparam list 
-
+    laptop $ dts start_gui_tools ![HOSTNAME]
+    container $ vim /etc/hosts 
     
-    Now you see a list of all parameters that are used in the device. You have to change 6 parameters according to your selections in step 4.
-    For module 1:
+Add two lines: 
     
-    First, change direction parameters:
-
-    container $ rosparam set ![HOSTNAME]/charging_manager_node/direction1 ![CHARGER_ID]  
-    container $ rosparam set ![HOSTNAME]/charging_manager_node/direction2 ![CHARGER_ID]  
-
-    Secondly, change the april tag parameters: 
-
-    container $ rosparam set ![HOSTNAME/charging_manager_node/direction1_tag ![direction1_tag]  
-    container $ rosparam set ![HOSTNAME/charging_manager_node/direction2_tag ![direction2_tag]  
-    container $ rosparam set ![HOSTNAME/charging_manager_node/entrance ![entrance]  
-    container $ rosparam set ![HOSTNAME/charging_manager_node/exit ![exit]  
+    HOST_IP_ADDRESS     HOST_NAME   
     
-    For module 2:
+    such as 
     
-    First, change direction parameters:
+    192.168.1.170       watchtower26  
+    container $ rqt_image_view 
+Then select the topic /poses_acquisition/test_video/HOSTNAME/compressed  
+Select the apriltags such that every selected apriltag represents one direction as in the picture above.  
+Type in the parameters to the YAML file.
 
-    container $ rosparam set ![HOSTNAME]/doorkeeper_node/direction1 ![CHARGER_ID]  
-    container $ rosparam set ![HOSTNAME]/doorkeeper_node/direction2 ![CHARGER_ID]  
+Now you have to build, push and run the container
 
-    Secondly, change the april tag parameters: 
+    laptop $ docker build --rm -f "Dockerfile" -t IMAGE_NAME
+    laptop $ docker push IMAGE_NAME
+    laptop $ laptop $docker -H HOSTNAME.local pull IMAGE_NAME
+    laptop $ docker -H hostname.local run -it --net host --memory="800m" --memory-swap="1.8g" --privileged -v /data:/data --name CONTAINER_NAME IMAGE_NAME
 
-    container $ rosparam set ![HOSTNAME/doorkeeper_node/direction1_tag ![direction1_tag]  
-    container $ rosparam set ![HOSTNAME/doorkeeper_node/direction2_tag ![direction2_tag]  
-    container $ rosparam set ![HOSTNAME/doorkeeper_node/entrance ![entrance_tag]  
-    container $ rosparam set ![HOSTNAME/doorkeeper_node/exit ![exit_tag]  
+You can check the logs of the container, You have to see the following logs periodically:
 
-    In the logs you see the positions of reference tags are updated periodically. At the beginning all reference tag positions are initialized with 0.0. After you change the above mentioned parameters, you must see that the positions are updated with non-zero values. If that is the case, you accomplished this step. 
-    
-> You should see that it says apriltags changed 
+```
+...
+[INFO] [1563805663.275686]: ###########################
+[INFO] [1563805663.288087]: STATIC AT:{'334': {'position': x: 1217.38195801
+y: 527.410217285
+z: 0}, '327': {'position': x: 252.730285645
+y: 602.758789062
+z: 0}, '360': {'position': x: 518.172912598
+y: 229.96383667
+z: 0}, '376': {'position': x: 283.221954346
+y: 217.282211304
+z: 0}}
+[INFO] [1563805663.298289]: MOVING AT:defaultdict(<type 'dict'>, {})
+...
+``` 
 
-> TODO: Show the logs
-    
+In the logs you see the positions of reference tags are updated periodically. At the beginning all reference tag positions are initialized with 0.0. After you change the above mentioned parameters, you must see that the positions are updated with non-zero values. If that is the case, you accomplished this step.
+
+
 
 6. Now you have to place the reference tags such that they refer to a particular direction. In order to do that, take a duckiebot and place it to the entrance of the intersection.   
 Now in the logs of charging manager(for module 1)/doorkeeper(for module 2) container you will see that the april tag id is added to a dictionary called MOVING AT(referring the moving apriltags). Its keys refer to the apriltag ids of the duckiebot which arrived to the intersection. For every apriltag id that is observed on the intersection, there is a dictionary. In it you have some attributes of a duckiebot apriltag:  
