@@ -13,14 +13,22 @@ For module 2 Duckiebots are detected on the charger intersections by the doorkee
 1. Allocate the watchtowers on the edge to the intersection in order to let it see all 3 directions: entrance/exit to the intersection and two directions to two seperate chargers. See[]()
 
 
-2. Before setting up the reference tags, first start the CSLAM container and then either charging manager container for module 1 with the following command :
+2. If you are using module 1, the charging manager will be responsible for apriltag detection. Therefore, you have to run the CSLAM container on charging manager. Use the following command line to run the CSLAM container 
+
+>TODO: describe how to run the CSLAM:autocharging container 
+
+After starting the container, make sure it is running. You have to see logs in CSLAM container as following:
+
+
 
 laptop $  docker -H ![HOSTNAME].local run -it --net host --memory="800m" --memory-swap="1.8g" --privileged -v /data:/data --name charging_manager ![charging_manager_container]
 
 or doorkeeper container for module 2 with the following command:  
 
 laptop $  docker -H ![HOSTNAME].local run -it --net host --memory="800m" --memory-swap="1.8g" --privileged -v /data:/data --name doorkeeper ![doorkeeper]
+Before setting up the reference tags, first start the CSLAM container:
 
+>TODO: describe how to start the CSLAM:autocharging container
 
 3. In order to observe what the camera sees type the following commands below in: 
 
