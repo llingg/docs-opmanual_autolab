@@ -3,13 +3,15 @@
 First, we seperate the apriltags that are only used for charging management with the normal ground apriltags and we call them reference tags.
 
 This part helps you to place reference tags on the intersections they are needed. They are used for detecting Duckiebots on an intersection. 
-For module 1 the charging manager will be detecting Duckiebots, so you have to place the reference tags on the maintenance intersection following the instructions below. 
-For module 2 Duckiebots are detected on the charger intersections from the apriltag on their apriltag plate, so you must place the reference tags on the charger intersections following the instructions below.
+For module 1 the charging manager will be detecting Duckiebots, so you have to place the reference tags on the maintenance intersection following the instructions below.   
+For module 2 Duckiebots are detected on the charger intersections by the doorkeepers from the apriltag on their apriltag plate, so you must place the reference tags on the charger intersections following the instructions below.  
+
 
 ## Steps
 
 
 1. Allocate the watchtowers on the edge to the intersection in order to let it see all 3 directions: entrance/exit to the intersection and two directions to two seperate chargers. See[]()
+
 
 2. Before setting up the reference tags, first start the CSLAM container and then either charging manager container for module 1 with the following command :
 
