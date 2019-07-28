@@ -25,6 +25,67 @@ Use the following command line to run the CSLAM container
 > Use the script for duckietown-cslam, change the container tag to autocharge
 > explain how it should work ros_master as it self...
 
+1) set ROS_MASTER and IP as the device responsible for apriltag detection, for example the charging manager or module 1 and doorkeepers for module 2. Run the commands. 
+2)Make sure that the roscore container is running:
+
+    docker -H HOSTNAME.local start roscore 
+
+3) Ros_picam 
+    docker -H HOSTNAME.local stop ros_picam
+
+    docker -H HOSTNAME.local rm ros_picam
+
+    docker -H HOSTNAME.local run -d --name ros_picam --network=host --device /dev/vchiq -v /data:/data aleksandarpetrov/rpi-duckiebot-ros-picam:highresshutter
+   
+   4)CSLAM for autocharging
+
+    docker -H HOSTNAME.local stop cslam-acquisition 
+
+    docker -H HOSTNAME.local rm cslam-acquisition 
+
+    docker -H HOSTNAME.local pull duckietown/cslam-acquisition:autocharging
+
+    docker -H HOSTNAME.local  run -d \
+
+                                      --name cslam-acquisition \
+
+                                      --restart always \
+
+                                      --network=host \
+
+                                      -e ACQ_DEVICE_MODE=live \
+
+                                      -e ACQ_ROS_MASTER_URI_DEVICE=${array[$index]} \
+
+                                      -e ACQ_ROS_MASTER_URI_DEVICE_IP=127.0.0.1 \
+
+                                      -e ACQ_SERVER_MODE=live \
+
+                                      -e ACQ_ROS_MASTER_URI_SERVER=${ROS_MASTER_HOSTNAME} \
+
+                                      -e ACQ_ROS_MASTER_URI_SERVER_IP=${ROS_MASTER_IP} \
+
+                                      -e ACQ_DEVICE_NAME=${array[$index]} \
+
+                                      -e ACQ_BEAUTIFY=1 \
+
+                                      -e ACQ_STATIONARY_ODOMETRY=0 \
+
+                                      -e ACQ_ODOMETRY_UPDATE_RATE=0 \
+
+                                      -e ACQ_POSES_UPDATE_RATE=15 \
+
+                                      -e ACQ_TEST_STREAM=1 \
+
+                                      -e ACQ_TOPIC_VELOCITY_TO_POSE=velocity_to_pose_node/pose \
+
+                                      -e ACQ_TOPIC_RAW=camera_node/image/compressed \
+
+                                      -e ACQ_APRILTAG_QUAD_DECIMATE=2.0 \
+
+                                      duckietown/cslam-acquisition:autocharging
+
+
 After starting the container, make sure it is running. You have to see logs in CSLAM container as following:
 
 ```
