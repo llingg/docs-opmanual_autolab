@@ -83,7 +83,7 @@ The duckiebot is charged and enters the final state: Way to city. It follows the
 <div figure-id="fig:software_architec">
 <img src="images/way_to_city.png" style="width: 80%"/>
 <figcaption>
-Graph of software architecture.
+Step 9
 </figcaption>
 </div>
 <br />
