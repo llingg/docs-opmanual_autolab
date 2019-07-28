@@ -30,7 +30,7 @@ and use the instructions to toggle between autonomous navigation and joystick co
 <div figure-id="fig:software_architec">
 <img src="images/way_to_maintenance.png" style="width: 80%"/>
 <figcaption>
-Graph of software architecture.
+Step 4
 </figcaption>
 </div>
 <br />
@@ -40,7 +40,7 @@ Graph of software architecture.
 <div figure-id="fig:software_architec">
 <img src="images/way_to_maintenance_2.png" style="width: 80%"/>
 <figcaption>
-Graph of software architecture.
+Step 5
 </figcaption>
 </div>
 <br />
@@ -50,7 +50,7 @@ Graph of software architecture.
 <div figure-id="fig:software_architec">
 <img src="images/wait.png" style="width: 80%"/>
 <figcaption>
-Graph of software architecture.
+Step 6
 </figcaption>
 </div>
 <br />
@@ -61,7 +61,7 @@ The duckiebot has arrived at the maintenance entrance and receives further instr
 <div figure-id="fig:software_architec">
 <img src="images/way_to_charging.png" style="width: 80%"/>
 <figcaption>
-Graph of software architecture.
+Step 7
 </figcaption>
 </div>
 <br />
@@ -72,7 +72,7 @@ At this given point of time the Duckiebot is the first one being able to leave t
 <div figure-id="fig:software_architec">
 <img src="images/in charging.png" style="width: 80%"/>
 <figcaption>
-Graph of software architecture.
+Step 8
 </figcaption>
 </div>
 <br />
