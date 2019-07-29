@@ -77,6 +77,7 @@ The "path_in" parameter of a charger should map traffic sign april tag IDs to a 
 <div figure-id="fig:path_to_charger2">
 <img src="images/path_to_charger2.png" style="width: 80%"/>
 <figcaption>
+    
 An example path from maintenance entrance to charger 2.
 </figcaption>
 </div>
