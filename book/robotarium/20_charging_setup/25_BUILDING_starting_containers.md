@@ -14,7 +14,7 @@ laptop $ docker -H ![HOSTNAME].local run -it --net host --memory="800m" --memory
 ## For Module 2:
 
 ### Charging Manager  
-On the charging manager you have to start the following containers 
+On the charging manager you have to start the following containers: 
 
 #### Start the TCP Server Container 
 
