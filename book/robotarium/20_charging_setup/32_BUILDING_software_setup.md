@@ -18,9 +18,8 @@ Clone the following repository
 
     git clone https://github.com/duckietown/rpi-autocharging-demo.git
     cd rpi-autocharging-demo.git
-    vim default.yaml
 
-The default.yaml file should have the following outline and structure:
+open with an text editor the default.yaml file. The default.yaml file should have the following outline and structure:
 
 ```
 # Maintenance gate
