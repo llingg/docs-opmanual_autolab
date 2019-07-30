@@ -38,5 +38,59 @@ Operating a Duckiebot inside a megacity requires software which can switch from 
 
 Below you may find a descriptive explanation on the transition of states on Duckiebot for autocharging.
 
-As soon as the megacity container is started, a Duckiebot is placed into the city and is able to drive around. A timer, the charge estimation algorithm or a human being triggers a topic called GO_TO_CHARGING from the maintenance control node in order to recognize the time when we need to put the Duckiebot into the charging area. When this state is switched from NONE to WAY_TO_MAINTENANCE, the Duckiebot is guided towards the entrance of the maintenance area by a fleet management algorithm(The responsible node for this algorithm is the action_dispatcher_node). Having arrived at the entrance, this state will get switched to WAY_TO_CHARGING. On the maintenance intersection, the Duckiebot will recognize the maintenance apriltag and its FSM State will transit from INTERSECTION_COORDINATION to WAIT. There it will wait for 15 seconds and take multiple measurements for the frequency of charging manager's blinking LED light. The detected frequency will be determined according to the most measured frequency. Since every frequency corresponds to a charger index, the charger which Duckiebot should go will be set. For every charger there is a predefined route, hence,, the Duckiebot will take the turns to reach the charger according to the predefined route. After entering the charger, a transition of state from WAY_TO_CHARGING to CHARGING follows and the finite state machine state switches to IN_CHARGING_AREA. These states mean that the Duckiebot is inside the charger and that it will keep distance from other Duckiebots queued up there. As soon as the Duckiebot sees a red line and a stop tag at the end of a charger the finite state is switched to CHARGING_FIRST_IN_LINE. At this given point of time the Duckiebot is the first one being able to leave the charger and it only needs to wait until it gets fully charged or someone triggers it to exit the charger and free another charging spot. 15 seconds before requesting to leave the charger, Duckiebot's lights on the backbumper will turn blue. In order to leave the charger, the Duckiebot needs to be charged for a certain amount of time and it should not detect another Duckiebot in front of it. While leaving the charger the finite state switches to LANE_FOLLOWING which makes the Duckiebot able to drive and the maintenance control node switches to WAY_TO_CITY. The Duckiebot is now guided out of the maintenance area. If the exit is reached, the maintenance control node is switched to NONE and the Duckiebot is again able to drive around in the city.
+
+<div figure-id="fig:software_architec">
+<img src="images/way_to_maintenance_2.png" style="width: 80%"/>
+<figcaption>
+WAY_TO_MAINTENANCE
+</figcaption>
+</div>
+<br />
+
+As soon as the megacity container is started, a Duckiebot is placed into the city and is able to drive around. A timer, the charge estimation algorithm or a human being triggers a topic called GO_TO_CHARGING from the maintenance control node in order to recognize the time when we need to put the Duckiebot into the charging area. When this state is switched from NONE to WAY_TO_MAINTENANCE, the Duckiebot is guided towards the entrance of the maintenance area by a fleet management algorithm(The responsible node for this algorithm is the action_dispatcher_node). During its journey it has the priority of way before other Duckiebots. (indicated by purple blinking LEDs).
+
+
+<div figure-id="fig:software_architec">
+<img src="images/wait.png" style="width: 80%"/>
+<figcaption>
+WAY_TO_CHARGING LED Detection
+</figcaption>
+</div>
+<br />
+
+Having arrived at the entrance, this state will get switched to WAY_TO_CHARGING. On the maintenance intersection, the Duckiebot will recognize the maintenance apriltag and its FSM State will transit from INTERSECTION_COORDINATION to WAIT. There it will wait for 15 seconds and take multiple measurements for the frequency of charging manager's blinking LED light. The detected frequency will be determined according to the most measured frequency. Since every frequency corresponds to a charger index, the charger which Duckiebot should go will be set. After this, the FSM State will be set to INTERSECTION_COORDINATION and the journey to the charger begins. 
+
+
+<div figure-id="fig:software_architec">
+<img src="images/way_to_charging.png" style="width: 80%"/>
+<figcaption>
+WAY_TO_CHARGING Driving to the charger
+</figcaption>
+</div>
+<br />
+
+For every charger there is a predefined route, hence, the Duckiebot will take the turns to reach the charger according to the predefined route. 
+
+
+<div figure-id="fig:software_architec">
+<img src="images/in charging.png" style="width: 80%"/>
+<figcaption>
+Step 8
+</figcaption>
+</div>
+<br />
+
+After entering the charger, a transition of state from WAY_TO_CHARGING to CHARGING follows and the finite state machine state switches to IN_CHARGING_AREA. These states mean that the Duckiebot is inside the charger and that it will keep distance from other Duckiebots queued up there. As soon as the Duckiebot sees a red line and a stop tag at the end of a charger the finite state is switched to CHARGING_FIRST_IN_LINE. 
+
+
+<div figure-id="fig:software_architec">
+<img src="images/way_to_city.png" style="width: 80%"/>
+<figcaption>
+Step 9
+</figcaption>
+</div>
+<br />
+
+
+At this given point of time the Duckiebot is the first one being able to leave the charger and it only needs to wait until it gets fully charged or someone triggers it to exit the charger and free another charging spot. 15 seconds before requesting to leave the charger, Duckiebot's lights on the backbumper will turn blue. In order to leave the charger, the Duckiebot needs to be charged for a certain amount of time and it should not detect another Duckiebot in front of it. While leaving the charger the finite state switches to LANE_FOLLOWING which makes the Duckiebot able to drive and the maintenance control node switches to WAY_TO_CITY. The Duckiebot is now guided out of the maintenance area. If the exit is reached, the maintenance control node is switched to NONE and the Duckiebot is again able to drive around in the city.
 
