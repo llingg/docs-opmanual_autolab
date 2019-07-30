@@ -75,7 +75,7 @@ For every charger there is a predefined route, hence, the Duckiebot will take th
 <div figure-id="fig:software_architec">
 <img src="images/in charging.png" style="width: 80%"/>
 <figcaption>
-Step 8
+CHARGING
 </figcaption>
 </div>
 <br />
@@ -86,7 +86,7 @@ After entering the charger, a transition of state from WAY_TO_CHARGING to CHARGI
 <div figure-id="fig:software_architec">
 <img src="images/way_to_city.png" style="width: 80%"/>
 <figcaption>
-Step 9
+WAY_TO_CITY
 </figcaption>
 </div>
 <br />
