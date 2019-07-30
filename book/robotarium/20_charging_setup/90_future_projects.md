@@ -31,4 +31,4 @@ After operating the Duckiebot for a long time, the Raspberry Pi gets really hot 
 
 ## Adapt autocharging to the newest version of CSLAM
 
-Right now, the charger management runs the version of CSLAM, where apriltag processing is done on raspberry pi. In the newest version of CSLAM, the images of the watchtowers are acquired from the watchtowers and apriltag processing is done on the server computer. This increases the rate of apriltag processing. In order to adapt the usage of CSLAM by charging manager or doorkeeper, one has to let the raspberry pi get the apriltag poses.
+Right now, the charger management runs the version of CSLAM, where apriltag processing is done on raspberry pi. In the newest version of CSLAM, the images of the watchtowers are acquired from the watchtowers and apriltag processing is done on the server computer. This increases the rate of apriltag processing. In order to adapt the usage of CSLAM by charging manager or doorkeeper, one has to let the raspberry pi get the apriltag poses, since they are needed on the device.
