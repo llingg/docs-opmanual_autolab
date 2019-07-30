@@ -28,7 +28,7 @@ In order to avoid stopping at the red line in opposite direction right after an 
 
 After operating the Duckiebot for a long time, the Raspberry Pi gets really hot at its interfaces (USB plugs, LAN Port, etc). For a 24/7 operating time that can influence the behavior of the Duckiebot a lot. If one would cool the Duckiebot actively by a little fan, the temperature wouldn't increase that much.
 
-## Implement a fault detection
 
-In order being able to act as soon as possible when a fault occurs on the charging station, a monitor system which enables the user to have a remote control over the whole auto-charging system could be developped. Then someone could for instance get a mail to clear a fault.
+## Adapt autocharging to the newest version of CSLAM
 
+Right now, the charger management runs the version of CSLAM, where apriltag processing is done on raspberry pi. In the newest version of CSLAM, the images of the watchtowers are acquired from the watchtowers and apriltag processing is done on the server computer. This increases the rate of apriltag processing. In order to adapt the usage of CSLAM by charging manager or doorkeeper, one has to let the raspberry pi get the apriltag poses.
