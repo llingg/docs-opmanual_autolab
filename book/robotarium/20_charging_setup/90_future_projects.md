@@ -12,7 +12,7 @@ In order to keep distance to a Duckiebot in front, the vehicle avoidance node de
 
 ## Optimize CPU utilization
 
-Currently, CPU utilization is at 100% for all four cores. The most expensive node seems to be the Image Transformer Node which uses alone 40% of the CPU. This slows down the whole megacity.launch and could be cause for multiple bugs.
+Currently, CPU utilization is at 100% for all four cores. The most expensive node seems to be the Image Transformer Node (Anti Instagram) which uses alone 30% of the CPU. This slows down the whole megacity.launch and could be cause for multiple bugs.
 
 ## Implement the battery capacity estimation
 
@@ -32,3 +32,7 @@ After operating the Duckiebot for a long time, the Raspberry Pi gets really hot 
 ## Adapt autocharging to the newest version of CSLAM
 
 Right now, the charger management runs the version of CSLAM, where apriltag processing is done on raspberry pi. In the newest version of CSLAM, the images of the watchtowers are acquired from the watchtowers and apriltag processing is done on the server computer. This increases the rate of apriltag processing. In order to adapt the usage of CSLAM by charging manager or doorkeeper, one has to let the raspberry pi get the apriltag poses, since they are needed on the device.
+
+## Hardware Redesign
+
+The current collectors are made out of plastic which need to be bend appropriately so they touch the rails well enough to conduct current but not to hard to not slow down the duckiebot from moving. This solution may wear out in long term use since the plastic wears out. A possible solution could be a hinge with two springs which will hold the current collector in its desired position.
