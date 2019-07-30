@@ -1,5 +1,5 @@
 # Starting the Containers {#autocharging-starting-containers status=Beta}
-TODO
+>TODO change the image names accordingly after merging
 Here you can find instructions on how to run the containers in order to bring the autocharging station into action.
 
 ## Instructions for CSLAM 
