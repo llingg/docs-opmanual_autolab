@@ -1,11 +1,11 @@
 # Starting the Containers {#autocharging-starting-containers status=Beta}
-
+TODO
 Here you can find instructions on how to run the containers in order to bring the autocharging station into action.
 
 ## Instructions for CSLAM 
 1) Clone the github repository for CSLAM:
 
-    laptop $ git clone https://github.com/duckietown/duckietown-cslam.git
+    laptop $ git clone https://github.com/duckietown/duckietown-cslam.git  
     lapotp $ cd duckietown-cslam/scripts 
 
 2) The way how CSLAM is used is the following:  
@@ -13,7 +13,7 @@ Since the apriltag poses are needed on the device, one has to set the ROS_MASTER
 change lines in the script _watchtowers-setup.sh_ as follows:
 
 ```
-ROS_MASTER_HOSTNAME=watchtower22
+ROS_MASTER_HOSTNAME=watchtower22  
 ROS_MASTER_IP=192.168.1.176
 
 array=(watchtower22)
@@ -64,7 +64,7 @@ After starting the container, make sure it is running. You have to see logs in C
 ## For Module 1:
 
 ### Start the CSLAM Container
->  TODO CSLAM container explanation 
+Start the CSLAM container according to the instructions above.
 
 ### Start the Charging Manager Container for Module 1
 
@@ -85,9 +85,9 @@ First clone the github repository for TCP server and then change the YAML file i
 Now change the IP address in default.yaml.  
 Then build, push and run the tcp_server container 
 
-  laptop $ docker build --rm -f "Dockerfile" -t IMAGE_NAME
-  laptop $ docker push IMAGE_NAME
-  laptop $ laptop $docker -H HOSTNAME.local pull IMAGE_NAME
+  laptop $ docker build --rm -f "Dockerfile" -t IMAGE_NAME  
+  laptop $ docker push IMAGE_NAME  
+  laptop $ laptop $docker -H HOSTNAME.local pull IMAGE_NAME  
   laptop $ docker -H hostname.local run -it --net host --memory="800m" --memory-swap="1.8g" --privileged -v /data:/data --name CONTAINER_NAME IMAGE_NAME
 
 
@@ -97,7 +97,8 @@ laptop $ docker -H ![HOSTNAME].local run -it --net host --memory="800m" --memory
 
 ### Doorkeeper 
 
-#### Start the CSLAM Container 
+#### Start the CSLAM Container  
+Start the CSLAM container according to the instructions above.
 
 #### Start the TCP Client Container 
 
@@ -115,7 +116,7 @@ Then build, push and run the tcp_server container
   laptop $ docker -H hostname.local run -it --net host --memory="800m" --memory-swap="1.8g" --privileged -v /data:/data --name CONTAINER_NAME IMAGE_NAME
 
 
-#### Start the Doorkeeper Container
+#### Start the Doorkeeper Container  
 Use the doorkeeper container you have run for setting up the reference tags 
 
 laptop $ docker -H ![HOSTNAME].local run -it --net host --memory="800m" --memory-swap="1.8g" --privileged -v /data:/data --name doorkeeper ![CONTAINTER_NAME] 
