@@ -58,7 +58,10 @@ docker -H ${array[$index]}.local  run -d \
                                       -e ACQ_APRILTAG_QUAD_DECIMATE=2.0 \
                                       duckietown/cslam-acquisition:autocharge || echo "ERROR: Starting cslam-acquisition on ${array[$index]} failed. Probably this watchtower wasn't configured properly or we can't connect via the network."
 ```
+2) Run the script 
 
+  laptop $ source wathctowers-setup.sh 
+  
 After starting the container, make sure it is running. You have to see logs in CSLAM container as following:
 
 ```
