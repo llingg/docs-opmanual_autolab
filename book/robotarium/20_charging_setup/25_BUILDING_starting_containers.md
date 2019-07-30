@@ -110,10 +110,10 @@ First clone the github repository for TCP client and then change the YAML file i
 Now change the IP address in default.yaml.  
 Then build, push and run the tcp_server container 
 
-  laptop $ docker build --rm -f "Dockerfile" -t IMAGE_NAME
-  laptop $ docker push IMAGE_NAME
-  laptop $ laptop $docker -H HOSTNAME.local pull IMAGE_NAME
-  laptop $ docker -H hostname.local run -it --net host --memory="800m" --memory-swap="1.8g" --privileged -v /data:/data --name CONTAINER_NAME IMAGE_NAME
+  laptop $ docker build --rm -f "Dockerfile" -t IMAGE_NAME  
+  laptop $ docker push IMAGE_NAME  
+  laptop $ laptop $docker -H HOSTNAME.local pull IMAGE_NAME  
+  laptop $ docker -H hostname.local run -it --net host --memory="800m" --memory-swap="1.8g" --privileged -v /data:/data --name CONTAINER_NAME IMAGE_NAME  
 
 
 #### Start the Doorkeeper Container  
