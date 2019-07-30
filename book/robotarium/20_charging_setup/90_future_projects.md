@@ -35,4 +35,4 @@ Right now, the charger management runs the version of CSLAM, where apriltag proc
 
 ## Hardware Redesign
 
-The current collectors are made out of plastic which need to be bend appropriately so they touch the rails well enough to conduct current but not to hard to not slow down the duckiebot from moving. This solution may wear out in long term use since the plastic wears out. A possible solution could be a hinge with two springs which will hold the current collector in its desired position.
+The current collectors are made out of plastic which need to be bend appropriately so they touch the rails well enough to conduct current, but not to hard to not hinder the duckiebot from moving. This solution may be inappropriate in the long term, since the plastic wears out with time. A possible solution could be a hinge with two springs which will hold the current collector in its desired position.
