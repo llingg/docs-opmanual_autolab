@@ -1,4 +1,4 @@
-# Setup of Reference Tags {#autocharging-reference-tags status=Beta}
+# Setup of Reference Tags {#autocharging-reference-tags status=beta}
 
 (First, we seperate the apriltags that are only used for charger management with the normal ground apriltags and we call them reference tags.)
 
