@@ -1,8 +1,7 @@
 # Infrastructure of Maintenance Area {#autocharging-maintenance-area status=beta}
 
 This part contains the steps to plan and build a maintenance area.  
-Before starting, here is a general schematic view of a maintenance area for module 1[](#fig:mt1) 
-and module 2[](#fig:mt2).
+Before starting, here is a general schematic view of a maintenance area for module 1 and module 2.
 
 
 <figure class="flow-subfigures">  
