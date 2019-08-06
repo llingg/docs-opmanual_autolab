@@ -39,7 +39,7 @@ Operating a Duckiebot inside a megacity requires software which can switch from 
 Below you may find a descriptive explanation on the transition of states on Duckiebot for autocharging.
 
 
-<div figure-id="fig:software_architec">
+<div figure-id="fig:software_architec0">
 <img src="images/way_to_maintenance_2.png" style="width: 80%"/>
 <figcaption>
 WAY_TO_MAINTENANCE
