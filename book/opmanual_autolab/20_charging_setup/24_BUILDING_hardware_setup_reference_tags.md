@@ -144,7 +144,6 @@ y: 229.96383667
 z: 0}, '347': {'position': x: 283.221954346
 y: 217.282211304
 z: 0}}
-[INFO] [1563805663.298289]: MOVING AT:...
 ...
 ``` 
 
@@ -166,7 +165,7 @@ Have a look on this log. We moved a duckiebot from entrance to direction 2:
 
 ```
 ...
-[INFO] [1563805798.282072]: MOVING AT:defaultdict(<type 'dict'>, {'400': {'first_neighbor': '374', 'last_neighbor': '347', 'timestamp': 1563805796.091526, 'position': x: 748.847106934
+[INFO] [1563805798.282072]: {'400': {'first_neighbor': '374', 'last_neighbor': '347', 'timestamp': 1563805796.091526, 'position': x: 748.847106934
 y: 468.132141113
 z: 0}})
 ...
