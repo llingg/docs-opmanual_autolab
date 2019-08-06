@@ -60,7 +60,7 @@ docker -H ${array[$index]}.local  run -d \
 ```
 2) Run the script 
 
-  laptop $ source wathctowers-setup.sh 
+  laptop $ source watchtowers-setup.sh 
   
 After starting the container, make sure it is running. You have to see logs in CSLAM container as following:
 
@@ -74,7 +74,7 @@ After starting the container, make sure it is running. You have to see logs in C
 
 ```
 
-3.Now you are going build and run containers which are responsible to interpret the apriltag poses of duckiebots. In order to do that, use the commands : 
+3) Now you are going build and run containers which are responsible to interpret the apriltag poses of duckiebots. In order to do that, use the commands : 
 
 For module 1:
 
@@ -127,7 +127,7 @@ Now you have to build, push and run the container
 
     laptop $ docker build --rm -f "Dockerfile" -t IMAGE_NAME
     laptop $ docker push IMAGE_NAME
-    laptop $ laptop $docker -H HOSTNAME.local pull IMAGE_NAME
+    laptop $ docker -H HOSTNAME.local pull IMAGE_NAME
     laptop $ docker -H hostname.local run -it --net host --memory="800m" --memory-swap="1.8g" --privileged -v /data:/data --name CONTAINER_NAME IMAGE_NAME
 
 You can check the logs of the container, You have to see the following logs periodically:
