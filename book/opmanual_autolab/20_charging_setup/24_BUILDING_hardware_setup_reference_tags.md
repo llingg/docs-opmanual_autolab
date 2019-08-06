@@ -97,7 +97,7 @@ In the _docker_ directory you find a YAML file. There you can find the parameter
 
 Now it is explained how these parameters are defined.  
 
-div figure-id="fig:doorkeeper_intersection">
+<div figure-id="fig:doorkeeper_intersection">
 <img src="images/apriltags_def.png" style="width: 80%"/>
 <figcaption>
 View from doorkeeper on charger intersection
