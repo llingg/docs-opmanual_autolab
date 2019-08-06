@@ -14,9 +14,9 @@ The software responsible for the autocharging capability is running entirely in 
 The maintenance control main goal is to transition through the maintenance states that run parallel to the FSM states in order to execute the autocharging procedure. The maintenance states and their transitions are explained in the run_demo part. Each time a FSM state transition occurs the following log info is printed in the megacity container:
 
 
-    rospy.loginfo("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+    rospy.loginfo("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
     rospy.loginfo("Maintenance Control Node MT State: " + str(state))
-    rospy.loginfo("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+    rospy.loginfo("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
 
 If you would like to test a specific maintenance state (i.e. for testing a specific path like path_calib), change the state with
 
