@@ -5,7 +5,6 @@ Before starting, here is a general schematic view of a maintenance area for modu
 
 
 <figure class="flow-subfigures">  
-    <figcaption>Modules</figcaption>
     <figure>
         <figcaption>Module 1</figcaption>
         <img style='width:8em' src="images/module_1.png"/>
