@@ -50,7 +50,7 @@ WAY_TO_MAINTENANCE
 As soon as the megacity container is started, a Duckiebot is placed into the city and is able to drive around. A timer, the charge estimation algorithm or a human being triggers a topic called GO_TO_CHARGING from the maintenance control node in order to recognize the time when we need to put the Duckiebot into the charging area. When this state is switched from NONE to WAY_TO_MAINTENANCE, the Duckiebot is guided towards the entrance of the maintenance area by a fleet management algorithm(The responsible node for this algorithm is the action_dispatcher_node). During its journey it has the priority of way before other Duckiebots. (indicated by purple blinking LEDs).
 
 
-<div figure-id="fig:software_architec">
+<div figure-id="fig:software_architec2">
 <img src="images/wait.png" style="width: 80%"/>
 <figcaption>
 WAY_TO_CHARGING LED Detection
@@ -61,7 +61,7 @@ WAY_TO_CHARGING LED Detection
 Having arrived at the entrance, this state will get switched to WAY_TO_CHARGING. On the maintenance intersection, the Duckiebot will recognize the maintenance apriltag and its FSM State will transit from INTERSECTION_COORDINATION to WAIT. There it will wait for 15 seconds and take multiple measurements for the frequency of charging manager's blinking LED light. The detected frequency will be determined according to the most measured frequency. Since every frequency corresponds to a charger index, the charger which Duckiebot should go will be set. After this, the FSM State will be set to INTERSECTION_COORDINATION and the journey to the charger begins. 
 
 
-<div figure-id="fig:software_architec">
+<div figure-id="fig:software_architec3">
 <img src="images/way_to_charging.png" style="width: 80%"/>
 <figcaption>
 WAY_TO_CHARGING Driving to the charger
@@ -72,7 +72,7 @@ WAY_TO_CHARGING Driving to the charger
 For every charger there is a predefined route, hence, the Duckiebot will take the turns to reach the charger according to the predefined route. 
 
 
-<div figure-id="fig:software_architec">
+<div figure-id="fig:software_architec4">
 <img src="images/in charging.png" style="width: 80%"/>
 <figcaption>
 CHARGING
@@ -83,7 +83,7 @@ CHARGING
 After entering the charger, a transition of state from WAY_TO_CHARGING to CHARGING follows and the finite state machine state switches to IN_CHARGING_AREA. These states mean that the Duckiebot is inside the charger and that it will keep distance from other Duckiebots queued up there. As soon as the Duckiebot sees a red line and a stop tag at the end of a charger the finite state is switched to CHARGING_FIRST_IN_LINE. 
 
 
-<div figure-id="fig:software_architec">
+<div figure-id="fig:software_architec5">
 <img src="images/way_to_city.png" style="width: 80%"/>
 <figcaption>
 WAY_TO_CITY
