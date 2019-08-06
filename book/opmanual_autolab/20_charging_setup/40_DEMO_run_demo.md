@@ -1,4 +1,4 @@
-# Run the demo
+# Run the demo {#run-demo status=beta}
 
 
 The megacity container has to be built and uploaded to the duckiebot as outlined in [here](https://docs.duckietown.org/DT17/)
