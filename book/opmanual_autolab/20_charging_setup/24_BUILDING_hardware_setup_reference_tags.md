@@ -60,7 +60,7 @@ docker -H ${array[$index]}.local  run -d \
 ```
 2) Run the script 
 
-  laptop $ source watchtowers-setup.sh 
+    laptop $ source watchtowers-setup.sh 
   
 After starting the container, make sure it is running. You have to see logs in CSLAM container as following:
 
@@ -74,13 +74,12 @@ After starting the container, make sure it is running. You have to see logs in C
 
 ```
 
-3) Now you are going build and run containers which are responsible to interpret the apriltag poses of duckiebots. In order to do that, use the commands : 
+3) Now you are going build and run containers which are responsible to interpret the apriltag poses of duckiebots. In order to do that, use the commands: 
 
 For module 1:
 
     laptop $ git clone https://github.com/alifahriander/charging_manager_module1.git
     laptop $ cd charging_manager_module1/docker
-
 
 For module 2:
 
@@ -135,15 +134,7 @@ You can check the logs of the container, You have to see the following logs peri
 ```
 ...
 [INFO] [1563805663.275686]: ###########################
-[INFO] [1563805663.288087]: STATIC AT:{'374': {'position': x: 1217.38195801
-y: 527.410217285
-z: 0}, '238': {'position': x: 252.730285645
-y: 602.758789062
-z: 0}, '361': {'position': x: 518.172912598
-y: 229.96383667
-z: 0}, '347': {'position': x: 283.221954346
-y: 217.282211304
-z: 0}}
+[INFO] [1563805663.288087]: {'374': {'position': x: 1217.38195801 y: 527.410217285 z: 0}, '238': {'position': x: 252.730285645 y: 602.758789062 z: 0}, '361': {'position': x: 518.172912598 y: 229.96383667 z: 0}, '347': {'position': x: 283.221954346 y: 217.282211304 z: 0}}
 ...
 ``` 
 
