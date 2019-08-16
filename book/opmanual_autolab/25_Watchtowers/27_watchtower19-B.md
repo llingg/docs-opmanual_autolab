@@ -2,15 +2,18 @@
 
 <div class='requirements' markdown="1">
 
-Requires: A fully operational [Duckietown](+opmanual_duckietown#duckietowns) and compliant [Autobots](#autolab-autobot-specs).
+Requires: Material: Watchtower components. To obtain them contact info@duckietown.org.
+
+Requires: An [initialized SD-card](#wt-sd-card-init) for traffic lights or Watchtowers.
+
+Requires: Tools: (strong) wood glue or hot glue gun, tape, double-sided tape.
 
 Results: An Assembled Watchtower system in WT19-B configuration.
 
-Next Steps: The next step is to [initialize the SD card](#watchtower-initialization).
 
 </div>
 
-## Parts needed
+## Parts Overview
 
 Below you find an overview of all components needed to build the Watchtower.
 
@@ -21,6 +24,14 @@ Overview of all components needed to build a Watchtower in WT19-B configuration.
 </figcaption>
 </div>
 
+<!-- NOTE: PoE version:
+<div figure-id="fig:WT19-B_all_components_PoE">
+<img src="opmanual_autolab/images/watchtower/WT19-B assembly/WT19-B_all_components_PoE.png" style="width: 90%"/>
+<figcaption>
+Overview of all components needed to build a Watchtower in WT19-B configuration using Power over Ethernet.
+</figcaption>
+</div>
+-->
 
 ##Watchtower Assembly
 

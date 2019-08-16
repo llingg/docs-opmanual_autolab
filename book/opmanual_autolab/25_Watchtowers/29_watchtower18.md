@@ -2,7 +2,11 @@
 
 <div class='requirements' markdown="1">
 
-Requires: A fully operational [Duckietown](+opmanual_duckietown#duckietowns) and compliant [Autobots](#autolab-autobot-specs).
+Requires: Material: Watchtower components. To obtain them contact info@duckietown.org.
+
+Requires: An [initialized SD-card](#wt-sd-card-init).
+
+Requires: Tools: (strong) wood glue or hot glue gun, tape, double-sided tape.
 
 Results: An Assembled Watchtower system in WT18 configuration.
 
@@ -115,5 +119,5 @@ After this step, we're finished with the chassis. Now let's assemble everything.
 You finished the assembly! You can now prettify the tube according to your own taste. The final result should look like [](#fig:WT18_final).
 
 <div figure-id="fig:WT18_final" figure-caption="completely assembled Watchtower in WT18 configuration">
-  <img src="opmanual_autolab/images/watchtower/WT18.png" style='width: 7em; height:auto'/>
+<img src="opmanual_autolab/images/watchtower/WT18.png" style='width: 7em; height:auto'/>
 </div>
