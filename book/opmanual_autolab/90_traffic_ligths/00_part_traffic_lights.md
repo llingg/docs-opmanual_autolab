@@ -1,5 +1,5 @@
 # Traffic Lights {#part:Autolab-traffic-light status=draft}
 
-todo: merge with traffic light docs in duckietown book
+The traffic light is part of a normal Duckietown and therefore the assembly is discussed in the [Duckietown book](+opmanual_duckietown#traffic-light-assembly). 
 
 **Keywords**: robotics, megacity, Autolab, traffic-lights, lights, traffic

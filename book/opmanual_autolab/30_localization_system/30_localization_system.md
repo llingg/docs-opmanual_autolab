@@ -6,7 +6,7 @@ Requires: A fully operational [Duckietown](+opmanual_duckietown#duckietowns)
 
 Results: A working localization system to localize all Autobots inside the Autolab
 
-Next Steps: The first step is to build the [Watchtowers](#localization-watchtower-hardware)
+Next Steps: The first step is to build the [Watchtowers](#watchtower-hardware)
 </div>
 
 
@@ -18,7 +18,7 @@ Note: Watchtowers are an experimental feature of Duckietown, which are currently
 ### Sections
 
 
-* [](#localization-watchtower-hardware): How to assemble Watchtowers. - OUTDATED
+* [](#localization-watchtower-placement): How to place the Watchtowers in the city. - TODO
 * [](#localization-apriltags-specs): The AprilTag specifications and measure. - TODO
 * [](#localization-offline): The manual to run localization offline. - TODO
 * [](#localization-online): The manual to run localization online. - TODO
@@ -28,7 +28,7 @@ Note: Watchtowers are an experimental feature of Duckietown, which are currently
 
 ###Overview and Concept of the system
 
-The localization system serves multiple purposes: 
+The localization system serves multiple purposes:
 
 * Automating the Autolab completely:
   * It allows the central system to discover if a Autobot moves out of the track
@@ -48,7 +48,7 @@ There are two structural elements required to have a working system:
 * The Watchtowers
 * The ground AprilTags
 
-The localization system is designed such that Watchtowers don't need to be at a specific height or position as long as they can view "sufficient" area of the Autolab. (TODO: specify what "sufficient" means) However, we still provide the specs of the Watchtowers so that you can produce your own Watchtowers. See hardware part in chapter [](#localization-watchtower-hardware).
+The localization system is designed such that Watchtowers don't need to be at a specific height or position as long as they can view "sufficient" area of the Autolab. (TODO: specify what "sufficient" means) However, we still provide the specs of the Watchtowers so that you can produce your own Watchtowers. See hardware part in chapter [](#watchtower-hardware).
 
 Moreover, the ground AprilTags need to follow conventions specified in the chapter [](#localization-apriltags-specs).
 
