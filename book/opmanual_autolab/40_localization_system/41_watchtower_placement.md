@@ -1,4 +1,4 @@
-# BUILDING - Placing Watchtowers in a city {#localization-watchtower-placement status=draft}
+# BUILDING - Placing Watchtowers in a city {#localization-watchtower-placement status=ready}
 
 <div class='requirements' markdown="1">
 
