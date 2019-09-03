@@ -50,7 +50,10 @@ View from a watchtower on a straight line. It covers approximately 3 tiles.
 
 ## Connection of the watchtowers
 
-Beside the placement of Watchtowers, they should be connected via ethernet cables. At ETH, the Watchtowers are first connected to switches, that are connected to our router. At ETHZ, all of the Autolab is on a stage, and we pull the cables directly from underneath it, to keep the track clean of cables.
+Beside the placement of Watchtowers, they should be connected via ethernet cables. At ETH, the Watchtowers are first connected to switches, that are connected to our router. At ETHZ, all of the Autolab is on a stage, and we pull the cables directly from underneath it, to keep the track clean from cables.
+
+Then we have one PC connected via ethernet to the router, for faster and more reliable communication with the watchtowers.
+
 
 Last but not least, these Watchtowers needs _power_. Remember to prepare your USB chargers and cables that support 2.4A output.
 
