@@ -111,3 +111,26 @@ The poses can then be visualized in Rviz as the optimization advance.
 The trajectories will be stored in the folder `PATH_TO_BAG_FOLDER`.
 
 Todo: add better visualization tools
+
+## Online Localization
+
+Note: This is highly experimental, as up until now the processing power required to run localization online is really heavy. The goal of the current development is to make the process affordable for a single computer
+
+Online localization is the idea of running an experiment and getting (with a reasonable delay) the localization and path of each duckiebot
+The processing bottle neck is on the processing of the april tags from the watchtower images.
+
+Normally, at this point, you should have a duckiebot-interface and a acquisition bridge on each device (duckiebot and watchtower).
+
+### Online processing
+
+TODO: give instructions
+
+### Localization
+
+Once the online processing is started (or even before), run:
+
+    laptop $ docker run --rm -e OUTPUT_DIR=/data -e ROS_MASTER_URI=http://![YOUR_IP]:11311 --name graph_optimizer -v ![PATH_TO_RESULT_FOLDER]:/data duckietown/post-processor:master19-amd64
+
+The `PATH_TO_RESULT_FOLDER` folder is the one where the results will be saved in yaml files at the end of the experiment, when you CTRL+C the above command
+
+
