@@ -20,8 +20,7 @@ Note: Watchtowers are an experimental feature of Duckietown, which are currently
 
 * [](#localization-watchtower-placement): How to place the Watchtowers in the city.
 * [](#localization-apriltags-specs): The AprilTag specifications and measure.
-* [](#localization-offline): The manual to run localization offline. - TODO
-* [](#localization-online): The manual to run localization online. - TODO
+* [](#localization-demo): The manual to run localization offline or online. - TODO
 * [](#localization-software): An overview of the localization code. - IN PROGRESS
 
 
@@ -57,9 +56,9 @@ Moreover, the ground AprilTags need to follow conventions specified in the chapt
 
 Localization can be run either online or offline.
 
-Running localization _online_ means that the data is processed _during_ the experiment and the results can be vizualised with some delay. The demo is found at [](#localization-online)
+Running localization _online_ means that the data is processed _during_ the experiment and the results can be vizualised with some delay. The demo is found at [](#localization-demo)
 
-Running localization _offline_ means that the data recorded but processed only _after_ the experiment. The demo is found at [](#localization-offline)
+Running localization _offline_ means that the data recorded but processed only _after_ the experiment. The demo is found at [](#localization-demo)
 
 While the long term objective is to only do online localization, the offline localization has proved very useful for AIDO, because it requires less computing power and does not have the network bandwidth as a bottleneck.
 

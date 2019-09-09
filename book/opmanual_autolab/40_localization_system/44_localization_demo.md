@@ -1,12 +1,12 @@
-# DEMO - Localization offline {#localization-offline status=draft}
+# DEMO - Localization {#localization-demo status=draft}
 
 <div class='requirements' markdown="1">
 
 Requires: A fully operational [Duckietown](+opmanual_duckietown#duckietowns), compliant [autobots](#autolab-autobot-specs), [watchtowers](#watchtower-hardware) and a system of [ground april tags](#localization-apriltags-specs)
 
-Results: running offline localization in the Autolab
+Results: running offline or online localization in the Autolab
 
-Next Steps: Run [online localization](#localization-online)
+Next Steps: Contribute to [localization software](#localization-software)
 </div>
 
 ## Setting up your master computer
@@ -36,11 +36,11 @@ First, remove the duckiebot interface that is running:
 
 Then, pull the custom image
 
-    laptop $ docker -H ![hostname].local pull duckietown/duckiebot-interface:master19-watchtower
+    laptop $ docker -H ![hostname].local pull duckietown/duckiebot-interface:devel20-watchtower-arm32v7
 
 Then, launch it:
 
-    laptop $ docker -H ![hostname].local run --name duckiebot-interface --privileged --restart unless-stopped -v /data:/data -dit --network=host duckietown/duckiebot-interface:master19-watchtower
+    laptop $ docker -H ![hostname].local run --name duckiebot-interface --privileged -e ROBOT_TYPE=watchtower --restart unless-stopped -v /data:/data -dit --network=host duckietown/duckiebot-interface:devel20-watchtower-arm32v7
 
 ### The acquisition-bridge for watchtowers
 
@@ -48,7 +48,7 @@ In order to get the images from all watchtowers to the same rosmaster (your comp
 
 To run this, please run on all watchtowers:
 
-    laptop $ docker -H ![hostname].local run --name acquisition-bridge --network=host -dit duckietown/acquisition-bridge:master19-arm32v7-watchtower
+    laptop $ docker -H ![hostname].local run --name acquisition-bridge --network=host -e ROBOT_TYPE=watchtower -dit duckietown/acquisition-bridge:devel20-arm32v7
 
 ### Advice
 
@@ -56,7 +56,7 @@ Always leave your roscore running, and always leave the duckiebot-interface and 
 
 ## Setting up software on the duckiebots
 
-The duckiebots require the same two containers, duckiebot-interface and acquisition-bridge. 
+The duckiebots require the same two containers, duckiebot-interface and acquisition-bridge.
 
 ### The acquisition bridge for duckiebots
 
@@ -64,7 +64,7 @@ The default duckiebot-interface is good enough for the duckiebots, so we will ju
 
 On all duckiebots please run:
 
-    laptop $ docker -H ![hostname].local run --name acquisition-bridge --network=host -dit duckietown/acquisition-bridge:master19-arm32v7-autobot
+    laptop $ docker -H ![hostname].local run --name acquisition-bridge --network=host -v /data:/data -dit duckietown/acquisition-bridge:devel20-arm32v7
 
 ## Checking if the acquisition bridges work
 
@@ -78,26 +78,36 @@ Then run rqt_image_view from there.
 
 ## Offline localization 
 
+The offline localization is offline in the meaning that you only get a trajectory of your duckiebots after the experiment is over. 
+The process is the following:
+
+- You record an experiment
+- You process the bag you get to extract apriltag poses and odometry
+- You run the graph optimizer on this intermediary result and it gives you the trajectory of all duckiebots in yaml files.
+
+
 ### Recording the experiment
 
 When you are ready to start an experiment, on your master PC, run rosbag:
 
-    laptop $ rosbag record -a -O ![bag_name.bag]
+    laptop $ rosbag record -a -O ![BAG_NAME.BAG]
 
 and stop it at the end of the experiment.
 
 ### Processing the apriltags and odometry from the bag
 
-First, you need to know where your bag is. The folder containing it is referred as ![PATH_TO_BAG_FOLDER] in the following. We recommend you create new seperate folders for each experiment (with date and/or sequence number).
+First, you need to know where your bag is. The folder containing it is referred as `PATH_TO_BAG_FOLDER` in the following. We recommend you create new separate folders for each experiment (with date and/or sequence number).
 
-    laptop $ docker run --name post_processor -dit --rm -e INPUT_BAG_PATH=/data/![bag_name.bag] -e OUTPUT_BAG_PATH=/data/processed_![bag_name.bag] -e ROS_MASTER_URI=http://![YOUR_IP]:11311 -v ![PATH_TO_BAG_FOLDER]:/data duckietown/post-processor:master19-amd64
+    laptop $ docker run --name post_processor -dit --rm -e INPUT_BAG_PATH=/data/![BAG_NAME.BAG] -e OUTPUT_BAG_PATH=/data/processed_![BAG_NAME.BAG] -e ROS_MASTER_URI=http://![YOUR_IP]:11311 -v ![PATH_TO_BAG_FOLDER]:/data duckietown/post-processor:master19-amd64
 
-When the container stops, then you should have a new bag called processed_![bag_name.bag] inside of your ![PATH_TO_BAG_FOLDER].
+When the container stops, then you should have a new bag called `processed_BAG_NAME.BAG` inside of your `PATH_TO_BAG_FOLDER`.
 
 ### Launching the graph optimizer
 
-    laptop $ docker run --rm  -e  ATMSGS_BAG=/data/processed_![bag_name.bag] -e OUTPUT_DIR=/data -e ROS_MASTER_URI=http://![YOUR_IP]:11311 --name graph_optimizer -v ![PATH_TO_BAG_FOLDER]:/data duckietown/post-processor:master19-amd64
+    laptop $ docker run --rm  -e  ATMSGS_BAG=/data/processed_![BAG_NAME.BAG] -e OUTPUT_DIR=/data -e ROS_MASTER_URI=http://![YOUR_IP]:11311 --name graph_optimizer -v ![PATH_TO_BAG_FOLDER]:/data duckietown/post-processor:master19-amd64
 
-The poses can then be visualized in Rviz.
+The poses can then be visualized in Rviz as the optimization advance.
+
+The trajectories will be stored in the folder `PATH_TO_BAG_FOLDER`.
 
 Todo: add better visualization tools

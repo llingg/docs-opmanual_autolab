@@ -63,7 +63,7 @@ From here, there are many different ways of doing things. The Apriltag detection
 
 ### Offline acquisition of images
 
-As explained in [](#localization-offline), the offline localization just needs every agent to record in rosbags the image stream. Then, it is download and feed to a Apriltag extractor node, that outputs all the transforms to a new bag, that is then fed to the graph optimizer. 
+As explained in [](#localization-demo), the offline localization just needs every agent to record in rosbags the image stream. Then, it is download and feed to a Apriltag extractor node, that outputs all the transforms to a new bag, that is then fed to the graph optimizer. 
 
 ### Online acquisition of images
 
