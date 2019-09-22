@@ -1,15 +1,17 @@
-# The Autolab {#book:autolab status=beta}
+# The Autolab {#book:autolab status=ready}
 
 <div class='requirements' markdown="1">
 
-Requires: A fully operational [Duckietown](+opmanual_duckietown#duckietowns)
+Requires: A fully operational [Duckietown](+opmanual_duckietown#duckietowns).
 
-Results: A working Autolab
+Results: A working Autolab.
+
 </div>
 
+<minitoc/>
 
 
-### The Big Picture
+### The Big Picture {nonumber notoc}
 
 The goal of an Autolab is to create a human free, automated environment for Duckiebots. This requires a bit more than just a standard [Duckietown](+opmanual_duckietown#duckietowns) to work. 
 
