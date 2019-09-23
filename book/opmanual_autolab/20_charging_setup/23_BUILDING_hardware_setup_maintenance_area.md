@@ -1,4 +1,4 @@
-# Building a maintenance area {#autocharging-maintenance-area status=beta}
+# Building a maintenance area {#autocharging-maintenance-area status=ready}
 
 <div figure-id="fig:maintenance-area">
 <img src="images/MaintenanceArea.jpg" style="width: 100%"/>

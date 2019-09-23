@@ -1,4 +1,4 @@
-# Localization System {#part:autolab-localization status=beta}
+# Localization System {#part:autolab-localization status=ready}
 
 <div class='requirements' markdown="1">
 

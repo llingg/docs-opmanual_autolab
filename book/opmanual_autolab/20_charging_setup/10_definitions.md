@@ -1,4 +1,4 @@
-# Definitions {#autocharging-definitions status=beta}
+# Definitions {#autocharging-definitions status=ready}
 
 ## Maintenance area
 

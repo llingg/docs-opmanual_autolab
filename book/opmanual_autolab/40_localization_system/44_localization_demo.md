@@ -1,4 +1,4 @@
-# DEMO - Localization {#localization-demo status=draft}
+# DEMO - Localization {#localization-demo status=ready}
 
 <div class='requirements' markdown="1">
 

@@ -1,4 +1,4 @@
-# SOFTWARE - Localization software {#localization-software status=draft}
+# SOFTWARE - Localization software {#localization-software status=ready}
 
 <div class='requirements' markdown="1">
 

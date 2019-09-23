@@ -1,4 +1,4 @@
-# Autolab minimum requirements {#part:autolab-minimal-requirements status=beta}
+# Autolab minimum requirements {#part:autolab-minimal-requirements status=ready}
 
 <div class='requirements' markdown="1">
 

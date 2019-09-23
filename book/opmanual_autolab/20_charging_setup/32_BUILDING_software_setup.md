@@ -1,4 +1,4 @@
-# Software setup on the Duckiebot {#autocharging-map status=beta}
+# Software setup on the Duckiebot {#autocharging-map status=ready}
 
 ## Goal
 

@@ -1,4 +1,4 @@
-# Future projects {#autocharging-future status=beta}
+# Future projects {#autocharging-future status=ready}
 
 There are still multiple tasks which would improve the charging area by a lot. In the following, you find a list of those tasks with a small description, ordered in descending priority.
 

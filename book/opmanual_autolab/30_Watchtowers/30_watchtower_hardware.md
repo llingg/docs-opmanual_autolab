@@ -1,4 +1,4 @@
-# Watchtowers {#part:watchtower-hardware status=draft}
+# Watchtowers {#part:watchtower-hardware status=ready}
 
 <div class='requirements' markdown="1">
 

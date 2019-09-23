@@ -1,4 +1,4 @@
-# BUILDING - Autolab map {#autolab-map-making status=beta}
+# BUILDING - Autolab map {#autolab-map-making status=ready}
 
 <div class='requirements' markdown="1">
 

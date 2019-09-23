@@ -1,4 +1,4 @@
-# BUILDING - Watchtower in WT19-B configuration {#watchtower-hardware-assembly-WT19-B status=draft}
+# BUILDING - Watchtower in WT19-B configuration {#watchtower-hardware-assembly-WT19-B status=ready}
 
 <div class='requirements' markdown="1">
 

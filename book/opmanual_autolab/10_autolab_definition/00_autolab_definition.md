@@ -1,4 +1,6 @@
-# Autolab definition {#part:autolab-definition status=beta}
+# Autolab definition {#part:autolab-definition status=ready}
+
+excerpt: 
 
 <div class='requirements' markdown="1">
 

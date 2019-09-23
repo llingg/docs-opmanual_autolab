@@ -1,4 +1,4 @@
-# Software architecture {#autocharging-software-architecture status=beta}
+# Software architecture {#autocharging-software-architecture status=ready}
 
 Operating a Duckiebot inside a megacity requires software which can switch from state to state. In this section, we describe how we have fit the maintenance code into the bigger picture.
 

@@ -1,4 +1,4 @@
-# Plan your maintenance area {#autocharging-planning status=beta}
+# Plan your maintenance area {#autocharging-planning status=ready}
 
 We highly recommend that the maintenance area fulfills the specifications of Duckietown.
 

@@ -1,4 +1,4 @@
-# Testing and debugging {#autocharging-debugging status=beta}
+# Testing and debugging {#autocharging-debugging status=ready}
 
 <div class='requirements' markdown="1">
 
