@@ -74,14 +74,12 @@ Once you are sure of your positioning of the Apriltags, you can start measuring 
 
 * Open a terminal inside the duckietown-world repository, as you did to create your map. Your map should still be in the `src/duckietown_world/data/gd1/maps` folder.
 
-Run the following command:    
+Run the following command:
 
     laptop $ python3 src/apriltag_measure/measure_ground_apriltags.py ![MAP_NAME]
-
 
 * Follow the instructions in the terminal : choose an Apriltag number, and fill in the 5 asked numbers, as described above.
 * If an Apriltag was already filled in before (if you are changing your map for instance), you will be asked to confirm the overwritting of the positionning. As everything is versionned in github, you can always go back to find the previous positions if need be.
 * If you try recording an Apriltag number than is not in the allocated range (300-399), the script will also ask to confirm.
 * At the end, just confirm the saving. The resulting map will be where it was before, with now the Apriltag measures added to it.
 * As described in [](#autolab-map-making), you should recompile your map and visualize the apriltags on it (easy debug to find obvious mistakes).
-
