@@ -4,7 +4,7 @@
 
 Requires: The city layout is fixed and ready.
 
-Results: The city layout is transcribed in duckietown-world, to be used for visualization tools, for localization and much more. 
+Results: The city layout is transcribed in duckietown-world, to be used for visualization tools, for localization and much more.
 
 Next Steps: todo
 </div>
@@ -19,7 +19,7 @@ Warning: this part is in chapter B for structural design of the documentation. H
 
 We recommend that you create a virtual environment for duckietown-world.
 
-Here is one possible method, but you can use whichever you prefer. 
+Here is one possible method, but you can use whichever you prefer.
 
 Note: duckietown-world currently needs python3.6 or higher.
 
@@ -32,7 +32,7 @@ First, install venv:
 Then, cd into your `duckietown-world` repository (it should be in the `src` folder of `dt-env-developer`), and create the venv.
 
 
-    laptop $ cd ~/dt-env-developer/src/duckietown-world 
+    laptop $ cd ~/dt-env-developer/src/duckietown-world
     laptop $ python3.6 -m venv duckietown-world-venv
     laptop $ source duckietown-world-venv/bin/activate
 
@@ -52,7 +52,7 @@ Now, you can setup duckietown-world. Inside of the virtual environment (you shou
 
 ## Using duckietown-world to create your map
 
-The best way to create a map is to do it interactively with the notebook. 
+The best way to create a map is to do it interactively with the notebook.
 
 Still in duckietown-world with your virtual environment, run
 
@@ -63,7 +63,7 @@ Warning: Please make sure it opens with some other browser than Firefox, which h
 
 Now, navigate to notebooks and open `30-DuckietownWorld-maps`. You can run each step in order to get familiar with the code functions.
 
-Once you get to the `Creating new maps` section, you can happily start creating your map. In the section below it is all the tile names and representation to help you. 
+Once you get to the `Creating new maps` section, you can happily start creating your map. In the section below it is all the tile names and representation to help you.
 
 You can add your map line by line, until satisfied with the result. Once this is done:
 
