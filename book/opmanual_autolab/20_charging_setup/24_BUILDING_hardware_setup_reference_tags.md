@@ -143,13 +143,13 @@ In the logs you see the positions of reference tags are updated periodically. At
 
 
 4. Now you have to place the reference tags such that they refer to a particular direction. In order to do that, take a duckiebot and place it to the entrance of the intersection.   
-Now in the logs of charging manager(for module 1)/doorkeeper(for module 2) container you will see that the april tag id is added to a dictionary called MOVING AT(referring the moving apriltags). Its keys refer to the apriltag ids of the duckiebot which arrived to the intersection.
+Now in the logs of charging manager(for module 1)/doorkeeper(for module 2) container you will see that the April tag id is added to a dictionary called MOVING AT(referring the moving apriltags). Its keys refer to the apriltag ids of the duckiebot which arrived to the intersection.
 
 For every apriltag id that is observed on the intersection, there is a dictionary. In it you have some attributes of a duckiebot apriltag: 
 
     * position :  Position of Duckiebot's apriltag on the image  
     * first_neighbor : First seen closest reference tag to Duckiebot's apriltag  
-    * last_neighbor  : Last seen closest reference tag to Duckiebot's apriltag. This attribute will be updated upon receiving april tag positions from the acquisition node  
+    * last_neighbor  : Last seen closest reference tag to Duckiebot's apriltag. This attribute will be updated upon receiving April tag positions from the acquisition node  
     * timestamp : The time the information above is saved 
     
 Have a look on this log. We moved a duckiebot from entrance to direction 2:

@@ -60,7 +60,7 @@ The parameters in the yaml file correspond to the following map:
 
 picture of map
 
-The parameters in the config file are dictionaries - each key (i.e. '150') stands for an april tag ID and maps to either a single direction (i.e. 1) or to multiple directions, stored in a list (i.e. [0,1,2]). The directions, stored as integers, map as follows:
+The parameters in the config file are dictionaries - each key (i.e. '150') stands for an April tag ID and maps to either a single direction (i.e. 1) or to multiple directions, stored in a list (i.e. [0,1,2]). The directions, stored as integers, map as follows:
 
 [0, 1, 2] == [LEFT, STRAIGHT, RIGHT].
 
@@ -68,7 +68,7 @@ The parameters in the config file are dictionaries - each key (i.e. '150') stand
 
 ### path_in
 
-The "path_in" parameter of a charger should map traffic sign april tag IDs to a single turn type, which in sum guide the Duckiebot to the charger. In [](#fig:path_to_charger2) an example is given. The path_in of charger 2 would then be
+The "path_in" parameter of a charger should map traffic sign April tag IDs to a single turn type, which in sum guide the Duckiebot to the charger. In [](#fig:path_to_charger2) an example is given. The path_in of charger 2 would then be
 
     path_in: {'261': 2, '240': 0}
 
@@ -98,7 +98,7 @@ The dictionary "entrances" and "exits" in the charging_stations parameter contai
 
 ### maintenance_entrance / maintenance_exit
 
-This dictionaries define which april tag IDs correspond to the entrance / exit of the maintenance area. This information is needed to detect when a Duckiebot enters or leaves the maintenance area.
+This dictionaries define which April tag IDs correspond to the entrance / exit of the maintenance area. This information is needed to detect when a Duckiebot enters or leaves the maintenance area.
 
 After setting up all parameters our docker image is ready to be build
 

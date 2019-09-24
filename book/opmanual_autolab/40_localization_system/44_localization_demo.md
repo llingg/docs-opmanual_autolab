@@ -2,7 +2,7 @@
 
 <div class='requirements' markdown="1">
 
-Requires: A fully operational [Duckietown](+opmanual_duckietown#duckietowns), compliant [autobots](#autolab-autobot-specs), [watchtowers](#watchtower-hardware) and a system of [ground april tags](#localization-apriltags-specs)
+Requires: A fully operational [Duckietown](+opmanual_duckietown#duckietowns), compliant [autobots](#autolab-autobot-specs), [watchtowers](#watchtower-hardware) and a system of [ground April tags](#localization-apriltags-specs)
 
 Results: running offline or online localization in the Autolab
 
@@ -117,7 +117,7 @@ Todo: add better visualization tools
 Note: This is highly experimental, as up until now the processing power required to run localization online is really heavy. The goal of the current development is to make the process affordable for a single computer
 
 Online localization is the idea of running an experiment and getting (with a reasonable delay) the localization and path of each duckiebot
-The processing bottle neck is on the processing of the april tags from the watchtower images.
+The processing bottle neck is on the processing of the April tags from the watchtower images.
 
 Normally, at this point, you should have a duckiebot-interface and a acquisition bridge on each device (duckiebot and watchtower).
 

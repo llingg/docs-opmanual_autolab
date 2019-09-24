@@ -54,7 +54,7 @@ This is the important part of the Apriltag specifications. You need to make sure
 * In the map you created before, the origin is the bottom left corner. Remember this as it is important.
 * The tiles have an internal and an external border, because of the interlocking slots. In the following, as for the map, take the inside bottom left as reference for a tile.
 * Each apriltag placement will be measured relatively to the tile it is on, from the above described origin.
-* Always measure the center of the april tag itself.
+* Always measure the center of the April tag itself.
 
 **How to measure**:
 

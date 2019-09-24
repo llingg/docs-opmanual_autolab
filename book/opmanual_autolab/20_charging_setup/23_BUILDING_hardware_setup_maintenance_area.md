@@ -17,7 +17,7 @@ Respect the constraints of Duckietown.
 
 **Note down** all the **tag IDs** and their **positions** in your maintenance area - you will need them later on to define your map in the software.
 
-## Add a red line and a **STOP** april tag after each charger
+## Add a red line and a **STOP** April tag after each charger
 
 Directly at the beginning of the next tile after a charger, add a red line [](#fig:red_line). This red line and the stop tag is used to determine whether a Duckiebot is the first in a charger or not.  
 
