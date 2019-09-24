@@ -16,7 +16,7 @@ Next Steps: if you have an autocharging area, add the parts for [autocharging](#
 
 ## Flashing the autobots
 
-For a functional autolab, we strongly recommend using names of the type :
+For a functional autolab, we strongly recommend using hostnames of the type :
 
 - autobotXX (with XX starting at 01)
 
@@ -24,7 +24,7 @@ The autobot part can be changed, but the numbers at the end make the whole autol
 
 To flash the autobots sd cards, follow the instructions [here](+opmanual_duckiebot#setup-duckiebot).
 
-## Adding hardware to the bot
+## Adding hardware to the bot {#adding-hw-to-bot status=ready}
 
 Warning: If you want to use the autocharging feature, you will have to swap the Raspberry Pi to the top part of the Duckiebot. This is due to additional hardware that will be added. So your Duckiebot should look like [](#fig:pre-autocharging-DB). As the batteries do not fit underneath the chassis you will have to get creative about where to place the battery.
 
