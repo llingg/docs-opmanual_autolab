@@ -164,6 +164,8 @@ Todo: Add pictures
 
 Each odometry or apriltag transform message comes with a timestamp. Since we want to track the movement in time of each autobot, those are very important to keep and transmit with the transform.
 
+For things that don't move, e.g. the watchtowers and the apriltags that are not on autobots, we don't need to keep the timestamp. This only happens when the transform is from a `watchtower_camera` to an `apriltag_base` (which is not on an autobot).
+
 **To conclude**:
 
 The ROS listener makes sure to transmit transforms with the right frame ids (parent and child), to the right frames of reference (`autobot_base` for the autobots), with the right time stamps.
@@ -171,6 +173,30 @@ The ROS listener makes sure to transmit transforms with the right frame ids (par
 At the end of the pipeline, it receives back optimized estimates of the trajectories of the autobots and of the positions of the watchtowers. It then publishes them and stores them.
 
 ### The Resampler
+
+**What is the resampler and why do we need it?**:
+
+The input of the graph consist of multiple non synchronized streams of data from multiple agents. At one point in time, for one autobot, there can be up to about 5 watchtowers that see it, each with a ~20Hz stream. Adding to this the odometry stream of the autobot (about 30Hz) and the image stream of the autobot (about 30Hz as well), we can end up with a total of 160 different time stamps to give to the autobot per seconds. This makes no sense, as we cant possibly want a trajectory with higher frame rate as the lowest frame rate of the sensors.
+
+The resampler's goal is to generate a synchronized and regular stream of transforms for the graph optimizer. What it does is:
+
+- For each autobot, keeps the odometry transform history
+- For each watchtower, keeps the transform history of each detected autobot
+- The transforms from watchtowers to other apriltags are transmitted directly to the graph optimizer, as we don't keep their timestamps.
+
+Then, at a regular interval (default is 15Hz), each sensor is queried for a transform.
+
+Let's call `t_query` the timestamp of the query.
+
+For each watchtower, for each `autobotXX` seen by watchtower:
+
+let's call `t_prev` and `t_next` respectively the closest timestamps before and after `t_query` such that the watchtower has transforms to `autobotXX` at `H_prev` at `t_prev` and transform `H_next` at `t_next`. Then we compute the corresponding queried transform `H_query` as a SE3 interpolation of `H_prev` and `H_next`. This will give the best approximation of the transform at `t_query`. Of course, this is done only if `t_prev` and `t_next` exist and are close enough to `t_query`.
+
+What this ensures is that if multiple watchtowers see `autobotXX` at the same time, their inputs will be synchronized and linked to the same node in the duckietown graph builder.
+
+Todo: odometry
+
+
 
 ### The duckietown graph builder
 

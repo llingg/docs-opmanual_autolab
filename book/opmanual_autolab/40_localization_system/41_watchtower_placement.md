@@ -54,6 +54,8 @@ Beside the placement of Watchtowers, they should be connected via ethernet cable
 
 Then we have one PC connected via ethernet to the router, for faster and more reliable communication with the watchtowers.
 
+Todo: explain the router requirements.
+
 
 Last but not least, these Watchtowers needs _power_. Remember to prepare your USB chargers and cables that support 2.4A output.
 
