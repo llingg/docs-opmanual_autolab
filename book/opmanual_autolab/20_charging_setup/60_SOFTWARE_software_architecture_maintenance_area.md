@@ -5,7 +5,7 @@ In this part it is explained how the system for module 1 and 2 works.
 ## Responsibilities of overall managing the chargers  
 There are 3 main tasks that have to be accomplished :
 
-**TASK 1**- Evaluating the april tag’s position in order to understand where the reference tags are located and in which direction the duckiebot went  
+**TASK 1**- Evaluating the April tag’s position in order to understand where the reference tags are located and in which direction the duckiebot went  
 **TASK 2**- Gathering information on charger sizes and finding the next free charger a duckiebot newly arriving the maintenance area should go  
 **TASK 3**- Selecting the frequency with which the LED should blink 
 
@@ -13,7 +13,7 @@ In Modul 1, all the responsibilities are done by the charging manager.
 The output of tasks above feeds information to other tasks, for example, in task 1, it will be found out, which duckiebot entered or left the charger and this will be saved in a data structure that can be accessed by the charging manager. 
 In task 2, charging manager will iterate over the data structure in order to discover how many duckiebots occupy the chargers. Through linear search, the most unoccupied charger will be determined and the frequency of LEDs corresponding charger id will be changed accordingly. In task 3 LEDs will blink with the mentioned frequency. 
 
-In Modul 2, the tasks are completed in separate devices. Task 1 is accomplished by doorkeepers and the rest will be done by the charging manager. The output of task 1 will be shared with the charging manager through a communication server. For this objective, charging manager serves a python-dictionary of duckiebot Apriltags as keys and charger indices as values (initially all charger indices are set to zero to indicate that the duckiebot does not occupy any charger.). The clients, in this case the doorkeepers, will update this dictionary according to their evaluation of april tag positions, for example, if duckiebot with april tag 400 enters charger 3 then the doorkeeper will change the value of 400 from 0 to 3. 
+In Modul 2, the tasks are completed in separate devices. Task 1 is accomplished by doorkeepers and the rest will be done by the charging manager. The output of task 1 will be shared with the charging manager through a communication server. For this objective, charging manager serves a python-dictionary of duckiebot Apriltags as keys and charger indices as values (initially all charger indices are set to zero to indicate that the duckiebot does not occupy any charger.). The clients, in this case the doorkeepers, will update this dictionary according to their evaluation of April tag positions, for example, if duckiebot with April tag 400 enters charger 3 then the doorkeeper will change the value of 400 from 0 to 3. 
 
 
 

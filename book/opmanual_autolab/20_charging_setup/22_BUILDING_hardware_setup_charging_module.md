@@ -19,7 +19,7 @@ Requires: Extra tools for assembling [](#autocharging-extratools)
 
 Result: A charging module for charging Duckiebots [](#fig:charging_module_during_operation).
 
-Next: Assembly a charging capable Duckiebot with a current collector [](#sec:autocharging-current-collector).
+Next: Assemble a Autobot that is capable of autocharging [](#autolab-autobot-specs)
 
 </div>
 
