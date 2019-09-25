@@ -28,7 +28,7 @@ In order to use the localization pipeline, you need to have two containers runni
 
 The watchtowers need a slightly modified version of the duckiebot interface.
 
-The following commands should be run on every watchower. If you named them with numbers (Watchtower01 to watchtowerXX), then you can easily make for loops in shell.
+**The following commands should be run on every watchower**. If you named them with numbers (Watchtower01 to watchtowerXX), then you can easily make for loops in shell.
 
 First, remove the duckiebot interface that is running:
 
