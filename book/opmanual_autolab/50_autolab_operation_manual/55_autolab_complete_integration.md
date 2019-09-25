@@ -1,10 +1,9 @@
-# SOFTWARE - Autolab complete integration {#autolab-complete-integration status=draft}
+# SOFTWARE - Autolab complete integration {#autolab-complete-integration status=ready}
 
 <div class='requirements' markdown="1">
 
-Requires: put requirements here
+Requires: A fully operational Autolab
 
-Results: put result here
-
-Next Steps: put next steps heres
 </div>
+
+The Autolab interface and needs some impro

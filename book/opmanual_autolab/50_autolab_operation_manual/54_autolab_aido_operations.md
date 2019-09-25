@@ -1,10 +1,9 @@
-# DEMO - Aido operations {#autolab-aido-operations status=draft}
+# DEMO - AIDO operations with the Autolab interface {#autolab-aido-operations status=ready}
 
 <div class='requirements' markdown="1">
 
-Requires: put requirements here
+Requires: Fully setup Autolab server
 
-Results: put result here
+Results: Ability to evaluate AIDO submissions
 
-Next Steps: put next steps here
 </div>

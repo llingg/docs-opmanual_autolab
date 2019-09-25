@@ -1,10 +1,7 @@
-# DEMO - Autolab control and monitoring scripts {#autolab-control-scripts status=draft}
+# DEMO - Using the Autolab interface {#autolab-interface-description status=ready}
 
 <div class='requirements' markdown="1">
 
-Requires: put requirements here
+Requires: Fully setup Autolab server
 
-Results: put result here
-
-Next Steps: put next steps here
 </div>
