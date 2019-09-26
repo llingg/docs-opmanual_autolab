@@ -91,3 +91,11 @@ Setting up the different parameters for the Autolab interface is straight forwar
 * **Hostname of the logging server** Hostname of the local logging server used to save the necessary ROS messages during an evaluation
 * **Username of the logging server, needs passwordless ssh** Username of the logging server, needs passwordless ssh to execute correctly
 * **IP of the lab ROS master** IP of the Autolab ROS master where every acquisition-bridge subscribes to
+
+### Changing the map
+
+TODO:
+
+### Changing intial Watchtower positions
+
+TODO:
