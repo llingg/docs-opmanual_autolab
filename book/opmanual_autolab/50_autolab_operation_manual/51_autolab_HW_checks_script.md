@@ -58,7 +58,7 @@ If all above steps are done, press <kbd>y</kbd> and <kbd>ENTER</kbd> on your key
 
 ### Step 9
 
-In ETH, we use special batteries that are no longer produced. If you use the battery that you got with your Duckiebot that is perfectly fine. To be able to write down what battery you use, press <kbd>n</kbd> and <kbd>ENTER</kbd>. This will give you the possibility to type in what battery you use.
+In ETH, we currently use batteries that are no longer produced. To replace them, we manufacture special batteries just for Duckietown which you will have gotten with your Duckiebot. So if you use these that's even better. To be able to write down what battery you use, press <kbd>n</kbd> and <kbd>ENTER</kbd>. This will give you the possibility to type in what battery you use.
 
 ### Step 10
 
@@ -73,18 +73,14 @@ The freshly created suitability test report can be found under ```http://HOSTNAM
 
 ### Step 13
 
-In ETH, we created a so called `fleet roaster` to store all this information. If you are using this instruction to operate the Autolab in ETH, upload the files to ```https://github.com/duckietown/ETHZ-autolab-fleet-roster/tree/aido2/autobots/autobotXX/hardware-compliance/YYYY-MM-DD_hardware-compliance```. where you need to replace the `XX` and the `YYYY-MM-DD`.
+Now upload the file that was created to your fleet-roster. If you don't know what a fleet-roster is and how to create one, read [this](#autolab-fleet-roster). Once you created your own fleet-roster, upload your newly created file to it.
 
-Otherwise create a repository that you have access to. We suggest you use the same structure as we do in ETH.
+Note: If you are using this instruction to operate the Autolab in ETHZ, upload the files to ```https://github.com/duckietown/ETHZ-autolab-fleet-roster/tree/aido2/autobots/autobotXX/hardware-compliance/YYYY-MM-DD_hardware-compliance```. where you need to replace the `XX` and the `YYYY-MM-DD`.
 
-Use the following convention to name the created file: `YYYY-MM-DD_hardware-compliance.yaml`
+if you know how to do upload the files to GitHub, you can skip the next section. If not, we will show you how on the example of the ETHZ fleet-roster: 
 
-
-if you know how to do upload the files to GitHub, you can skip the next section. If not, do the following:
-
-First, if you are not operating the Autolab in ETH, create your own repository on Github. You can find a tutorial on how to do that [here](https://help.github.com/en/enterprise/2.13/user/articles/creating-a-new-repository).
-
-Now you can clone the repository where the files will be stored onto your local computer. To do this, open a terminal and type
+Clone your fleet-roster repository onto your local computer.
+To do this, open a terminal and type
 
     laptop $ git clone git@github.com:duckietown/ETHZ-autolab-fleet-roster.git
 
@@ -118,4 +114,4 @@ It should look as follows:
     sd-memory: class 10 micro SD
     battery: RAVPOWER RP-PB07
     actuation: DG01D dual-axis drive gear (48:1)
-    tester_name: Merlin Hosner
+    tester_name: Gyro Gearloose
