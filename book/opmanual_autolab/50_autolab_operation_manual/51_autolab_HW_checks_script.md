@@ -50,7 +50,7 @@ Check that no cables can interfere with the wheels of the Duckiebot. If necessar
 
 ### Step 7
 
-Check that all cables are properly attached. Especially check that the camera cable is plugged in correctly and locked.
+Check that all cables are properly attached. Especially check that the camera cable is plugged in correctly and locked. When the Autobot is on, a small red light appears on the camera. Note that it can sometimes appear but still the camera is badly connected.
 
 ### Step 8
 
