@@ -26,11 +26,6 @@ If you mounted the Raspberry Pi on top, check that a pin protector is mounted on
 If no protector is installed yet, then first check that no pins are bent or are making contact and then add the protector. It should slide into place without applying any force. The stl file to 3D print the pin protector can be found in [](#adding-hw-to-bot).
 
 
-### Step 2
-
-Make sure there is a SD card plugged into the Duckiebot for logging using a USB adapter. As the adapter has a LED that might disturb the performance of the other Duckiebots, you need to put a piece of tape on it. Make sure that you cannot see any more light coming from the LED before proceeding. A USB memory stick is fine as well for storage.
-IMPORTANT: the SD card or USB memory stick must be formatted as `ext4`. You can change this by plugging in the memory stick or SD card in the computer, choose `format` and then choose `ext4`.
-
 ### Step 3
 
 Check if the standoff on the Duckiebot is mounted and an April tag matching the Duckiebot name (hostname) is attached. The April tag needs to be aligned with the front of the top plate and centered. On the top plate you will find engraved lines that show you where to position it.  the standoff needs to be mounted in the very front of the bot. A picture can be found in [](#fig:standoffs-mounted-autobot)
@@ -73,27 +68,25 @@ The freshly created suitability test report can be found under ```http://HOSTNAM
 
 ### Step 13
 
-Now upload the file that was created to your fleet-roster. If you don't know what a fleet-roster is and how to create one, read [this](#autolab-fleet-roster). Once you created your own fleet-roster, upload your newly created file to it.
+Now upload the file that was created to your `fleet roster`. If you don't know what a `fleet roster` is and how to create one, read [this](#autolab-fleet-roster). Once you created your own `fleet roster`, upload your newly created file to it.
 
-Note: If you are using this instruction to operate the Autolab in ETHZ, upload the files to ```https://github.com/duckietown/ETHZ-autolab-fleet-roster/tree/aido2/autobots/autobotXX/hardware-compliance/YYYY-MM-DD_hardware-compliance```. where you need to replace the `XX` and the `YYYY-MM-DD`.
-
-if you know how to do upload the files to GitHub, you can skip the next section. If not, we will show you how on the example of the ETHZ fleet-roster: 
+if you know how to do upload the files to GitHub, you can skip the next section. If not, we will give you a step by step instruction in the following:
 
 Clone your fleet-roster repository onto your local computer.
 To do this, open a terminal and type
 
-    laptop $ git clone git@github.com:duckietown/ETHZ-autolab-fleet-roster.git
+    laptop $ git clone git@github.com:YOUR-WORKSPACE/YOUR-FLEET-ROSTER.git
 
 create the directory where you want to place the file with the following code. you need to exchange `XX` by the number of the actual autobot and fill in the current date.
 
-    laptop $ mkdir ETHZ-autolab-fleet-roster/autobots/autobotXX/hardware-compliance/YYYY-MM-DD_hardware-compliance
+    laptop $ mkdir YOUR-FLEET-ROSTER/autobots/autobotXX/hardware-compliance/YYYY-MM-DD_hardware-compliance
 
 add the new file into the above mentioned folder. The easiest way to do this is just copying the file and placing it in the folder mentioned in step 2 using the file explorer.
 
 now you are set to push things to github. Run the following in the same terminal as above: (again replace XX by the number of the autobot)
 
 
-    laptop $ cd ETHZ-autolab-fleet-roster
+    laptop $ cd YOUR-FLEET-ROSTER
     laptop $ git add .
     laptop $ git commit -m "hardware compliance test for autobotXX"
     laptop $ git push origin aido2  
@@ -101,7 +94,7 @@ now you are set to push things to github. Run the following in the same terminal
 
 ### Step 13
 
-Verify that everythig worked out by checking the yaml file in `ETHZ-autolab-fleet-roster/autobots/autobotXX/hardware-compliance/YYYY-MM-DD_hardware-compliance/YYYY-MM-DD_hardware-compliance.yaml`.
+Verify that everythig worked out by checking the yaml file in `YOUR-FLEET-ROSTER/autobots/autobotXX/hardware-compliance/YYYY-MM-DD_hardware-compliance/YYYY-MM-DD_hardware-compliance.yaml`.
 It should look as follows:
 
     verdict: pass

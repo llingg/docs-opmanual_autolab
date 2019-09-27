@@ -48,4 +48,4 @@ Note: `The camera_intrinsic.yaml`, `camera_extrinsic.yaml` and `kinematics.yaml`
 
 ## Creating your own fleet-roaster
 
-You can create your own fleet-roster repository on GitHub using the structure shown above. If you know how to create a new repository you can proceed right away. If not, read the instructions [here](https://help.github.com/en/enterprise/2.13/user/articles/creating-a-new-repository) to find out how you can create a new repository on GitHub.
+You can create your own ``fleet roster` repository on GitHub using the structure shown above. If you know how to create a new repository you can proceed right away. If not, read the instructions [here](https://help.github.com/en/enterprise/2.13/user/articles/creating-a-new-repository) to find out how you can create a new repository on GitHub.
