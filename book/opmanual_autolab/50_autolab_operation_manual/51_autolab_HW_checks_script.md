@@ -45,7 +45,7 @@ Check that no cables can interfere with the wheels of the Duckiebot. If necessar
 
 ### Step 7
 
-Check that all cables are properly attached. Especially check that the camera cable is plugged in correctly and locked.
+Check that all cables are properly attached. Especially check that the camera cable is plugged in correctly and locked. When the Autobot is on, a small red light appears on the camera. Note that it can sometimes appear but still the camera is badly connected.
 
 ### Step 8
 
@@ -64,7 +64,7 @@ Check that a standard actuators (yellow motors) are used to drive the Duckiebot.
 Fill in your name and press <kbd>ENTER</kbd>, the container should now close without errors.
 
 ### Step 12
-The freshly created suitability test report can be found under ```http://HOSTNAME.local:8082/config/YYYY-MM-DD_hardware-compliance.yaml```
+The freshly created suitability test report can be found under ```http://HOSTNAME.local:8082/config/YYYY-MM-DD_hardware-compliance.yaml```. Please download it.
 
 ### Step 13
 
