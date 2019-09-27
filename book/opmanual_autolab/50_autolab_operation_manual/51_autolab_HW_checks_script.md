@@ -69,7 +69,7 @@ Check that a standard actuators (yellow motors) are used to drive the Duckiebot.
 Fill in your name and press <kbd>ENTER</kbd>, the container should now close without errors.
 
 ### Step 12
-The freshly created suitability test report can be found under ```http://HOSTNAME.local:8082/config/YYYY-MM-DD_hardware-compliance.yaml```
+The freshly created suitability test report can be found under ```http://HOSTNAME.local:8082/config/YYYY-MM-DD_hardware-compliance.yaml```. Please download it.
 
 ### Step 13
 
