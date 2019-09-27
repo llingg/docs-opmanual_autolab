@@ -1,6 +1,6 @@
 # Autolab definition {#part:autolab-definition status=ready}
 
-excerpt: 
+excerpt:
 
 <div class='requirements' markdown="1">
 
@@ -9,6 +9,7 @@ Requires: A Duckietown up to specifications from [the Duckietown book](+opmanual
 Results: Knowledge of the fundamental structures that make an Autolab.
 
 Next Steps: Building the [autocharging area](#part:autolab-auto-charging).
+
 </div>
 
 An Autolab is a Duckietown with a set of additional structures:
@@ -19,7 +20,7 @@ An Autolab is a Duckietown with a set of additional structures:
 - A localization system
 - An Autolab operation server
 
-*The Duckiebots that are used inside an Autolab are called Autobots and rely on additional specifications.
+\*The Duckiebots that are used inside an Autolab are called Autobots and rely on additional specifications.
 
 ### The Map
 For an Autolab to work, a precise map is needed. This part is handled in [](#autolab-map-making)

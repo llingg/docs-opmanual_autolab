@@ -10,10 +10,12 @@ Results: A working Autolab.
 
 <minitoc/>
 
+Warning: Autolabs are still experimental. We are working on preparing a set of instructions for you but it is still all in its beta version.  
+
 
 ### The Big Picture {nonumber notoc}
 
-The goal of an Autolab is to create a human free, automated environment for Duckiebots. This requires a bit more than just a standard [Duckietown](+opmanual_duckietown#duckietowns) to work. 
+The goal of an Autolab is to create a human free, automated environment for Duckiebots. This requires a bit more than just a standard [Duckietown](+opmanual_duckietown#duckietowns) to work.
 
 An Autolab can serve different purposes. It is used for research on the Duckietown platform, and is also being used to organize the embodied challenges of [AIDO]((+AIDO#AIDO)).
 
@@ -27,7 +29,7 @@ The aim of this book is to present:
 
 In each of the following sections you will find the BUILDING, the DEMO and the SOFTWARE pages.
 
-You can find the up-to-date status of each page of the book at the top-right of the page, that will change as we write them down. Please only refer to those marked as either BETA or READY. 
+You can find the up-to-date status of each page of the book at the top-right of the page, that will change as we write them down. Please only refer to those marked as either BETA or READY.
 
 - [](#autolab-definition) : The precise definition of an Autolab
 - [](#autolab-minimal-requirements) : The set of instructions to setup the minimal working environment
