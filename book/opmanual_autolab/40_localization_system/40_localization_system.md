@@ -16,10 +16,7 @@ Note: Watchtowers are an experimental feature of Duckietown, which are currently
 
 ### Sections
 
-* [](#localization-watchtower-placement): How to place the Watchtowers in the city.
-* [](#localization-apriltags-specs): The AprilTag specifications and measure.
-* [](#localization-demo): The manual to run localization offline or online. - TODO
-* [](#localization-software): An overview of the localization code. - IN PROGRESS
+<minitoc/>
 
 ### Overview and Concept of the system
 

@@ -1,5 +1,7 @@
 # BUILDING - Apriltags specifications {#localization-apriltags-specs status=ready}
 
+Excerpt:  The AprilTag specifications and measure.
+
 <div class='requirements' markdown="1">
 
 Requires: A fully operational [Duckietown](+opmanual_duckietown#duckietowns), compliant [autobots](#autolab-autobot-specs) and a [map of the Autolab](#autolab-map-making).
@@ -8,6 +10,9 @@ Results: The city is ready to be used for localization
 
 Next Steps: The two localization demos: [offline and online](#localization-demo)
 </div>
+
+<minitoc/>
+
 
 ## Why do we need ground Apritags
 

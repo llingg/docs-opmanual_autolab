@@ -1,11 +1,16 @@
 # BUILDING - Placing Watchtowers in a city {#localization-watchtower-placement status=ready}
 
+Excerpt: How to place and connect the Watchtowers in the city
+
 <div class='requirements' markdown="1">
 
 Requires: Assembled [Watchtowers](#watchtower-hardware).
 
 Results: A Watchtower system ready to be used.
 </div>
+
+<minitoc/>
+
 
 ## Placement of the watchtowers
 
