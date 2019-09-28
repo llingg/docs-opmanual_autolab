@@ -56,4 +56,4 @@ While the long term objective is to only do online localization, the offline loc
 
 ### SOFTWARE - Description
 
-The software is explained in detailed in chapter [](#localization-software)
+The software is explained in detailed in chapter [](#autolab-localization-software)

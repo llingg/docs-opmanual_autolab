@@ -8,7 +8,7 @@ Requires: A fully operational [Duckietown](+opmanual_duckietown#duckietowns), co
 
 Results: running offline or online localization in the Autolab
 
-Next Steps: Contribute to [localization software](#localization-software)
+Next Steps: Contribute to [localization software](#autolab-localization-software)
 </div>
 
 <minitoc/>
