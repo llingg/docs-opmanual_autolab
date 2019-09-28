@@ -1,4 +1,6 @@
-# SOFTWARE - Localization software {#localization-software status=ready}
+# Localization System - Software explanation {#part:autolab-localization-software status=ready}
+
+Excerpt: The whole localization software explained
 
 <div class='requirements' markdown="1">
 
@@ -8,6 +10,8 @@ Results: Better knowledge of the working of the current localization pipeline
 
 Next Steps: Contribute to make it better 
 </div>
+
+<minitoc/>
 
 ## Goals and specifications of the localization system
 
