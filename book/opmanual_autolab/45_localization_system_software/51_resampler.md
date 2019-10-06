@@ -44,63 +44,95 @@ What the resampler does is:
 
 Then, at a regular interval (the default rate is 15Hz), each sensor is queried for a transform.
 
-**Let's call $t_{query}$ the timestamp of the query.**
+**Let's call $t_{\text{query}}$ the timestamp of the query.**
 
 ### For the Apriltag transforms
 
 For each Watchtower, for each `AutobotXX` seen by Watchtower:
 
-Let's call $t_{prev}$ and $t_{next}$ respectively the closest timestamps before and after $t_{query}$ such that the Watchtower has transforms to `AutobotXX` at $H_{prev}$ at $t_{prev}$ and transform $H_{next}$ at $t_{next}$. 
+Let's call $t_{\text{prev}}$ and $t_{\text{next}}$ respectively the closest timestamps before and after $t_{\text{query}}$ such that the Watchtower has transforms to `AutobotXX` at $H_{\text{prev}}$ at $t_{\text{prev}}$ and transform $H_{\text{next}}$ at $t_{\text{next}}$.
 
-First, we compute from those two transforms the transform $H_{movement}$ that is the movement of the Autobot from $t_{prev}$ to $t_{next}$:
+<div figure-id="fig:watchtower-resampler-1">
+<img src="images/resampler/watchtower-resampler-Page-1.svg" style="width: 50%"/>
+<figcaption> We have two transforms from the Watchtower to the Autobot, only at times $t_{\text{prev}}$ and $t_{\text{next}}$ </figcaption>
+</div>
 
-\[
-    H_{movement} = H_{next} \cdot H_{prev}^{-1}
-\]
-
-Then we "crop" this H_movement to only take the part happening from $t_{prev}$ to $t_{query}$:
-
-\[
-    H_{movement-cropped} = interpolation(H_{movement}, t_{query})
-\]
-
-
-Then we left-multiply it by $H_{prev}$ to finally get the transform from the camera frame to the duckiebot at time $t_query$:
+First, we compute from those two transforms the transform $H_{\text{movement}}$ that is the movement of the Autobot from $t_{\text{prev}}$ to $t_{\text{next}}$:
 
 \[
-    H_{query} = H_{prev} \cdot H_{movement-cropped}
+    H_{\text{movement}} = H_{\text{next}} \cdot H_{\text{prev}}^{-1}
 \]
 
-This will give the best approximation of the transform at $t_{query}$. Of course, this is done only if $t_{prev}$ and $t_{next}$ exist and are close enough to $t_{query}$. We use the Lie Algebra of SE3 to compute the interpolation.
+<div figure-id="fig:watchtower-resampler-2">
+<img src="images/resampler/watchtower-resampler-Page-2.svg" style="width: 50%"/>
+<figcaption> $H_{\text{movement}} = H_{\text{next}} \cdot H_{\text{prev}}^{-1}$ </figcaption>
+</div>
 
-This is then the output $H_{query}$ that is called resampled transform.
+<div figure-id="fig:watchtower-resampler-3">
+<img src="images/resampler/watchtower-resampler-Page-3.svg" style="width: 55%"/>
+<figcaption> Extrapolating the Autobot's position at $t_{\text{query}}$ </figcaption>
+</div>
+
+Then we "crop" this H_movement to only take the part happening from $t_{\text{prev}}$ to $t_{\text{query}}$:
+
+\[
+    H_{\text{movement-cropped}} = \text{interpolation}(H_{\text{movement}}, t_{\text{query}})
+\]
+
+<div figure-id="fig:watchtower-resampler-4">
+<img src="images/resampler/watchtower-resampler-Page-4.svg" style="width: 50%"/>
+<figcaption> Taking only the first part of the transform </figcaption>
+</div>
+
+Then we left-multiply it by $H_{\text{prev}}$ to finally get the transform from the camera frame to the duckiebot at time $t_query$:
+
+\[
+    H_{\text{query}} = H_{\text{prev}} \cdot H_{\text{movement-cropped}}
+\]
+
+<div figure-id="fig:watchtower-resampler-5">
+<img src="images/resampler/watchtower-resampler-Page-5.svg" style="width: 50%"/>
+<figcaption> Creating $H_{\text{query}}$ from the computed interpolation </figcaption>
+</div>
+
+This will give the best approximation of the transform at $t_{\text{query}}$. Of course, this is done only if $t_{\text{prev}}$ and $t_{\text{next}}$ exist and are close enough to $t_{\text{query}}$. We use the Lie Algebra of SE3 to compute the interpolation.
+
+This is then the output $H_{\text{query}}$ that is called resampled transform.
 
 What this ensures is that if multiple Watchtowers see `AutobotXX` at the same time, their inputs will be synchronized and linked to the same node in the duckietown graph builder.
 
-Todo: Add image to explain
+<div figure-id="fig:watchtower-resampler-6">
+<img src="images/resampler/watchtower-resampler-Page-6.svg" style="width: 50%"/>
+<figcaption> Without the resampler, all transforms are not synchronized, this will create 4 separated nodes in the graph </figcaption>
+</div>
+
+<div figure-id="fig:watchtower-resampler-7">
+<img src="images/resampler/watchtower-resampler-Page-7.svg" style="width: 50%"/>
+<figcaption> With the resampler, we query the same time for each watchtower, thus synchronizing the data </figcaption>
+</div>
 
 ### For the odometry transforms
 
-For each Autobot, the sequence of odometry transforms are stored. As said before, for the odometry two time stamps are required as the transform is a transform of time, not of space. Hence, we store the previous queried time, called $t_{query-prev}$, and calculate the odometry transform between $t_{query-prev}$ and $t_{query}$.
+For each Autobot, the sequence of odometry transforms are stored. As said before, for the odometry two time stamps are required as the transform is a transform of time, not of space. Hence, we store the previous queried time, called $t_{\text{query-prev}}$, and calculate the odometry transform between $t_{\text{query-prev}}$ and $t_{\text{query}}$.
 
 This means that we need to get :
 
-* $t_{prev}$ : the time stamp closest before $t_{query-prev}$
-* $t_{next}$ : the time stamp closest after $t_{query}$
-* [$t_{1}$, $t_{2}$, ..., $t_{n}$], the `n` timestamps for of odometry messages between $t_{query-prev}$ and $t_{query}$
+* $t_{\text{prev}}$ : the time stamp closest before $t_{\text{query-prev}}$
+* $t_{\text{next}}$ : the time stamp closest after $t_{\text{query}}$
+* [$t_{\text{1}}$, $t_{\text{2}}$, ..., $t_{\text{n}}$], the `n` timestamps for of odometry messages between $t_{\text{query-prev}}$ and $t_{\text{query}}$
 
 Note: `n` depends on the difference between the query rate and the odometry rate. If the odometry rate is 30Hz and the query rate is 10Hz, then n will usually be 2. If both rate are comparable, `n` might be zero and the following algorithm just does the two first interpolations as one.
 
 **Then**, we do two interpolations :
 
-* The transform $H_{prev}$ which is between $t_{query-prev}$ and $t_{1}$ (we need the odometry at time $t_{prev}$ to compute it).
-* The transform $H_{final}$ which is between $t_{n}$ and $t_{query}$
+* The transform $H_{\text{prev}}$ which is between $t_{\text{query-prev}}$ and $t_{\text{1}}$ (we need the odometry at time $t_{\text{prev}}$ to compute it).
+* The transform $H_{\text{final}}$ which is between $t_{\text{n}}$ and $t_{\text{query}}$
 
-**Then**, we have the transforms $[H_{1-to-2}, H_{2-to-3}, ..., H_{(n-1)-to-n}]$ that are the `n-1` inner transforms. By direct multiplication, we have that the requested $H_{query}$ is:
+**Then**, we have the transforms $[H_{\text{1-to-2}}, H_{\text{2-to-3}}, ..., H_{\text{(n-1)-to-n}}]$ that are the `n-1` inner transforms. By direct multiplication, we have that the requested $H_{\text{query}}$ is:
 \[
-    H_{query} = H_{prev} \cdot H_{1-to-2} \cdot H_{2-to-3} \cdot ... \cdot H_{(n-1)-to-n} \cdot H_{final}
+    H_{\text{query}} = H_{\text{prev}} \cdot H_{\text{1-to-2}} \cdot H_{\text{2-to-3}} \cdot ... \cdot H_{\text{(n-1)-to-n}} \cdot H_{\text{final}}
 \]
 
-This is then the output $H_{query}$ that is called resampled transform.
+This is then the output $H_{\text{query}}$ that is called resampled transform.
 
 Todo: Add image to explain
