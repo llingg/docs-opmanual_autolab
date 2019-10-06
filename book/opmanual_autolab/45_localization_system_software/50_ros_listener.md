@@ -1,34 +1,46 @@
 
 # The ROS listener {#localization-ros-listener status=ready}
 
-Excerpt: The details of the first layer of the system, the ros wrapper
+Excerpt: The details of the first layer of the localization system, the ros wrapper.
 
 <div class='requirements' markdown="1">
 
-Requires: 
+Requires: Knowing what the processed input to the localization system is. ()[#localization-input-processing].
 
-Results: 
+Results: Knowing the role of the ROS listener (layer 1) of the localization system does.
 </div>
 
 <minitoc/> 
 
+## The place of the layer in the bigger picture
+
+As stated in [](#part:autolab-localization-software), the localization graph optimizer works in layers:
+
+* 1) The **ROS listener**, that receives the transforms data from the apriltag extraction and odometry
+* 2) The **Resampler**, that filter the data inside the graph
+* 3) The **Duckietown Graph Builder**, that creates and manage the graph
+* 4) The **g2o graph builder**, a custom wrapper around the g2o library.
+
+This part of the docs focuses on **layer 1, the ROS listener**.
 
 This layer has the rode node. It can work either online or offline:
 
 - Online : it has ros subscriber to `/pose_acquisition/poses` and `/pose_acquisition/odometry`, which respectively receive transforms from apriltag detection and odometry transforms
 - Offline : it receives a rosbag containing the same type of information and plays it back to the same subscribers
 
-The purpose of this node is to feed transforms to the resampler (that feeds them to the graph builder). The transforms all need to be formatted the same way and have consistent agent names between them (see example below). To do so, there is some work
+The received stamped transforms all need to be **filtered and formatted** the same way and have consistent agent names between them (see example below).
 
-## For apriltag transforms
+Note: **Notation**: This layer receives **stamped transforms** and outputs **formatted transforms** to the [resampler](#localization-resampler).
 
-Upon receiving a apriltag transform, we needs to filter the transform's following attributes:
+## For stamped transforms from Apriltag detection
+
+Upon receiving a stamped transform from an Apriltag detection, we needs to filter the stamped transform's following attributes:
 
 - `header.frame_id` --> agent which detected the apriltag
 - `header.tag_id` --> apriltag number
 
 The `frame_id` will always be a duckiebot or a watchtower, for instance `autobot01` or `watchtower03`.
-But the `tag_id` will always be a number. We therefore need a list of apriltag attribution. For instance, the default attribution of apriltag 402 is `autobot03`, but the one for apriltag 53 is a traffic sign. 
+But the `tag_id` will always be a number. We therefore need a list of apriltag attribution. For instance, the default attribution of apriltag 402 is `autobot03`, but the one for apriltag 53 is a traffic sign.
 
 There are three possible case for a apriltag message:
 
@@ -71,12 +83,12 @@ Todo: Add pictures
 
 ## The importance of time stamps
 
-Each odometry or apriltag transform message comes with a timestamp. Since we want to track the movement in time of each autobot, those are very important to keep and transmit with the transform.
+Each odometry or apriltag stamped transform message comes with a timestamp. Since we want to track the movement in time of each autobot, those are very important to keep and transmit with the transform.
 
 For things that don't move, e.g. the watchtowers and the apriltags that are not on autobots, we don't need to keep the timestamp. This only happens when the transform is from a `watchtower_camera` to an `apriltag_base` (which is not on an autobot).
 
 ## To conclude
 
-The ROS listener makes sure to transmit transforms with the right frame ids (parent and child), to the right frames of reference (`autobot_base` for the autobots), with the right time stamps.
+The ROS listener makes sure to transmit **formatted transforms** with the right frame ids (parent and child), to the right frames of reference (`autobot_base` for the autobots), with the right time stamps.
 
 At the end of the pipeline, it receives back optimized estimates of the trajectories of the autobots and of the positions of the watchtowers. It then publishes them and stores them.

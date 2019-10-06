@@ -88,12 +88,12 @@ A charger intersection is a 3-way intersection where the charger entrances and e
 
 ## Charging Manager {#autocharging-definitions-charging-manager}
 
-A charging manager is basically a watchtower with a traffic light. Its task is to tell Duckiebots to which charger they should drive in. 
+A charging manager is basically a Watchtower with a traffic light. Its task is to tell Duckiebots to which charger they should drive in. 
 The charging manager must be allocated on the maintenance intersection. See [](#fig:int_def)
 
 ## Doorkeeper {#autocharging-definitions-doorkeeper}
 
-A doorkeeper is a watchtower that detects which charger a Duckiebot entered or exited. It must be allocated on the charging intersection. See [](#fig:int_def)    
+A doorkeeper is a Watchtower that detects which charger a Duckiebot entered or exited. It must be allocated on the charging intersection. See [](#fig:int_def)    
 
 
 Below you can find the definitions of maintenance intersection and charger intersections. You can also see also an example of the placement of charging manager and doorkeepers. See [](#fig:int_def)

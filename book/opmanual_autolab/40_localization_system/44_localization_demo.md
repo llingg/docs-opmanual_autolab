@@ -136,5 +136,3 @@ Once the online processing is started (or even before), run:
     laptop $ docker run --rm -e OUTPUT_DIR=/data -e ROS_MASTER_URI=http://![YOUR_IP]:11311 --name graph_optimizer -v ![PATH_TO_RESULT_FOLDER]:/data duckietown/cslam-graphoptimizer:daffy-amd64
 
 The `PATH_TO_RESULT_FOLDER` folder is the one where the results will be saved in yaml files at the end of the experiment, when you CTRL+C the above command
-
-

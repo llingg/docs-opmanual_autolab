@@ -41,7 +41,7 @@ docker -H ${array[$index]}.local  run -d \
                                       -e ACQ_TOPIC_VELOCITY_TO_POSE=velocity_to_pose_node/pose \
                                       -e ACQ_TOPIC_RAW=camera_node/image/compressed \
                                       -e ACQ_APRILTAG_QUAD_DECIMATE=2.0 \
-                                      duckietown/cslam-acquisition:autocharge || echo "ERROR: Starting cslam-acquisition on ${array[$index]} failed. Probably this watchtower wasn't configured properly or we can't connect via the network."
+                                      duckietown/cslam-acquisition:autocharge || echo "ERROR: Starting cslam-acquisition on ${array[$index]} failed. Probably this Watchtower wasn't configured properly or we can't connect via the network."
 ```
 
 4) Run the script 
