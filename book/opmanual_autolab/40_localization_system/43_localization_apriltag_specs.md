@@ -71,7 +71,10 @@ In the following, you will be asked 5 numbers for each Apriltag:
 * the y measure of the Apriltag on the tile : you can get it by blocking your meter in the interior bottom edge and measuring (in meters) the distance from the interior edge to the center of the Apriltag.
 * the orientation of the apriltag (in degrees) : it is 0 if the Apriltag's name is alined normaly with the x axis (eg readable from the "bottom" of the map). Then it is defined with the trigonometric convention (counter-clockwise). This should normally always be in multiples of 45°
 
-TODO : add a picture to make that clear.
+<div figure-id="fig:apriltag_measure_x">
+<img src="images/apriltag_measure_x.png" style="width: 60%"/>
+<figcaption> We measure from the inside band from the bottom left inner corner, defined as the origin of the tile </figcaption>
+</div>
 
 ### Filling the map in
 
