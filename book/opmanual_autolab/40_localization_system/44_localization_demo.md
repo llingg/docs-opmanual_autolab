@@ -41,11 +41,11 @@ First, remove the duckiebot interface that is running:
 
 Then, pull the custom image
 
-    laptop $ docker -H ![hostname].local pull duckietown/duckiebot-interface:daffy-arm32v7
+    laptop $ docker -H ![hostname].local pull duckietown/dt-duckiebot-interface:daffy-arm32v7
 
 Then, launch it:
 
-    laptop $ docker -H ![hostname].local run --name duckiebot-interface --privileged -e ROBOT_TYPE=watchtower --restart unless-stopped -v /data:/data -dit --network=host duckietown/duckiebot-interface:daffy-arm32v7
+    laptop $ docker -H ![hostname].local run --name duckiebot-interface --privileged -e ROBOT_TYPE=watchtower --restart unless-stopped -v /data:/data -dit --network=host duckietown/dt-duckiebot-interface:daffy-arm32v7
 
 ### The acquisition-bridge for watchtowers
 
