@@ -53,7 +53,7 @@ Now, you need to place the ground apriltags. Once they are printed, place them w
 
 Todo: add figure(s)
 
-Note: Try to put at least two ground Apriltag in the field of view of each watchtower (see [](fig:watchtower_view_straight_line)), and try to have Apriltags that are seen by multiple Watchtowers at the same time. This will improve the robustness of the localization graph.
+Note: Try to put at least two ground Apriltag in the field of view of each watchtower (see [](#fig:watchtower_view_straight_line)), and try to have Apriltags that are seen by multiple Watchtowers at the same time. This will improve the robustness of the localization graph.
 
 ## Generating the map in duckietown-world
 
@@ -73,7 +73,7 @@ This is the important part of the Apriltag specifications. You need to make sure
 
 * The measure of the ground Apriltags needs to be very precise. You should have a meter with millimeter precision.
 * In the map you created before, **the origin is the bottom left corner**. Remember this as it is *important*.
-* The tiles have an internal and an external border, because of the interlocking slots. In the following, as for the map, take **the inside bottom left as reference for a tile**. (see [](fig:apriltag_measure_x))
+* The tiles have an internal and an external border, because of the interlocking slots. In the following, as for the map, take **the inside bottom left as reference for a tile**. (see [](#fig:apriltag_measure_x))
 * Each apriltag placement will be measured relatively to the tile it is on, from the above described origin.
 * Always measure the center of the April tag itself.
 
@@ -100,12 +100,12 @@ Once you are sure of your positioning of the Apriltags, you can start measuring 
 
 * Open a terminal inside the duckietown-world repository, as you did to create your map. Your map should still be in the `src/duckietown_world/data/gd1/maps` folder.
 
-Inside the `duckieotwn-world` repository, run the following command:
+Inside the `duckietown-world` repository, run the following command:
 
     laptop $ python3 src/apriltag_measure/measure_ground_apriltags.py ![MAP_NAME]
 
 * Follow the instructions in the terminal : choose an Apriltag number, and fill in the 5 asked numbers, as described above.
-* If an Apriltag was already filled in before (if you are changing your map for instance), you will be asked to confirm the overwritting of the positionning. As everything is versionned in github, you can always go back to find the previous positions if need be.
+* If an Apriltag was already filled in before (if you are changing your map for instance), you will be asked to confirm the overwriting of the positioning. As everything is versioned in github, you can always go back to find the previous positions if need be.
 * If you try recording an Apriltag number than is not in the allocated range (300-399), the script will also ask to confirm.
 * At the end, just confirm the saving. The resulting map will be where it was before, with now the Apriltag measures added to it.
 * As described in [](#autolab-map-making), you should recompile your map and visualize the apriltags on it (easy debug to find obvious mistakes).

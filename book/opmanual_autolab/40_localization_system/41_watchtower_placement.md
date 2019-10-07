@@ -59,12 +59,16 @@ Beside the placement of Watchtowers, they should be connected via ethernet cable
 
 Then we have one PC connected via ethernet to the router, for faster and more reliable communication with the watchtowers.
 
+### Recommended network setup
+
+Since all Watchtowers might send data at the same time, we recommend you have a strong network setup:
+
+The best, and currently used in the ETHZ Autolab, is a switch with 1 Gb/s ports for each watchtower, with 2 ports at 10 Gb/s, that are connected to a central computer (which in turn needs a 10 Gb/s network card).
+
 Todo: explain the router requirements.
 
+### Power management
 
 Last but not least, these Watchtowers needs _power_. Remember to prepare your USB chargers and cables that support 2.4A output.
 
-
-
 Note: EXPERIMENTAL : If you want to get less cables around, the possibility of using POE (power over ethernet) exists. With a additional hat, you can power the pi directly by the ethernet cable (provided that you switch provides the service as well).
-
