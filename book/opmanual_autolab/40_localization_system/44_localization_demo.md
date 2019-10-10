@@ -143,6 +143,8 @@ For each Autobot that is running do on your computer :
 
 Where `AUTOBOT_NUMBER` is just 01 to XX and `AUTOBOT_NAME` is the hostname of the Autobot (usually it is `autobotXX`).
 
+Warning: The processing of apriltags is very heavy. Putting more than 4 processors on a computer is very risky. What you can do is use other computers that are on the same network. Launch exactly the same command and be sure to leave the IP of the designated master computer.
+
 ### Localization
 
 Once the online processing is started (or even before), run:
