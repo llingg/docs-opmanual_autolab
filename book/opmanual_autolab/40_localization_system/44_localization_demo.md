@@ -53,7 +53,7 @@ In order to get the images from all watchtowers to the same rosmaster (your comp
 
 To run this, please run on all watchtowers:
 
-    laptop $ docker -H ![hostname].local run --name acquisition-bridge --network=host -e ROBOT_TYPE=watchtower -dit duckietown/acquisition-bridge:daffy-arm32v7
+    laptop $ docker -H ![hostname].local run --name acquisition-bridge --network=host -e ROBOT_TYPE=watchtower -e LAB_ROS_MASTER_IP=![YOUR_ROS_MASTER_IP] -dit duckietown/acquisition-bridge:daffy-arm32v7
 
 ### Advice
 
@@ -69,7 +69,7 @@ The default duckiebot-interface is good enough for the duckiebots, so we will ju
 
 On all duckiebots please run:
 
-    laptop $ docker -H ![hostname].local run --name acquisition-bridge --network=host -v /data:/data -dit duckietown/acquisition-bridge:daffy-arm32v7
+    laptop $ docker -H ![hostname].local run --name acquisition-bridge --network=host -v /data:/data -e LAB_ROS_MASTER_IP=![YOUR_ROS_MASTER_IP] -dit duckietown/acquisition-bridge:daffy-arm32v7
 
 ## Checking if the acquisition bridges work
 
@@ -108,7 +108,11 @@ When the container stops, then you should have a new bag called `processed_BAG_N
 
 ### Launching the graph optimizer
 
-    laptop $ docker run --rm  -e  ATMSGS_BAG=/data/processed_![BAG_NAME.BAG] -e OUTPUT_DIR=/data -e ROS_MASTER_URI=http://![YOUR_IP]:11311 --name graph_optimizer -v ![PATH_TO_BAG_FOLDER]:/data duckietown/cslam-graphoptimizer:daffy-amd64
+Remember from [](#autolab-map-making) that you created a map. Now is the time to remember on which fork you pushed it (the default is `duckietown`), and what name you gave to your map. The map file needs to be in the same folder as the rest of the maps. They are respectively the YOUR_FORK_NAME and YOUR_MAP_NAME arguments in the following command line.
+
+To run localization, execute:
+
+    laptop $ docker run --rm  -e  ATMSGS_BAG=/data/processed_![BAG_NAME.BAG] -e OUTPUT_DIR=/data -e ROS_MASTER_URI=http://![YOUR_IP]:11311 --name graph_optimizer -v ![PATH_TO_BAG_FOLDER]:/data -e DUCKIETOWN_WORLD_FORK=![YOUR_FORK_NAME] -e MAP_NAME=![YOUR_MAP_NAME] duckietown/cslam-graphoptimizer:daffy-amd64
 
 The poses can then be visualized in Rviz as the optimization advance.
 
@@ -127,12 +131,22 @@ Normally, at this point, you should have a duckiebot-interface and a acquisition
 
 ### Online processing
 
-TODO: give instructions
+For each Watchtower that is running do on your computer :
+
+    laptop $ docker run --name apriltag_processor_![WATCHTOWER_NUMBER] --network=host -dit --rm  -e ROS_MASTER_URI=http://![YOUR_IP]:11311 -e ACQ_DEVICE_NAME=![WATCHTOWER_NAME] duckietown/apriltag-processor:master19-amd64
+
+Where `WATCHTOWER_NUMBER` is just 01 to XX and `WATCHTOWER_NAME` is the hostname of the Watchtower (usually it is `watchtowerXX`).
+
+For each Autobot that is running do on your computer :
+
+    laptop $ docker run --name odometry_processor_![AUTOBOT_NUMBER] --network=host -dit --rm  -e ACQ_ROS_MASTER_URI_SERVER_IP=![YOUR_IP] -e ACQ_DEVICE_NAME=![AUTOBOT_NAME] duckietown/wheel-odometry-processor:master19-amd64
+
+Where `AUTOBOT_NUMBER` is just 01 to XX and `AUTOBOT_NAME` is the hostname of the Autobot (usually it is `autobotXX`).
 
 ### Localization
 
 Once the online processing is started (or even before), run:
 
-    laptop $ docker run --rm -e OUTPUT_DIR=/data -e ROS_MASTER_URI=http://![YOUR_IP]:11311 --name graph_optimizer -v ![PATH_TO_RESULT_FOLDER]:/data duckietown/cslam-graphoptimizer:daffy-amd64
+    laptop $ docker run --rm -e OUTPUT_DIR=/data -e ROS_MASTER_URI=http://![YOUR_IP]:11311 --name graph_optimizer -v ![PATH_TO_RESULT_FOLDER]:/data -e DUCKIETOWN_WORLD_FORK=![YOUR_FORK_NAME] -e MAP_NAME=![YOUR_MAP_NAME] duckietown/cslam-graphoptimizer:daffy-amd64
 
-The `PATH_TO_RESULT_FOLDER` folder is the one where the results will be saved in yaml files at the end of the experiment, when you CTRL+C the above command
+The `PATH_TO_RESULT_FOLDER` folder is the one where the results will be saved in yaml files at the end of the experiment, when you CTRL+C the above command to finish.

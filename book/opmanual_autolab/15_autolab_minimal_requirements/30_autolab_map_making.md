@@ -90,6 +90,7 @@ Now that the map is ready, you can commit :
 * the map in `duckietown-world/src/duckietown_world/data/gd1/maps`
 * the generated folder is `visualization/maps/`
 
+Note: You may note have the rights to push to the duckietown repository. Instead, create a fork of the repository and remember the user account you use, as it will be useful later on. Also remember the name you gave to the map.
+
 Warning: again, please do not commit any virtual environment.
 
-If you don't have push rights to the main branch, you can open a pull request and notify the developers team.
