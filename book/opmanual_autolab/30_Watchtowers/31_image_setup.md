@@ -28,11 +28,13 @@ In the Autolab of ETH Zurich, we use the naming convention:
 
 Note: **Important** : please add `--type watchtower` to the flashing procedure
 
+Note: **Important** : please add `--configuration daffy` to the flashing procedure
+
 Note: **For raspberryPi 4**, use add `--experimental` to the flashing procedure
 
 A complete command you look like :
 
-    laptop $ dts init_sd_card --hostname watchtower![XX] --linux-username mom --linux-password MomWatches --country ![COUNTRY] --type watchtower --experimental
+    laptop $ dts init_sd_card --hostname watchtower![XX] --linux-username mom --linux-password MomWatches --country ![COUNTRY] --type watchtower --experimental --configuration daffy
 
 Using the above naming conventions, you can flash your SD cards as is described in [Duckiebot Initialization](+opmanual_duckiebot#setup-duckiebot).
 
