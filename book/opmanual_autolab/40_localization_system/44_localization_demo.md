@@ -112,13 +112,13 @@ Remember from [](#autolab-map-making) that you created a map. Now is the time to
 
 To run localization, execute:
 
-    laptop $ docker run --rm  -e  ATMSGS_BAG=/data/processed_![BAG_NAME.BAG] -e OUTPUT_DIR=/data -e ROS_MASTER_URI=http://![YOUR_IP]:11311 --name graph_optimizer -v ![PATH_TO_BAG_FOLDER]:/data -e DUCKIETOWN_WORLD_FORK=![YOUR_FORK_NAME] -e MAP_NAME=![YOUR_MAP_NAME] duckietown/cslam-graphoptimizer:daffy-amd64
+    laptop $ docker run --rm  -e  ATMSGS_BAG=/data/processed_![BAG_NAME.BAG] -e OUTPUT_DIR=/data  ROS_MASTER=![YOUR_HOSTNAME] -e ROS_MASTER_IP=![YOUR_IP] --name graph_optimizer -v ![PATH_TO_BAG_FOLDER]:/data -e DUCKIETOWN_WORLD_FORK=![YOUR_FORK_NAME] -e MAP_NAME=![YOUR_MAP_NAME] duckietown/cslam-graphoptimizer:daffy-amd64
 
 The poses can then be visualized in Rviz as the optimization advance.
 
 The trajectories will be stored in the folder `PATH_TO_BAG_FOLDER`.
 
-Todo: add better visualization tools
+
 
 ## Online Localization
 
@@ -133,13 +133,13 @@ Normally, at this point, you should have a duckiebot-interface and a acquisition
 
 For each Watchtower that is running do on your computer :
 
-    laptop $ docker run --name apriltag_processor_![WATCHTOWER_NUMBER] --network=host -dit --rm  -e ROS_MASTER_URI=http://![YOUR_IP]:11311 -e ACQ_DEVICE_NAME=![WATCHTOWER_NAME] duckietown/apriltag-processor:master19-amd64
+    laptop $ docker run --name apriltag_processor_![WATCHTOWER_NUMBER] --network=host -dit --rm  -e ROS_MASTER_URI=http://![YOUR_IP]:11311 -e ACQ_DEVICE_NAME=![WATCHTOWER_NAME] duckietown/apriltag-processor:daffy-amd64
 
 Where `WATCHTOWER_NUMBER` is just 01 to XX and `WATCHTOWER_NAME` is the hostname of the Watchtower (usually it is `watchtowerXX`).
 
 For each Autobot that is running do on your computer :
 
-    laptop $ docker run --name odometry_processor_![AUTOBOT_NUMBER] --network=host -dit --rm  -e ACQ_ROS_MASTER_URI_SERVER_IP=![YOUR_IP] -e ACQ_DEVICE_NAME=![AUTOBOT_NAME] duckietown/wheel-odometry-processor:master19-amd64
+    laptop $ docker run --name odometry_processor_![AUTOBOT_NUMBER] --network=host -dit --rm  -e ACQ_ROS_MASTER_URI_SERVER_IP=![YOUR_IP] -e ACQ_DEVICE_NAME=![AUTOBOT_NAME] duckietown/wheel-odometry-processor:daffy-amd64
 
 Where `AUTOBOT_NUMBER` is just 01 to XX and `AUTOBOT_NAME` is the hostname of the Autobot (usually it is `autobotXX`).
 
@@ -149,6 +149,6 @@ Warning: The processing of apriltags is very heavy. Putting more than 4 processo
 
 Once the online processing is started (or even before), run:
 
-    laptop $ docker run --rm -e OUTPUT_DIR=/data -e ROS_MASTER_URI=http://![YOUR_IP]:11311 --name graph_optimizer -v ![PATH_TO_RESULT_FOLDER]:/data -e DUCKIETOWN_WORLD_FORK=![YOUR_FORK_NAME] -e MAP_NAME=![YOUR_MAP_NAME] duckietown/cslam-graphoptimizer:daffy-amd64
+    laptop $ docker run --rm -e OUTPUT_DIR=/data -e ROS_MASTER=![YOUR_HOSTNAME] -e ROS_MASTER_IP=![YOUR_IP] --net=host --name graph_optimizer -v ![PATH_TO_RESULT_FOLDER]:/data -e DUCKIETOWN_WORLD_FORK=![YOUR_FORK_NAME] -e MAP_NAME=![YOUR_MAP_NAME] duckietown/cslam-graphoptimizer:daffy-amd64
 
 The `PATH_TO_RESULT_FOLDER` folder is the one where the results will be saved in yaml files at the end of the experiment, when you CTRL+C the above command to finish.
