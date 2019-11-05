@@ -22,6 +22,18 @@ The localization pipeline needs a __master__ computer that will receive all info
 
 If this container is stopped at some point, then all the acquisition bridges (see below) need to be restarted, as they need connection to this rosmaster.
 
+## Setting visualization (optionnal)
+
+To set up an rviz visualization, run first :
+
+    laptop $ xhost +
+
+Then, remembering the fork of duckietown-world on which your map is, and remembering the name of the map, run:
+
+    laptop $ docker run -it --rm --net=host --env="DISPLAY" -e ROS_MASTER=![COMPUTER_HOSTNAME] -e ROS_MASTER_IP=![COMPUTER_IP] -e DUCKIETOWN_WORLD_FORK=![YOUR_FORK] -e MAP_NAME=![YOUR_MAP] duckietown/dt-autolab-rviz
+
+This should first show just the map with the tiles. When the graph optimizer runs (later down), the position that are calculated will show on this visualization.
+
 ## Setting up software on the watchtowers
 
 In order to use the localization pipeline, you need to have two containers running on the watchtowers: 
