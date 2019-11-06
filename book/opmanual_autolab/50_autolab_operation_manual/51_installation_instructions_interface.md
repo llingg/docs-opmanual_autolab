@@ -14,9 +14,9 @@ This Unit describes the different steps needed to setup an Autolab Server.
 
 Follow [these instructions](http://compose.afdaniele.com/docs/devel/setup-docker) to install compose on your server. 
 
-### Installing the Lab Controls package 
+### Installing the necessary packages
 
-After installing compose, open your **Firefox** browser (other browsers are **not** supported) and navigate to the url forwarding to the port 80 of the Autolab Server. Most likely, when inside a local network, `server-hostname`.local will work. After logging in, navigate to the `Package Store` tab to and install the **Lab Controls** package ([](#fig:lab_controls_pkg)).
+After installing compose, open your **Firefox** browser (other browsers are **not** supported) and navigate to the url forwarding to the port 80 of the Autolab Server. Most likely, when inside a local network, `server-hostname`.local will work. After logging in, navigate to the `Package Store` tab to and install the **Lab Controls** package ([](#fig:lab_controls_pkg)) as well as the **ROS** package.
 
 <div figure-id="fig:lab_controls_pkg">
 <img src="opmanual_autolab/images/autolab_interface/lab_controls_package.png" style="width: 90%"/>
@@ -27,9 +27,9 @@ Installed Lab controls package
 
 ### Running the Flask server
 
-The Flask Server handles every API call from and to the Autolab interface. To run it, first the following repository needs to be pulled:
+The Flask Server handles every API call from and to the Autolab interface. To run it, first the following repository needs to be cloned:
 
-    $ git pull git@github.com:duckietown/autolab_control_flask_scripts.git
+    $ git clone git@github.com:duckietown/autolab_control_flask_scripts.git
 
 The next step involves setup for passwordless ssh, Watchtowers with a hostname `watchtowerXX.local` where XX is between 01 and 60 as well as Duckiebots with `autobotXX.local` where XX is between 01 and 20 will be setup. simply run the following script:
 
@@ -43,9 +43,9 @@ Finally, the Flask server can be started via:
 
 ### Installing the Rosbridge server
 
-The Rosbridge server is used for communication between the Autolab interface and every ROS Agent in the lab running the acquisition-bridge (more on this in [](#localization-software)). To install it first pull the following repository:
+The Rosbridge server is used for communication between the Autolab interface and every ROS Agent in the lab running the acquisition-bridge (more on this in [](#localization-software)). To install it first clone the following repository:
 
-    $ git pull git@github.com:duckietown/rosbridge_kinetic.git
+    $ git clone git@github.com:duckietown/rosbridge_kinetic.git
 
 Inside the `Dockerfile` change the `ROS_IP` and `ROS_MASTER_URI` to the IP of your server, keep in mind that `ROS_MASTER_URI` needs to include the correct port for ROS (11311). The last line of the Dockerfile should look similar to this: `CMD /bin/bash -c "source /opt/ros/kinetic/setup.bash; export ROS_IP=172.31.168.115; export ROS_MASTER_URI="http://172.31.168.115:11311"; roslaunch rosbridge_server rosbridge_websocket.launch unregister_timeout:=999999999"`
 
@@ -91,6 +91,9 @@ Setting up the different parameters for the Autolab interface is straight forwar
 * **Hostname of the logging server** Hostname of the local logging server used to save the necessary ROS messages during an evaluation
 * **Username of the logging server, needs passwordless ssh** Username of the logging server, needs passwordless ssh to execute correctly
 * **IP of the lab ROS master** IP of the Autolab ROS master where every acquisition-bridge subscribes to
+
+In the `Package: ROS` menu, the following parameters need to be changed:
+* **ROSBridge Port** Needs to be set to port 9090
 
 ### Changing the map
 
