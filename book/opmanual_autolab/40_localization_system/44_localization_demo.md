@@ -36,7 +36,7 @@ This should first show just the map with the tiles. When the graph optimizer run
 
 ## Setting up software on the watchtowers
 
-In order to use the localization pipeline, you need to have two containers running on the watchtowers: 
+In order to use the localization pipeline, you need to have two containers running on the watchtowers:
 
 - duckiebot-interface (a special version)
 - acquisition-bridge
@@ -95,7 +95,7 @@ Then run rqt_image_view from there.
 
 ## Offline localization
 
-The offline localization is offline in the meaning that you only get a trajectory of your duckiebots after the experiment is over. 
+The offline localization is offline in the meaning that you only get a trajectory of your duckiebots after the experiment is over.
 The process is the following:
 
 - You record an experiment
@@ -164,3 +164,16 @@ Once the online processing is started (or even before), run:
     laptop $ docker run --rm -e OUTPUT_DIR=/data -e ROS_MASTER=![YOUR_HOSTNAME] -e ROS_MASTER_IP=![YOUR_IP] --net=host --name graph_optimizer -v ![PATH_TO_RESULT_FOLDER]:/data -e DUCKIETOWN_WORLD_FORK=![YOUR_FORK_NAME] -e MAP_NAME=![YOUR_MAP_NAME] duckietown/cslam-graphoptimizer:daffy-amd64
 
 The `PATH_TO_RESULT_FOLDER` folder is the one where the results will be saved in yaml files at the end of the experiment, when you CTRL+C the above command to finish.
+
+
+## Visualize the trajectories
+
+After the localization is done (either offline or online), you can visualize the trajectory
+of each Autobot superimposed to your map using a jupyter notebook in the duckietown-world repository.
+Similarly to [](#autolab-map-making), launch `jupiter notebook` and open your browser.
+Navigate to `notebooks` and open the notebook `65-Localization-ShowTrajectory`.
+Change the values in the first block of this notebook to reflect the name of your map,
+the location of your trajectory files within the file system, and the name of the Autobot to show.
+
+Run all the cells, the last one will produce a picture of your map with the location of the
+Autobot at time `t=0` and a slider to adjust the time.
