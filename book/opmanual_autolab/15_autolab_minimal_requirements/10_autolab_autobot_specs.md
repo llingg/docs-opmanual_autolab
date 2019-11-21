@@ -44,8 +44,8 @@ Pre-flight setup of the Duckiebot if you want to use autocharging.
 
 * 4 standoffs M3 x 50mm for example from [here](https://www.distrelec.ch/en/spacer-bolt-6mm-50-mm-no-brand-distin3060pa-50/p/14843056?queryFromSuggest=true)
 * 8 screws M3 * 8mm
-* laser cut [top plate](https://drive.google.com/open?id=1LF6UORjYlF0ICI8ZGKwz_oqMJ4QF_Nix)
-* printed [April tags](https://drive.google.com/open?id=1B7oAyzrq4CZSOYOZ6KBGFxsMMh1tul2p)
+* laser cut [top plate](https://github.com/duckietown/docs-resources_autolab/tree/daffy/Topplate_AprilTag)
+* printed [April tags](https://github.com/duckietown/docs-resources_autolab/blob/daffy/AprilTags/Apriltags_autobots.pdf)
 
 
 <div figure-id="fig:material_standoff_localization">
