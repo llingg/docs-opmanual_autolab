@@ -38,7 +38,7 @@ Note: For the Autobots themselves, the tags are in range 400 to 439.
 
 </col4>
 
-To print the ones you need, you can find them here: [pdf](AprilTags/AprilTags_localization_ID300-399.pdf) 
+To print the ones you need, you can find them here: [pdf](https://github.com/duckietown/docs-resources_autolab/blob/daffy/AprilTags/AprilTags_localization_ID300-399.pdf) 
 
 ## Placing the ground Apriltags and the Watchtowers
 
