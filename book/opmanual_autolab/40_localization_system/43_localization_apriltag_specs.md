@@ -38,7 +38,7 @@ Note: For the Autobots themselves, the tags are in range 400 to 439.
 
 </col4>
 
-To print the ones you need, you can find them here: [pdf](https://github.com/duckietown/Software/blob/master18/catkin_ws/src/20-indefinite-navigation/apriltags_ros/signs_and_tags/tag36h11.pdf) [ps](https://github.com/duckietown/Software/blob/master18/catkin_ws/src/20-indefinite-navigation/apriltags_ros/signs_and_tags/tag36h11.ps)
+To print the ones you need, you can find them here: [pdf](AprilTags/AprilTags_localization_ID300-399.pdf) 
 
 ## Placing the ground Apriltags and the Watchtowers
 
