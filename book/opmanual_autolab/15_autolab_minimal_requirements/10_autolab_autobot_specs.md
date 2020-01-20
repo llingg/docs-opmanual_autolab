@@ -1,6 +1,6 @@
-# BUILDING - Autobot specifications and assembly {#autolab-autobot-specs status=ready}
+# Autobot specifications and assembly {#autolab-autobot-specs status=ready}
 
-Excerpt: upgrade your Duckiebot to become an Autobot
+Excerpt: Fantastic Autobots and how to build them : upgrade your Duckiebot to become an Autobot
 
 <div class='requirements' markdown="1">
 

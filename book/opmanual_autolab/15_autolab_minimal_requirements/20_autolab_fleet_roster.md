@@ -1,4 +1,6 @@
-# BUILDING - Autolab fleet roster {#autolab-fleet-roster status=ready}
+# Autolab fleet roster {#autolab-fleet-roster status=ready}
+
+Excerpt: Handling the fleet of Autobots.
 
 <div class='requirements' markdown="1">
 

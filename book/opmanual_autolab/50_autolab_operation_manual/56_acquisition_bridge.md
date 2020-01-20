@@ -1,1 +1,1 @@
-# Acquisition bridge {#acquisition-bridge status=ready}
+# Acquisition bridge {#acquisition-bridge status=draft}

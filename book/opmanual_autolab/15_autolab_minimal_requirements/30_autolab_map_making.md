@@ -1,4 +1,6 @@
-# BUILDING - Autolab map {#autolab-map-making status=ready}
+# Autolab map {#autolab-map-making status=ready}
+
+Excerpt: Creating and managing the map of your Autolab.
 
 <div class='requirements' markdown="1">
 
